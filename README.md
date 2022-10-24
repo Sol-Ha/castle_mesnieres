@@ -1,7 +1,14 @@
 # castle_mesnieres
 internship project to remodel a website from the early 2000. Method : MERN
 
-# yarn over npm 
+## yarn over npm 
+
+## creating a project
+```npx create-react-app .```
+*( create a new project in the field you selected with CD command)*
+
+
+# BACKEND
 ## api dependencies database:
 
 ```yarn add express```
