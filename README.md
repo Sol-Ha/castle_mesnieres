@@ -4,8 +4,13 @@ internship project to remodel a website from the early 2000. Method : MERN
 ## yarn over npm 
 
 ## creating a project
+
 ```npx create-react-app .```
 *( create a new project in the field you selected with CD command)*
+
+
+```yarn add react-router-dom```
+*( update the URL over rebooting / refreshing making it a better user experience)*
 
 
 # BACKEND
@@ -61,3 +66,33 @@ internship project to remodel a website from the early 2000. Method : MERN
 
 *( let a user store infos on the web browser such as : languages, locations, keep the session alive etc... )*
 
+
+# FRONTEND
+## user dependencies CSS:
+
+
+```yarn add sass```
+
+*( CSS pre processor with nesting system)*
+
+
+```yarn add bootstrap```
+```yarn add react-bootstrap```
+```yarn add react-router-bootstrap```
+
+*( framework CSS to react with REACT )*
+
+
+# FRONTEND
+## user dependencies API:
+
+
+```yarn add leaflet```
+```yarn add leaflet-react```
+
+*( API map to react with REACT )*
+
+
+```yarn add @emailjs/browser```
+
+*( API to process forms to a chosen templace through mailJS and forwards it to the receiver )*
