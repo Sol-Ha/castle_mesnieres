@@ -1,18 +1,23 @@
 # castle_mesnieres
 internship project to remodel a website from the early 2000. Method : MERN
 
-__yarn over npm
+#__yarn over npm
 <br>
-api dependencies__
+#0969DA api dependencies:__
 <br>
 <br>
-``` yarn add express ```
+##```yarn add express ```
 <br>
-<i>( framework for building REST API with Nodejs)
+*( framework for building REST API with Nodejs)*
 <br>
-yarn add mongoose ( database )
+```yarn add mongoose``` 
 <br>
-yarn add dotenv ( hidding vital infos )
+*( database )*
 <br>
-yarn add multer ( middleware for handling multipart / form-data - primarly use for uploading files )
+```yarn add dotenv```
+<br>
+*( hidding vital infos )*
+<br>
+```yarn add multer``` 
+*( middleware for handling multipart / form-data - primarly use for uploading files )*
 </i>
