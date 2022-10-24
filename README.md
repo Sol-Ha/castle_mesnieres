@@ -5,7 +5,10 @@ __yarn over npm
 <br>
 api dependencies__
 <br>
-<i> yarn add express ( framework for building REST API with Nodejs)
+<br>
+``` yarn add express ```
+<br>
+<i>( framework for building REST API with Nodejs)
 <br>
 yarn add mongoose ( database )
 <br>
