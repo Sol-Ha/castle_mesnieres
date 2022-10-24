@@ -1,6 +1,6 @@
 import express from "express"
 import { deleteAdmin, updateAdmin } from "../controllers/admincontroller.js"
-import { verifyToken, verifyAdmin, verifySuperadmin } from "../utils/verifyToken.js"
+import { verifyAdmin, verifySuperadmin } from "../utils/verifyToken.js"
 
 const router = express.Router()
 
