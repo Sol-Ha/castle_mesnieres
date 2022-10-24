@@ -1,13 +1,13 @@
 # castle_mesnieres
 internship project to remodel a website from the early 2000. Method : MERN
 
-# __ yarn over npm 
-## `#RRGGBB` api dependencies:__
+# yarn over npm 
+## api dependencies:
 <br>
 <br>
 ```yarn add express```
 <br>
-*( framework for building REST API with Nodejs)*
+#RRGGBB *( framework for building REST API with Nodejs)*
 <br>
 ```yarn add mongoose``` 
 <br>
