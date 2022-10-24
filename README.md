@@ -83,7 +83,6 @@ internship project to remodel a website from the early 2000. Method : MERN
 *( framework CSS to react with REACT )*
 
 
-# FRONTEND
 ## user dependencies API:
 
 
