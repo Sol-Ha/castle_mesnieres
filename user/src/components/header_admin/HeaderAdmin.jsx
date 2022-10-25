@@ -2,11 +2,17 @@ import React from 'react';
 
 import { Dropdown, DropdownButton, Image } from "react-bootstrap";
 import "./headerAdmin.scss";
-import Image1 from "../../assets/images/logo.avif";
 
 const HeaderAdmin = () => {
   return (
-    <Image1 alt="illustration d'une porte" style={{ width: "16vh" }}/>
+    <header className='navbar_back'>
+      <div>
+
+      </div>
+    <Image
+    src="../assets/photos/castle_back.avif"
+    alt="illustration du logo du château"/>
+    </header>
   )
 }
 

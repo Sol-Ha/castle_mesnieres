@@ -1,0 +1,12 @@
+@import "../../styles/_variable.scss";
+@import "../../styles/_variable.scss";
+@import "..";
+@import "~bootstrap/scss/bootstrap";
+
+.navbar_back{
+    width: 100%;
+    div{
+        width: 100%;
+        height: 6vh;
+    }
+}

@@ -1,0 +1,113 @@
+@import "./_variable.scss";
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter";
+  color: $main_txt;
+}
+
+@mixin responsiveImg {
+  width: 100%;
+  height: auto;
+}
+
+// HOME NAV BAR
+@mixin homeNav {
+  background-color: $black;
+  height: 9vh;
+  display: flex;
+  flex-direction: row;
+
+  .btn,
+  .btn-primary {
+    background-color: $black !important;
+    color: $white !important;
+    padding-inline: 5vh !important;
+    font-size: 1.1vw !important;
+    border-block: 0.2vw $black solid !important;
+    border-inline: none;
+    outline: none !important;
+
+    img {
+      width: 7vh;
+      height: 7vh;
+      margin-right: 3vh;
+    }
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:checked {
+      background-color: $white !important;
+      color: $black !important;
+      font-weight: 600 !important;
+      border-left: none !important;
+      border-radius: 0 !important;
+
+      img {
+        filter: brightness(0%);
+      }
+    }
+  }
+}
+
+// HOME NAV BAR 2
+@mixin homeNavPath {
+  span {
+    border: 0.1vh solid $white;
+  }
+
+  h3 {
+    color: $white;
+    font-size: 1.1vw;
+    margin-block: auto;
+    padding-inline: 5vh;
+  }
+}
+
+// first letter font change
+@mixin majChanges{
+  font-size: 4vw;
+  font-family: 'Handmagic Signature';
+  margin: 0em 0.3em 0em -0.5em;
+  line-height: 0.1em;
+}
+
+@mixin smallTitle {
+  font-weight: 500;
+  font-size: 0.7em;
+}
+
+@mixin btnType1{
+  width: 30%;
+  font-size: 0.9vw;
+  display: flex;
+  background-color: $white;
+  filter:drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border: $main_txt solid 0.1vw!important;
+
+  &:hover{
+    background-color: $main_txt;
+    color: $white;
+  }
+}
+// calendar color map
+@mixin colorMap{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-block: 1%;
+  width: 100%;
+  .color {
+    height: 2.5vh;
+    width: 2.5vh;
+    border: 0.2vh solid $main_txt;
+    border-radius: 2px;
+    margin-inline: 5%;
+  }
+  p {
+    font-weight: 400;
+    font-size: 0.9vw;
+  }
+}
