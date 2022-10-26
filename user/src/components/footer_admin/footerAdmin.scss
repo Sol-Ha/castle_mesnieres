@@ -14,16 +14,15 @@
 
   div:first-child {
     width: 33%;
-    height: 30vh;
     display: flex;
     flex-direction: row;
     align-items: center;
 
     address {
-      padding: 10vh;
+      padding: 9vh;
       color: $white;
-      font-weight: 500;
-      font-size: 1.25vw;
+      font-weight: 600;
+      font-size: 1.2vw;
       line-height: 6vh;
 
       a {
@@ -34,35 +33,48 @@
     img{
       width: 13vh;
       height: auto;
-      margin-top: -20vh;
+      margin-top: -30vh;
     }
 
     span{
-      height: 21vh;
+      height: 29vh;
       width: 0.3vh;
       background-color: $white;
-      margin-top: -9vh;
+      margin-top: -10vh;
       margin-left: 3vh;
     }
   }
 
   div:nth-child(2) {
     width: 33%;
-    height: 20vh;
-    background-color: red;
+    margin-left: 15vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding-inline: 3vh;
+
+    img{
+      margin-top: -5vh;
+      height: 30vh;
+      height: auto;
+    }
   }
 
   div:last-child {
     width: 33%;
-    height: 20vh;
-    background-color: red;
+    padding-inline: 13vh;
+    margin-top: -20vh;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    padding-inline: 3vh;
+    justify-content: space-between;
+
+    img{
+      width: 5.5vh;
+      height: auto;
+      &:hover{
+        transform: scale(1.5);
+filter: brightness(0) saturate(100%) invert(76%) sepia(33%) saturate(440%) hue-rotate(2deg) brightness(99%) contrast(102%);
+      }
+    }
   }
 }

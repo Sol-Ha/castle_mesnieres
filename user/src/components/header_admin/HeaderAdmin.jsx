@@ -8,6 +8,9 @@ const HeaderAdmin = () => {
     <header className='header_back'>
       <div>
           <h2>PAGE RESERVEE AU PERSONNEL DU CHATEAU UNIQUEMENT</h2>
+          <Image
+    src="../assets/icones/unlock-padlock.svg"
+    alt="Logo cadenas ouvert"/>
       </div>
     <Image
     src="../assets/photos/castle_back.avif"

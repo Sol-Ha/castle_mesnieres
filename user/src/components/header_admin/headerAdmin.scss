@@ -18,8 +18,16 @@
 
         h2{
             color: $white;
-            @include smallTitle;
-            
+            margin-top: 1vh;
+            @include smallTitle;           
+        }
+        img{
+            margin-left: 2vh;
+            width: 3vh;
+            height: auto;
         }
     }
+    img{
+    @include responsiveImg
+}
 }
