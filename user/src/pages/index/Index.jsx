@@ -1,4 +1,4 @@
-import { Image } from "react-bootstrap";
+
 import "./index.scss";
 
 const Index = () => {

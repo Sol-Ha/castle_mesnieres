@@ -52,8 +52,8 @@ const FooterAdmin = () => {
  </a>
 </p>  
 {/* link Twitter */}
-<p>
 
+<p>
  <a href="https://www.linkedin.com/company/ch%C3%A2teau-de-mesni%C3%A8res-en-bray/about/">
  <Image 
         src="../assets/icones/linkedin.svg"
