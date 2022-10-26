@@ -1,0 +1,10 @@
+@import "../../styles/_fonts.scss";
+@import "../../styles/_variable.scss";
+@import "../../styles/_mixin.scss";
+@import "~bootstrap/scss/bootstrap";
+
+.nav_SelectionMenu{
+    background-color: $black;
+    height: 10vh;
+    width: 100%;
+}

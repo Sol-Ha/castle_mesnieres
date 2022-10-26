@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // components
 import HeaderAdmin from "./components/header_admin/HeaderAdmin";
 import FooterAdmin from "./components/footer_admin/FooterAdmin";
+import SelectionMenu from "./pages/selection_menu/SelectionMenu";
 // import HeaderAdmin from "./components/header_admin/HeaderAdmin";
 
 // pages
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/admin/login" element={<Login />} />
+        <Route path="/admin/selection_menu" element={<SelectionMenu/>}/>
       </Routes>
 
       <FooterAdmin />
