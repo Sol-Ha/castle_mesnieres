@@ -1,6 +1,6 @@
-@import "../../styles/_fonts.scss";
-@import "../../styles/_variable.scss";
-@import "../../styles/_mixin.scss";
+@import "../../../styles/_fonts.scss";
+@import "../../../styles/_variable.scss";
+@import "../../../styles/_mixin.scss";
 @import "~bootstrap/scss/bootstrap";
 
 //  nav and disconnecting button
@@ -15,8 +15,8 @@ button{
     justify-content: space-evenly;
     align-items: center;
     background-color: $black;
-    font-size: 1.2vw;
-    font-weight: 600;
+    font-size: 1.1vw;
+    font-weight: 500;
     a{
         text-decoration: none;
         color: $white;
@@ -29,6 +29,7 @@ button{
     &:hover{
         background-color: $white;
         color: white;
+        font-weight: 600;
 
         img{
             filter: none;
@@ -55,7 +56,7 @@ button{
         flex-direction: row;
         justify-content: center;
         align-self: center;
-        background-image: url("../../../public/assets/images/paint_brush1.png");
+        background-image: url("../../../../public/assets/images/paint_brush1.png");
         background-size:cover;
         background-repeat: no-repeat;
 
@@ -86,56 +87,56 @@ button{
         margin: 3%;
     }
     .card_back:first-child{
-        background-image: url("../../../public/assets/photos/key_ring.jpg");
+        background-image: url("../../../../public/assets/photos/key_ring.jpg");
         background-size:cover;
         background-repeat: no-repeat;
         background-position-x: -5.5vh;
     }
 
     .card_back:nth-child(2){
-        background-image: url("../../../public/assets/photos/workflow.jpg");
+        background-image: url("../../../../public/assets/photos/workflow.jpg");
         background-size:cover;
         background-repeat: no-repeat;
         background-position-x: -5.5vh;
     }
 
     .card_back:nth-child(3){
-        background-image: url("../../../public/assets/photos/solidarity.jpg");
+        background-image: url("../../../../public/assets/photos/solidarity.jpg");
         background-size:cover;
         background-repeat: no-repeat;
         background-position-x: -5.5vh;
     }
 
     .card_back:nth-child(4){
-        background-image: url("../../../public/assets/photos/hire.jpg");
+        background-image: url("../../../../public/assets/photos/hire.jpg");
         background-size:cover;
         background-repeat: no-repeat;
         background-position-x: -5.5vh;
     }
 
     .card_back:nth-child(5){
-        background-image: url("../../../public/assets/photos/roadtag.jpg");
+        background-image: url("../../../../public/assets/photos/roadtag.jpg");
         background-size:cover;
         background-repeat: no-repeat;
         background-position-x: -5.5vh;
     }
 
     .card_back:nth-child(6){
-        background-image: url("../../../public/assets/photos/bedroom.jpg");
+        background-image: url("../../../../public/assets/photos/bedroom.jpg");
         background-size:cover;
         background-repeat: no-repeat;
         background-position-x: -25vh;
     }
 
     .card_back:nth-child(7){
-        background-image: url("../../../public/assets/photos/rentroom.jpg");
+        background-image: url("../../../../public/assets/photos/rentroom.jpg");
         background-size:cover;
         background-repeat: no-repeat;
         background-position-x: -10.5vh;
     }
 
     .card_back:last-child{
-        background-image: url("../../../public/assets/photos/food.jpg");
+        background-image: url("../../../../public/assets/photos/food.jpg");
         background-size:cover;
         background-repeat: no-repeat;
         background-position-x: -2.5vh;

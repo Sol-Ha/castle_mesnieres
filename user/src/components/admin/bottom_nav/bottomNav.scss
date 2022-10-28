@@ -1,0 +1,57 @@
+@import "../../../styles/_fonts.scss";
+@import "../../../styles/_variable.scss";
+@import "../../../styles/_mixin.scss";
+@import "~bootstrap/scss/bootstrap";
+
+//  nav and disconnecting button
+.bottom_nav{
+    background-color: $black;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    font-weight: 600;
+
+button{
+    height: 100%;
+    width: 40vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: $black;
+    font-size: 1.1vw;
+    font-weight: 500;
+    a{
+        text-decoration: none;
+        color: $white;
+    }
+    img{
+        width: 8vh;
+        height: auto;
+        filter: brightness(0) saturate(100%) invert(99%) sepia(3%) saturate(832%) hue-rotate(282deg) brightness(116%) contrast(100%);
+    }
+    &:hover{
+        background-color: $white;
+        color: white;
+        font-weight: 600;
+
+        img{
+            filter: none;
+        }
+        a{
+            color: $black;
+        }
+    }
+}
+span{
+    height:auto;
+    width: 0.3vh;
+    background-color: $white;
+
+  }
+  h2 {
+    color: $white;
+    font-size: 1.1vw;
+    margin-block: auto;
+    padding-inline: 5vh;
+  }
+}

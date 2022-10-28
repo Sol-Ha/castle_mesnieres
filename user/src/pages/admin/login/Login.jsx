@@ -33,7 +33,7 @@ const Login = () => {
       <section id='login_admin'>
         <h2>CONNEXION</h2>
         <article>
-          <Image src="../assets/images/stag.png" alt="Image d'un cerf"></Image>
+          <Image src="../../assets/images/stag.png" alt="Image d'un cerf"></Image>
           <Form>
                       {/* DISPLAY MESSAGE ERROR */}
           <h3>Votre identifiant n'est pas valide</h3>

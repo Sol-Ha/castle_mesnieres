@@ -1,9 +1,6 @@
 import React from "react";
 import { Image, Container } from "react-bootstrap";
-import ReactLoading from "react-loading";
-import axios from "axios";
-
-import Card from "../../components/card/Card";
+import Card from "../../../components/admin/card/Card";
 import "./selectionMenu.scss";
 
 const SelectionMenu = () => {
@@ -27,7 +24,7 @@ const SelectionMenu = () => {
         </Container>
 
         <Container fluid>
-          <Card name="CREER UN NOUVEL UTILISATEUR" />
+          <Card name="CREER UN NOUVEL UTILISATEUR" urlCard="/admin/create_admin" />
           <Card name="EVENEMENTS & PRESSE" />
           <Card name="NOS PARTENAIRES" />
           <Card name="EMPLOIS & STAGES" />
