@@ -68,8 +68,15 @@ button{
         }
     }
     div.container-fluid:last-child{
-        width: inherit;
-        height: 15vh;
+        width: 100%;
+        height:fit-content;
         background-color: red;
+
+    .card_back{
+        background-image: url("../../../public/assets/photos/key_ring.jpg");
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position-x: -5.5vh;
+    }
     }
 }

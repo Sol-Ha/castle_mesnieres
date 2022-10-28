@@ -1,7 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import { Image, Container } from "react-bootstrap";
 import ReactLoading from "react-loading";
 import axios from "axios";
+
+import Card from "../../components/card/Card"
 import "./selectionMenu.scss";
 
 const SelectionMenu = () => {
@@ -28,7 +30,12 @@ const SelectionMenu = () => {
           Par ou souhaitez-vous commencer?
           </p>
         </Container>
-        <Container fluid></Container>
+        
+        <Container fluid>
+          <Card
+          name="CREER UN NOUVEL UTILISATEUR"
+          />
+        </Container>
       </main>
 
 

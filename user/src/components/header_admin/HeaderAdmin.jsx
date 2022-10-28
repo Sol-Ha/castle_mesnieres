@@ -8,6 +8,8 @@ const HeaderAdmin = () => {
     <header className='header_back'>
       <div>
           <h2>PAGE RESERVEE AU PERSONNEL DU CHATEAU UNIQUEMENT</h2>
+
+          {/* on pages other than login display unlock padlock */}
           <Image
     src="../assets/icones/unlock-padlock.svg"
     alt="Logo cadenas ouvert"/>

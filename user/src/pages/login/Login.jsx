@@ -1,6 +1,6 @@
 import { React, useContext, useState } from 'react';
 // import { AuthContext } from '../../../context/authContext';
-import { Button, Form, Image, Row, Col } from 'react-bootstrap';
+import { Button, Form, Image, Row } from 'react-bootstrap';
 import "./login.scss";
 import axios from 'axios';
 
@@ -52,13 +52,15 @@ const Login = () => {
               <Form.Check type="checkbox" label="Check me out" />
             </Form.Group> */}
             <Row>
-            <a href="" className="mb-5">Vous n'arrivez pas à vous connecter?</a>
+            <a href="#" className="mb-5">Vous n'arrivez pas à vous connecter?</a>
             </Row>
 
-            <Button variant="primary" className="mb-5" type="submit">
+            {/* security */}
+            <a href="/admin/selection_menu">
+            <Button variant="primary" className="mb-5">
               SE CONNECTER
             </Button>
-
+            </a>
           </Form>
         </article>
       </section>
