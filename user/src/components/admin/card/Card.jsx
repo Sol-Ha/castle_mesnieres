@@ -1,6 +1,7 @@
 import React from "react";
 import "./card.scss";
 
+// rfce for function
 // building card with function
 function Card({ name, urlCard }) {
   return (

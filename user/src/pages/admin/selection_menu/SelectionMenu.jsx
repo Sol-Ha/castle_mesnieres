@@ -24,7 +24,7 @@ const SelectionMenu = () => {
         </Container>
 
         <Container fluid>
-          <Card name="CREER UN NOUVEL UTILISATEUR" urlCard="/admin/create_admin" />
+          <Card name="CREER UN NOUVEL UTILISATEUR" urlCard="/admin/manage_moderator" />
           <Card name="EVENEMENTS & PRESSE" urlCard="/admin/path_events&news" />
           <Card name="NOS PARTENAIRES" />
           <Card name="EMPLOIS & STAGES" />

@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import Card from "../../../components/admin/card/Card";
 import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
 import "./pathBedroomDormitory.scss";

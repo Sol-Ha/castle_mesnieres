@@ -76,6 +76,12 @@
   font-size: 0.9em;
 }
 
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @mixin btnType1{
   width: 30%;
   font-size: 0.9vw;
@@ -103,7 +109,7 @@
     margin-inline: 5%;
   }
   p {
-    font-weight: 400;
-    font-size: 0.9vw;
+    font-weight: 500;
+    font-size: 1.2vh;
   }
 }
