@@ -19,11 +19,6 @@ const SelectionMenu = () => {
 
       <main className="main_SelectionMenu">
         <Container fluid>
-          <Image
-            src="../assets/images/paint_brush1.png"
-            alt="icone de deconnexion"
-          />
-
           {/* USER: GRAB USER FIRSTNAME */}
           <p>
             Bonjour, !<br />

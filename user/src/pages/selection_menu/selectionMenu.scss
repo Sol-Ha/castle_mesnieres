@@ -43,8 +43,10 @@ button{
 // main 
 
 .main_SelectionMenu{
-    height: 200vh;
+    height: auto;
     width: 100%;
+
+    // container display name
     div.container-fluid:first-child{
         width: 35%;
         height: 38vh;
@@ -53,6 +55,9 @@ button{
         flex-direction: row;
         justify-content: center;
         align-self: center;
+        background-image: url("../../../public/assets/images/paint_brush1.png");
+        background-size:cover;
+        background-repeat: no-repeat;
 
         img{
             @include responsiveImg
@@ -75,7 +80,7 @@ button{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin-inline: 5%;
+        margin: -5% 5% 5% 5%;
 
     .card_back{
         margin: 3%;
