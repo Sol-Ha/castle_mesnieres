@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, Container } from "react-bootstrap";
+import { Image } from "react-bootstrap";
 import "./bottomNav.scss";
 
 // rfce for function

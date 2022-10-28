@@ -9,7 +9,7 @@ const SelectionMenu = () => {
       {/* DISCONNECTING USER */}
       <nav className="nav_SelectionMenu">
         <button>
-          <Image src="../assets/icones/off.svg" alt="icone de deconnexion" />
+          <Image src="../../assets/icones/off.svg" alt="icone de deconnexion" />
           <a href="Login">DECONNEXION</a>
         </button>
       </nav>
@@ -25,11 +25,11 @@ const SelectionMenu = () => {
 
         <Container fluid>
           <Card name="CREER UN NOUVEL UTILISATEUR" urlCard="/admin/create_admin" />
-          <Card name="EVENEMENTS & PRESSE" />
+          <Card name="EVENEMENTS & PRESSE" urlCard="/admin/path_events&news" />
           <Card name="NOS PARTENAIRES" />
           <Card name="EMPLOIS & STAGES" />
           <Card name="VISITER" />
-          <Card name="HEBERGEMENT" />
+          <Card name="HEBERGEMENT" urlCard="/admin/path_bedroom&dormitory" />
           <Card name="LOUER NOS SALLES" />
           <Card name="RESTAURATION" />
         </Container>
