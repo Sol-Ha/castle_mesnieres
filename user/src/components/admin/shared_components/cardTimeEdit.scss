@@ -9,22 +9,7 @@
       margin: 5% 7% 5% 7%;
       @include center;
       flex-direction: row;
-  
-    //   &:hover {
-    //     div:first-child,
-    //     div:last-child {
-    //       background-color: $txt;
-  
-    //       p {
-    //         color: $white;
-    //       }
-    //       img {
-    //         filter: brightness(0) saturate(100%) invert(99%) sepia(3%)
-    //           saturate(832%) hue-rotate(282deg) brightness(116%) contrast(100%);
-    //       }
-    //     }
-    //   }
-  
+    
       p {
         font-weight: 500;
         font-size: 2.2vh;

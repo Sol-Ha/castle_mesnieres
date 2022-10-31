@@ -1,20 +1,19 @@
-import React from "react";
 import { Container } from "react-bootstrap";
 import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
 import CardTime from "../../../components/admin/shared_components/CardTime";
 import CardTimeEdit from "../../../components/admin/shared_components/CardTimeEdit";
-import "./manageModerator.scss";
+import "./manageEvents.scss";
 
-const ManageModerator = () => {
+const ManageEvents = () => {
   return (
     <>
-      <BottomNav name="GESTION DES MODERATEURS" />
+      <BottomNav name="GESTION DES EVENEMENTS" />
 
-      <section className="manage_mod">
+      <section className="manage_events">
         <div className="side_image"></div>
         <Container>
           <CardTime
-            url="/admin/create_moderator"
+            url="/admin/create_event"
             date="_ _ /_ _ / _ _"
             firstName="_ _ _ _ _ _"
             lastName="_ _ _ _ _ _"
@@ -23,7 +22,7 @@ const ManageModerator = () => {
 
           <div className="manage_mode_feed">
           <CardTimeEdit 
-                      url="/admin/edit_moderator"
+                      url="/admin/edit_event"
                       date="_ _ /_ _ / _ _"
                       firstName="_ _ _ _ _ _"
                       lastName="_ _ _ _ _ _"
@@ -32,7 +31,7 @@ const ManageModerator = () => {
         </Container>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default ManageModerator;
+export default ManageEvents

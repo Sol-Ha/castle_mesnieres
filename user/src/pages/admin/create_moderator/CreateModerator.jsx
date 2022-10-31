@@ -1,6 +1,6 @@
 import React from 'react';
+import FormModerator from '../../../components/admin/forms/form_moderator/FormModerator';
 import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
-import "./createModerator.scss";
 
 const CreateModerator = () => {
   return (
@@ -8,8 +8,11 @@ const CreateModerator = () => {
     <BottomNav
     name="CREATION D'UN MODERATEUR"
     />
-
-    
+    <FormModerator 
+    subject="NOUVEAU MODERATEUR"
+    button="CREER"
+    />
+                {/* SEND INFORMATIONS TO DATABASE */}
   </>
   )
 }

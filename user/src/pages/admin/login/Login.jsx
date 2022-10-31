@@ -1,8 +1,8 @@
-import { React, useContext, useState } from 'react';
+// import { useContext, useState } from "react";
 // import { AuthContext } from '../../../context/authContext';
 import { Button, Form, Image, Row } from 'react-bootstrap';
 import "./login.scss";
-import axios from 'axios';
+// import axios from 'axios';
 
 const Login = () => {
 

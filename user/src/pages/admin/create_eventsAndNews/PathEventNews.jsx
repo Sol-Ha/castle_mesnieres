@@ -7,7 +7,7 @@ import "./pathEventNews.scss";
 const PathEventNews = () => {
   return (
     <>
-      <BottomNav name="EVENEMENT & PRESSE" />
+      <BottomNav name="EVENEMENTS & PRESSE" />
 
 <div className="pathEvent">
       <div className="side_image"></div>
@@ -15,8 +15,8 @@ const PathEventNews = () => {
       <h2>Ou souhaitez-vous aller?</h2>
         <div>
         <Card
-          name="CREER UN NOUVEL UTILISATEUR"
-          urlCard="/admin/create_admin"
+          name="CREER UN EVENEMENT"
+          urlCard="/admin/manage_events"
         />
         <Card name="EVENEMENTS & PRESSE" urlCard="/admin/path_events&news" />
         </div>

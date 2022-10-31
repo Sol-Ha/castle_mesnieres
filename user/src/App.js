@@ -16,8 +16,13 @@ import SelectionMenu from "./pages/admin/selection_menu/SelectionMenu";
 import ManageModerator from "./pages/admin/create_moderator/ManageModerator";
 import CreateModerator from "./pages/admin/create_moderator/CreateModerator";
 import EditModerator from "./pages/admin/create_moderator/EditModerator";
+
 import PathBedroomDormitory from "./pages/admin/path_bedrooms_dormitory/PathBedroomDormitory";
-import PathEventNews from "./pages/admin/path_event_news/PathEventNews";
+
+import PathEventNews from "./pages/admin/create_eventsAndNews/PathEventNews";
+import ManageEvents from "./pages/admin/create_eventsAndNews/ManageEvents";
+import CreateEvent from "./pages/admin/create_eventsAndNews/CreateEvent";
+import EditEvent from "./pages/admin/create_eventsAndNews/EditEvent";
 
 function App() {
   
@@ -40,6 +45,9 @@ function App() {
         <Route path="/admin/edit_moderator" element={<EditModerator />}/>
 
         <Route path='/admin/path_events&news' element={<PathEventNews />}/>
+        <Route path="/admin/manage_events" element={<ManageEvents />}/>
+        <Route path="/admin/edit_event" element={<EditEvent />}/>
+        <Route path="/admin/create_event" element={<CreateEvent />}/>
 
         <Route path='/admin/path_bedroom&dormitory' element={<PathBedroomDormitory />}/>
 
