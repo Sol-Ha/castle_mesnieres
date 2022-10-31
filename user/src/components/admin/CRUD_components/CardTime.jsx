@@ -11,7 +11,7 @@ function cardTime({url, date, firstName, lastName}) {
         <p>{date}</p>
         </div>
       <div>
-        <p>{firstName}</p>
+        <p>{firstName} &nbsp; &nbsp;</p>
         <p>{lastName}</p>
       </div>
       <div>

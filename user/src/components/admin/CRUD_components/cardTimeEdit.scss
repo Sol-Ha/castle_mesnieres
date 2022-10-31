@@ -1,0 +1,116 @@
+@import "../../../styles/_fonts.scss";
+@import "../../../styles/_variable.scss";
+@import "../../../styles/_mixin.scss";
+@import "~bootstrap/scss/bootstrap";
+  
+    .cardTimeEdit {
+      width: 80%;
+      height: 10vh;
+      margin: 5% 7% 5% 7%;
+      @include center;
+      flex-direction: row;
+  
+    //   &:hover {
+    //     div:first-child,
+    //     div:last-child {
+    //       background-color: $txt;
+  
+    //       p {
+    //         color: $white;
+    //       }
+    //       img {
+    //         filter: brightness(0) saturate(100%) invert(99%) sepia(3%)
+    //           saturate(832%) hue-rotate(282deg) brightness(116%) contrast(100%);
+    //       }
+    //     }
+    //   }
+  
+      p {
+        font-weight: 500;
+        font-size: 2.2vh;
+      }
+  
+      div:first-child {
+        @include center;
+        height: inherit;
+        width: 20%;
+        border: 0.1vh $txt solid;
+        border-right: none;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        
+      }
+  
+      div:nth-child(2) {
+        @include center;
+        height: inherit;
+        width: 55%;
+        margin-right: 4%;
+        align-content: flex-start;
+        justify-content:start;
+        border: 0.1vh $txt solid;
+        padding-left: 5%;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+  
+      div:nth-child(3) {
+        @include center;
+        height: inherit;
+        width: 15%;
+        align-content: flex-start;
+        justify-content:start;
+        border: 0.1vh $txt solid;
+        border-right: none;
+        padding-left: 5%;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        img {
+            width: 4vh;
+            margin-right: 35%;
+            height: auto;
+          }
+
+          &:hover {
+            background-color: $txt;
+    
+            p {
+              color: $white;
+            }
+            img {
+              filter: brightness(0) saturate(100%) invert(99%) sepia(3%)
+                saturate(832%) hue-rotate(282deg) brightness(116%) contrast(100%);
+            }
+          }
+      }
+
+      a:last-child {
+        @include center;
+        border: 0.1vh $txt solid;
+        width: 15%;
+        height: inherit;
+        display: flex;
+        align-content: flex-end;
+        justify-content:end;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
+        img {
+          width: 4vh;
+          margin-right: 35%;
+          height: auto;
+        }
+
+              &:hover {
+          background-color: $txt;
+  
+          p {
+            color: $white;
+          }
+          img {
+            filter: brightness(0) saturate(100%) invert(99%) sepia(3%)
+              saturate(832%) hue-rotate(282deg) brightness(116%) contrast(100%);
+          }
+        }
+      }
+      }
+
+
+  

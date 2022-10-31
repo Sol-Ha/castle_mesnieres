@@ -13,8 +13,9 @@ import ParcEtDomaine from "./pages/user/parc_et_domaine/ParcEtDomaine";
 import Login from "./pages/admin/login/Login";
 import SelectionMenu from "./pages/admin/selection_menu/SelectionMenu";
 
-import ManageModerator from "./pages/admin/manage_moderator/ManageModerator";
+import ManageModerator from "./pages/admin/create_moderator/ManageModerator";
 import CreateModerator from "./pages/admin/create_moderator/CreateModerator";
+import EditModerator from "./pages/admin/create_moderator/EditModerator";
 import PathBedroomDormitory from "./pages/admin/path_bedrooms_dormitory/PathBedroomDormitory";
 import PathEventNews from "./pages/admin/path_event_news/PathEventNews";
 
@@ -36,6 +37,7 @@ function App() {
 
         <Route path="/admin/manage_moderator" element={<ManageModerator />}/>
         <Route path="/admin/create_moderator" element={<CreateModerator />}/>
+        <Route path="/admin/edit_moderator" element={<EditModerator />}/>
 
         <Route path='/admin/path_events&news' element={<PathEventNews />}/>
 
