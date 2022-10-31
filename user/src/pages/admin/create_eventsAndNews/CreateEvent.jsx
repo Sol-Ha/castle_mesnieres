@@ -8,6 +8,7 @@ const CreateEvent = () => {
 
     <FormEvent 
     subject="NOUVEL EVENEMENT"
+    button="CREER"
     />
     </>
   )

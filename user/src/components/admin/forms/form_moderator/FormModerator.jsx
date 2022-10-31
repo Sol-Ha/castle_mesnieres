@@ -71,7 +71,7 @@ function FormModerator({ subject, button}) {
         <Form.Label>
           <span>* </span>DATE DE LA FIN DU CONTRAT
         </Form.Label>
-        <Form.Control className="inputEndContract"
+        <Form.Control className="inputhalf"
           name="contract_end"
           type="date"
           placeholder="exemple: 01/01/1990"

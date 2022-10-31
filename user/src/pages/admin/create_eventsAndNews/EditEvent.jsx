@@ -7,6 +7,7 @@ const EditEvent = () => {
     <BottomNav name="EDITER UN EVENEMENT" />
     <FormEvent 
     subject="CHANGER LES INFORMATIONS D'UN EVENEMENT"
+    button="CHANGER"
     />
     </>
   )
