@@ -16,7 +16,7 @@ function FormModerator({ subject, button}) {
           <span>* </span>NOM
         </Form.Label>
         <Form.Control
-          name="lastName"
+          name="user_lastName"
           type="text"
           placeholder="exemple: Dupont"
           required
@@ -29,7 +29,7 @@ function FormModerator({ subject, button}) {
           <span>* </span>PRENOM
         </Form.Label>
         <Form.Control
-          name="firstName"
+          name="user_firstName"
           type="text"
           placeholder="exemple: Jean"
           required
@@ -45,7 +45,7 @@ function FormModerator({ subject, button}) {
           <span>* </span>DATE DE NAISSANCE
         </Form.Label>
         <Form.Control
-          name="birthday_user"
+          name="user_birthday"
           type="date"
           placeholder="exemple: Dupont"
           required
@@ -58,7 +58,7 @@ function FormModerator({ subject, button}) {
                     <span>* </span>E-MAIL
                   </Form.Label>
                   <Form.Control
-                    name="email"
+                    name="user_email"
                     type="email"
                     placeholder="exemple: dupont@chateau.com"
                     required
@@ -72,7 +72,7 @@ function FormModerator({ subject, button}) {
           <span>* </span>DATE DE LA FIN DU CONTRAT
         </Form.Label>
         <Form.Control className="inputhalf"
-          name="contract_end"
+          name="user_contractEnd"
           type="date"
           placeholder="exemple: 01/01/1990"
           required

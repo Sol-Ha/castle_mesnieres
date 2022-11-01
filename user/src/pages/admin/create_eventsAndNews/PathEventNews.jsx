@@ -18,7 +18,7 @@ const PathEventNews = () => {
           name="CREER UN EVENEMENT"
           urlCard="/admin/manage_events"
         />
-        <Card name="EVENEMENTS & PRESSE" urlCard="/admin/path_events&news" />
+        <Card name="EVENEMENTS & PRESSE" urlCard="/admin/manage_news" />
         </div>
       </Container>
       </div>

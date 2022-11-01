@@ -43,15 +43,20 @@
       }
     }
   
-    #formGroupAssociation,
-    #formGroupFirstName,
-    #formGroupLastName,
-    #formGroupAssociation,
-    textarea,
-    #formGroupEmail,
-    #formFileLg.form-control.form-control-lg,
-    #formGroupPhone {
+    label{
+      color: $txt!important;
+      font-size: 1vw !important;
+    }
+
+    ::placeholder, input[type=date], input[type=file]{
+      color: $slate !important;
+      font-size: 1vw !important;
+}
+
+
+    input, textarea {
       border-color: $txt;
+      color: $dark_grey !important;
       font-size: 1.2vw !important;
       font-style: italic;
       resize: none;
@@ -59,9 +64,14 @@
         box-shadow: 0 0 0 0.2rem rgba(214, 96, 96, 0.438);
         border-color: $red;
       }
+
     }
     .inputhalf {
       width: 48%;
+    }
+
+    .centeredRow{
+      margin-inline: 10%;
     }
   
     button.btn.btn-primary {

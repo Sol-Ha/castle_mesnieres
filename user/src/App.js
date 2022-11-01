@@ -16,13 +16,18 @@ import SelectionMenu from "./pages/admin/selection_menu/SelectionMenu";
 import ManageModerator from "./pages/admin/create_moderator/ManageModerator";
 import CreateModerator from "./pages/admin/create_moderator/CreateModerator";
 import EditModerator from "./pages/admin/create_moderator/EditModerator";
-
-import PathBedroomDormitory from "./pages/admin/path_bedrooms_dormitory/PathBedroomDormitory";
-
+// articles & news
 import PathEventNews from "./pages/admin/create_eventsAndNews/PathEventNews";
 import ManageEvents from "./pages/admin/create_eventsAndNews/ManageEvents";
 import CreateEvent from "./pages/admin/create_eventsAndNews/CreateEvent";
 import EditEvent from "./pages/admin/create_eventsAndNews/EditEvent";
+import ManageNews from "./pages/admin/create_eventsAndNews/ManageNews";
+import CreateNews from "./pages/admin/create_eventsAndNews/CreateNews";
+import EditNews from "./pages/admin/create_eventsAndNews/EditNews";
+// bedrooms dorms and camping
+import PathBedroomDormitory from "./pages/admin/create_bedroomsAndDorms/PathBedroomDormitory";
+import ManageBedrooms from "./pages/admin/create_bedroomsAndDorms/ManageBedrooms";
+import ManageDorms from "./pages/admin/create_bedroomsAndDorms/ManageDorms";
 
 function App() {
   
@@ -44,12 +49,18 @@ function App() {
         <Route path="/admin/create_moderator" element={<CreateModerator />}/>
         <Route path="/admin/edit_moderator" element={<EditModerator />}/>
 
+        {/* // articles & news */}
         <Route path='/admin/path_events&news' element={<PathEventNews />}/>
         <Route path="/admin/manage_events" element={<ManageEvents />}/>
         <Route path="/admin/edit_event" element={<EditEvent />}/>
         <Route path="/admin/create_event" element={<CreateEvent />}/>
-
+        <Route path="/admin/manage_news" element={<ManageNews />}/>
+        <Route path="/admin/create_news" element={<CreateNews />}/>
+        <Route path="/admin/edit_news" element={<EditNews />}/>
+        {/* // bedrooms dorms and camping */}
         <Route path='/admin/path_bedroom&dormitory' element={<PathBedroomDormitory />}/>
+        <Route path='/admin/manage_bedrooms' element={<ManageBedrooms/>}/>
+        <Route path='/admin/manage_dorms_and_camping' element={<ManageDorms/>}/>
 
       </Routes>
 
