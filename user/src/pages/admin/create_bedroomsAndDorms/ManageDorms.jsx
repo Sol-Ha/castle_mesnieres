@@ -1,5 +1,5 @@
 import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
-import DropDown from "../../../components/admin/shared_components/DropDown";
+import DropDown from "../../../components/admin/shared_components/Accordion";
 
 const ManageDorms = () => {
   return (
