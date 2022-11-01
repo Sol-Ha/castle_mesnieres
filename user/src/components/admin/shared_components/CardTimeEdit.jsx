@@ -13,10 +13,10 @@ function CardTimeEdit({url, date, firstName, lastName}) {
         <p>{lastName}</p>
       </div>
       <div>
-        <Image src="../../assets/icones/delete.svg"/>
+        <Image src="../../assets/icones/delete.svg" alt="image d'une croix"/>
       </div>
       <a href={url}>
-        <Image src="../../assets/icones/edit_create.svg"/>
+        <Image src="../../assets/icones/edit_create.svg" alt="image d'un stylo"/>
       </a>
     </article>
   )

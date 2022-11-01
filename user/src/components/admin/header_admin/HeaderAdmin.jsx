@@ -15,7 +15,7 @@ const HeaderAdmin = () => {
       </div>
     <Image
     src="../assets/photos/castle_back.avif"
-    alt="illustration du logo du château"/>
+    alt="illustration du logo du château" />
     </header>
   )
 }

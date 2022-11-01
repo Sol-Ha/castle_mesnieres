@@ -1,4 +1,3 @@
-import React from "react";
 import { Image } from "react-bootstrap";
 import "./cardTime.scss";
 
@@ -15,7 +14,7 @@ function cardTime({url, date, firstName, lastName}) {
         <p>{lastName}</p>
       </div>
       <div>
-        <Image src="../../assets/icones/edit_create.svg"/>
+        <Image src="../../assets/icones/edit_create.svg" alt="image d'un stylo"/>
       </div>
     </article>
     </a>

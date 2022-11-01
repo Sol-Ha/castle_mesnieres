@@ -3,13 +3,14 @@ import DropDown from "../../../components/admin/shared_components/DropDown";
 
 const manageBedrooms = () => {
   return (
-<>
-<BottomNav
-    name="EDITER LES CHAMBRES DU CHATEAU"
-    />
-        <DropDown/>
+    <>
+      <BottomNav name="EDITER LES CHAMBRES DU CHATEAU" />
+      <DropDown title="Chambre : Suite" />
+      <DropDown title="Chambre : Jumeau" />
+      <DropDown title="Chambre : Triple" />
+      <DropDown title="Chambre : Quadruple" />
     </>
-  )
-}
+  );
+};
 
-export default manageBedrooms
+export default manageBedrooms;
