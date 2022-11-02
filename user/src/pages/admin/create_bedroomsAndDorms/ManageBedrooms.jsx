@@ -1,16 +1,49 @@
+import React, { useState } from 'react';
 import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
-import DropDown from "../../../components/admin/shared_components/Accordion";
+import Accordion from "../../../components/admin/shared_components/AccordionA";
+import "./manage.scss";
 
-const manageBedrooms = () => {
+const ManageBedrooms = () => {
+  // accordion auto
+  // index start at 0 so no content is shown
+  // "activeContent" is what's already in motion while "nextActivation" is the next one to turn on
+  const [activeContent, nextActivation] = useState(0); 
   return (
     <>
       <BottomNav name="EDITER LES CHAMBRES DU CHATEAU" />
-      <DropDown title="Chambre : Suite" />
-      <DropDown title="Chambre : Jumeau" />
-      <DropDown title="Chambre : Triple" />
-      <DropDown title="Chambre : Quadruple" />
+      <Accordion
+      title="Chambre: Suite"
+
+      // activeContent at the start will be 1, therefore our first accordion will be open at the starting point of our application.
+      index={1}
+      activeContent={activeContent}
+      nextActivation={nextActivation}
+      content="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est illum sequi dolores distinctio eligendi earum optio quae eaque totam exercitationem? Tempora, autem! Repudiandae reiciendis molestiae aut itaque aliquid nam quod."
+      />
+            <Accordion
+      title="Chambre: Jumeaux"
+      index={2}
+      activeContent={activeContent}
+      nextActivation={nextActivation}
+      content="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est illum sequi dolores distinctio eligendi earum optio quae eaque totam exercitationem? Tempora, autem! Repudiandae reiciendis molestiae aut itaque aliquid nam quod."
+      />
+            <Accordion
+      title="Chambre: Triple"
+      index={3}
+      activeContent={activeContent}
+      nextActivation={nextActivation}
+      content="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est illum sequi dolores distinctio eligendi earum optio quae eaque totam exercitationem? Tempora, autem! Repudiandae reiciendis molestiae aut itaque aliquid nam quod."
+      />
+                  <Accordion
+      title="Chambre: Quadruple"
+      index={4}
+      activeContent={activeContent}
+      nextActivation={nextActivation}
+      content="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est illum sequi dolores distinctio eligendi earum optio quae eaque totam exercitationem? Tempora, autem! Repudiandae reiciendis molestiae aut itaque aliquid nam quod."
+      />
+
     </>
   );
 };
 
-export default manageBedrooms;
+export default ManageBedrooms;
