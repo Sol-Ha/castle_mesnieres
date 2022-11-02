@@ -2,7 +2,7 @@ import React from "react";
 import { Image } from "react-bootstrap";
 import "./cardTimeEdit.scss";
 
-function CardTimeEdit({url, date, firstName, lastName}) {
+const CardTimeEdit = ({url, date, firstName, lastName}) => {
   return (
     <article className="cardTimeEdit">
       <div>

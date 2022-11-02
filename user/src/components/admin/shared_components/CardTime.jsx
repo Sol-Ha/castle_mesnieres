@@ -1,8 +1,7 @@
 import { Image } from "react-bootstrap";
 import "./cardTime.scss";
 
-// rfce for function
-function cardTime({url, date, firstName, lastName}) {
+const cardTime = ({url, date, firstName, lastName}) => {
   return (
     <a href={url} className="cardTime">
     <article>

@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Form, Col, Button } from "react-bootstrap";
 import "./formModerator.scss";
 
-function FormModerator({ subject, button}) {
+const FormModerator = ({ subject, button}) =>{
   return (
     <Form className="formModerator" action="/admin/manage_moderator">
       <h2>{subject}</h2>

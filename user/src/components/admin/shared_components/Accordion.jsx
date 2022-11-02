@@ -1,7 +1,7 @@
 import { Image } from "react-bootstrap";
 import "./accordion.scss";
 
-function DropDown({title}) {
+const DropDown = ({title}) => {
 
 
 

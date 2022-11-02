@@ -1,7 +1,7 @@
 import { Row, Form, Col, Button } from "react-bootstrap";
 
 // rfce for function
-function FormNews({subject, button}) {
+const FormNews = ({subject, button}) => {
   return (
     <>
     <Form className="formEvent" action="/admin/manage_news">

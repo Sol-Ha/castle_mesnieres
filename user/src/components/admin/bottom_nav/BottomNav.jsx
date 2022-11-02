@@ -3,7 +3,7 @@ import { Image } from "react-bootstrap";
 import "./bottomNav.scss";
 
 // rfce for function
-function BottomNav({name}) {
+const BottomNav = ({name}) => {
   return (
     <>
     {/* DISCONNECTING USER */}

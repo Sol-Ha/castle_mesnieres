@@ -2,8 +2,8 @@
 import { Row, Form, Col, Button } from "react-bootstrap";
 import "./formEvent.scss";
 
-// rfce for function
-function FormEvent({ subject, button }) {
+
+const FormEvent = ({ subject, button }) => {
   // locking slider
   // const [show, setShow] = useState(false);
 
