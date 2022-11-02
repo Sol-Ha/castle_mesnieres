@@ -11,9 +11,12 @@ const ManageBedrooms = () => {
   return (
     <>
       <BottomNav name="EDITER LES CHAMBRES DU CHATEAU" />
- 
+
+ <h2 className='titleBackend'>CHAMBRES:</h2>
+
       <Accordion
-      title="Chambre: Suite"
+      bedroomName="Chambre: Suite"
+      title="bedroom_title"
       // activeContent at the start will be 1, therefore our first accordion will be open at the starting point of our application.
       index={1}
       activeContent={activeContent}
@@ -21,21 +24,22 @@ const ManageBedrooms = () => {
       />
 
             <Accordion
-      title="Chambre: Jumeaux"
+      bedroomName="Chambre: Jumeaux"
+      title="bedroom_Title"
       index={2}
       activeContent={activeContent}
       nextActivation={nextActivation}
       />
 
             <Accordion
-      title="Chambre: Triple"
+      bedroomName="Chambre: Triple"
       index={3}
       activeContent={activeContent}
       nextActivation={nextActivation}
       />
 
                   <Accordion
-      title="Chambre: Quadruple"
+      bedroomName="Chambre: Quadruple"
       index={4}
       activeContent={activeContent}
       nextActivation={nextActivation}

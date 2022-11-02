@@ -1,11 +1,11 @@
 import { Row, Form, Col, Button } from "react-bootstrap";
 import "./formAccomodation.scss";
 
-const formAccomodation = () => {
+const formAccomodation = ({title, image, message, lowSeason, highSeason }) => {
   return (
     <>
     <Form className="formAccomodation">
- 
+ <h3>{title}</h3>
       <p>
         <span>* </span>Les champs marqués par une étoile sont obligatoires
       </p>
@@ -17,7 +17,7 @@ const formAccomodation = () => {
               <span>* </span>TITRE
             </Form.Label>
             <Form.Control
-              name="bedroom_title"
+              name={title}
               type="text"
               placeholder="exemple: Suite"
               required
@@ -31,7 +31,7 @@ const formAccomodation = () => {
           <Form.Label>
             <span>* </span>INSERER UNE IMAGE
           </Form.Label>
-          <Form.Control type="file" size="lg" name="bedroom_image" required />
+          <Form.Control type="file" size="lg" name={image} required />
         </Form.Group>
         </Col>
 
@@ -42,7 +42,7 @@ const formAccomodation = () => {
             <span>* </span>CONTENU
           </Form.Label>
           <Form.Control
-            name="bedroom_message"
+            name={message}
             className="mb-4"
             as="textarea"
             rows={"10"}
@@ -59,7 +59,7 @@ const formAccomodation = () => {
               <span>* </span>PRIX BASSE SAISON ( € )
             </Form.Label>
             <Form.Control
-              name="bedroom_priceLowSeason"
+              name={lowSeason}
               type="number"
               placeholder="exemple: 10,80"
               required
@@ -71,7 +71,7 @@ const formAccomodation = () => {
               <span>* </span>PRIX HAUTE SAISON ( € )
             </Form.Label>
             <Form.Control
-              name="bedroom_priceHighSeason"
+              name={highSeason}
               type="number"
               placeholder="exemple: 10,80"
               required

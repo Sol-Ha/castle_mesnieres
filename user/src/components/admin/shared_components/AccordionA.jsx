@@ -3,7 +3,7 @@ import FormAccomodation from "../forms/form_accomodation/FormAccomodation";
 import "./accordion.scss";
 // index start at 0 so no content is shown
 // "activeContent" is what's already in motion while "nextActivation" is the next one to turn on
-const accordionA = ({ title, index, activeContent, nextActivation }) => {
+const accordionA = ({ bedroomName, index, activeContent, nextActivation }) => {
   const handleSetIndex = (index) =>
     activeContent !== index && nextActivation(index);
   return (
@@ -11,7 +11,7 @@ const accordionA = ({ title, index, activeContent, nextActivation }) => {
       <article className="fullAccordion">
         <header>
           <div>
-            <h3>{title}</h3>
+            <h3>{bedroomName}</h3>
           </div>
           <div onClick={() => handleSetIndex(index)}>
             <Image
