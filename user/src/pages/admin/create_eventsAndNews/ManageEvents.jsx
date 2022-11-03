@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import Btnreturn from "../../../components/admin/shared_components/Btnreturn";
 import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
 import CardTime from "../../../components/admin/shared_components/CardTime";
 import CardTimeEdit from "../../../components/admin/shared_components/CardTimeEdit";
@@ -8,6 +9,8 @@ const ManageEvents = () => {
   return (
     <>
       <BottomNav name="GESTION DES EVENEMENTS" />
+
+      <Btnreturn urlCard="/admin/path_events&news"/>
 
       <section className="manage_events">
         <div className="side_image"></div>
