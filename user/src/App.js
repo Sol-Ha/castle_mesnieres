@@ -17,13 +17,13 @@ import ManageModerator from "./pages/admin/create_moderator/ManageModerator";
 import CreateModerator from "./pages/admin/create_moderator/CreateModerator";
 import EditModerator from "./pages/admin/create_moderator/EditModerator";
 // articles & news
-import PathEventNews from "./pages/admin/create_eventsAndNews/PathEventNews";
-import ManageEvents from "./pages/admin/create_eventsAndNews/ManageEvents";
-import CreateEvent from "./pages/admin/create_eventsAndNews/CreateEvent";
-import EditEvent from "./pages/admin/create_eventsAndNews/EditEvent";
-import ManageNews from "./pages/admin/create_eventsAndNews/ManageNews";
-import CreateNews from "./pages/admin/create_eventsAndNews/CreateNews";
-import EditNews from "./pages/admin/create_eventsAndNews/EditNews";
+import PathEventNews from "./pages/admin/events_News/PathEventNews";
+import ManageEvents from "./pages/admin/events_News/ManageEvents";
+import CreateEvent from "./pages/admin/events_News/CreateEvent";
+import EditEvent from "./pages/admin/events_News/EditEvent";
+import ManageNews from "./pages/admin/events_News/ManageNews";
+import CreateNews from "./pages/admin/events_News/CreateNews";
+import EditNews from "./pages/admin/events_News/EditNews";
 // bedrooms dorms and camping
 import PathBedroomDormitory from "./pages/admin/bedrooms_Dorms/PathBedroomDormitory";
 import ManageBedrooms from "./pages/admin/bedrooms_Dorms/ManageBedrooms";
