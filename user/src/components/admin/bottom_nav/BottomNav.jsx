@@ -3,15 +3,15 @@ import { Image } from "react-bootstrap";
 import "./bottomNav.scss";
 
 // rfce for function
-function BottomNav({name}) {
+const BottomNav = ({name}) => {
   return (
     <>
     {/* DISCONNECTING USER */}
     <nav className="bottom_nav">
-      <button>
+      <a href="/admin/selection_menu">
         <Image src="../assets/icones/stag.svg" alt="icone de retour vers le menu principal" />
-        <a href="/admin/selection_menu">PAGE D'ACCUEIL</a>
-      </button>
+        <h2>PAGE D'ACCUEIL</h2>
+      </a>
 
       <span></span>
       <h2>{name}</h2>

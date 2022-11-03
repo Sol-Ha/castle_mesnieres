@@ -1,0 +1,41 @@
+@import "../../../../styles/_fonts.scss";
+@import "../../../../styles/_variable.scss";
+@import "../../../../styles/_mixin.scss";
+@import "~bootstrap/scss/bootstrap";
+
+.formAccomodation{
+    padding: 4%;
+
+    span{
+        font-size: 2vw;
+        color: $red;
+    }
+
+    input, textarea {
+        border-color: $txt;
+        color: $dark_grey !important;
+        font-size: 1.2vw !important;
+        font-style: italic;
+        resize: none;
+        &:focus {
+          box-shadow: 0 0 0 0.2rem rgba(214, 96, 96, 0.438);
+          border-color: $red;
+        }
+    }
+
+    .inputhalf {
+        width: 48%;
+      }
+      
+    ::placeholder, input[type=file]{
+        color: $slate !important;
+        font-size: 1vw !important;
+  }
+
+    button.btn.btn-primary {
+        width: 30% !important;
+        @include btnType1;
+        padding: 1% 11%;
+        margin-inline: 35%;
+      }
+}

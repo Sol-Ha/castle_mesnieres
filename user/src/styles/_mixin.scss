@@ -78,8 +78,9 @@
 
 @mixin center {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
 
 @mixin btnType1{
@@ -92,6 +93,7 @@
 
   &:hover{
     color: $white;
+    background-color: $black;
   }
 }
 // calendar color map

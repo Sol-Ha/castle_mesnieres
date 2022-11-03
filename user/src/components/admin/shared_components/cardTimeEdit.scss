@@ -1,0 +1,92 @@
+@import "../../../styles/_fonts.scss";
+@import "../../../styles/_variable.scss";
+@import "../../../styles/_mixin.scss";
+@import "~bootstrap/scss/bootstrap";
+  
+    .cardTimeEdit {
+      width: 80%;
+      height: 10vh;
+      margin: 5% 7% 5% 7%;
+      @include center;
+    
+      p {
+        font-weight: 500;
+        font-size: 2.2vh;
+      }
+  
+      div:first-child {
+        width: 20%;
+        height: inherit;
+        @include center;
+        border: 0.1vh $txt solid;
+        border-right: none;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        
+      }
+  
+      div:nth-child(2) {
+        width: 55%;
+        height: inherit;
+        @include center;
+        margin-right: 4%;
+        border: 0.1vh $txt solid;
+        padding-left: 5%;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+  
+      div:nth-child(3) {
+        width: 15%;
+        height: inherit;
+        @include center;
+        border: 0.1vh $txt solid;
+        border-right: none;
+        padding-left: 5%;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        img {
+            width: 4vh;
+            margin-right: 35%;
+            height: auto;
+          }
+
+          &:hover {
+            background-color: $txt;
+    
+            p {
+              color: $white;
+            }
+            img {
+              filter: brightness(0) saturate(100%) invert(99%) sepia(3%)
+                saturate(832%) hue-rotate(282deg) brightness(116%) contrast(100%);
+            }
+          }
+      }
+
+      a:last-child {
+        width: 15%;
+        height: inherit;
+        @include center;
+        border: 0.1vh $txt solid;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
+        img {
+          width: 4vh;
+          height: auto;
+        }
+
+              &:hover {
+          background-color: $txt;
+  
+          p {
+            color: $white;
+          }
+          img {
+            filter: brightness(0) saturate(100%) invert(99%) sepia(3%)
+              saturate(832%) hue-rotate(282deg) brightness(116%) contrast(100%);
+          }
+        }
+      }
+      }
+
+
+  

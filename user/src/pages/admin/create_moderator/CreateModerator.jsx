@@ -1,17 +1,18 @@
-import React from 'react';
+import Btnreturn from "../../../components/admin/shared_components/Btnreturn";
+import FormModerator from "../../../components/admin/forms/form_moderator/FormModerator";
 import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
-import "./createModerator.scss";
 
 const CreateModerator = () => {
   return (
     <>
-    <BottomNav
-    name="CREATION D'UN MODERATEUR"
-    />
+      <BottomNav name="CREATION D'UN MODERATEUR" />
 
-    
-  </>
-  )
-}
+      <Btnreturn urlCard="/admin/manage_moderator" />
 
-export default CreateModerator
+      <FormModerator subject="NOUVEAU MODERATEUR" button="CREER" />
+      {/* SEND INFORMATIONS TO DATABASE */}
+    </>
+  );
+};
+
+export default CreateModerator;
