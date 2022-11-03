@@ -1,9 +1,10 @@
 import { Image } from "react-bootstrap";
-import FormAccomodation from "../forms/form_accomodation/FormAccomodation";
 import "./accordion.scss";
+
 // index start at 0 so no content is shown
 // "activeContent" is what's already in motion while "nextActivation" is the next one to turn on
-const accordionA = ({ bedroomName, index, activeContent, nextActivation }) => {
+
+const accordionA = ({ bedroomName, index, content, activeContent, nextActivation }) => {
   const handleSetIndex = (index) =>
     activeContent !== index && nextActivation(index);
   return (
@@ -23,7 +24,7 @@ const accordionA = ({ bedroomName, index, activeContent, nextActivation }) => {
 
         {activeContent === index && (
           <div className="contentForm">
-            <FormAccomodation />
+            {content}
           </div>
         )}
       </article>

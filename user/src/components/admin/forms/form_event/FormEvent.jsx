@@ -1,11 +1,8 @@
-// import { useState } from "react";
 import { Row, Form, Col, Button } from "react-bootstrap";
 import "./formEvent.scss";
 
 
 const FormEvent = ({ subject, button }) => {
-  // locking slider
-  // const [show, setShow] = useState(false);
 
   return (
     <Form className="formEvent" action="/admin/manage_event">

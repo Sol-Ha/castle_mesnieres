@@ -30,7 +30,7 @@ const SelectionMenu = () => {
           <Card name="EMPLOIS & STAGES" />
           <Card name="VISITER" />
           <Card name="HEBERGEMENT" urlCard="/admin/path_bedroom&dormitory" />
-          <Card name="LOUER NOS SALLES" />
+          <Card name="LOUER NOS SALLES" urlCard="/admin/rent_rooms" />
           <Card name="RESTAURATION" />
         </Container>
       </main>

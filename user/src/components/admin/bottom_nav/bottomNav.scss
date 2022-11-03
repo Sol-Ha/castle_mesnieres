@@ -10,6 +10,7 @@
     width: 100%;
     display: flex;
     font-weight: 600;
+    border-block: $black solid 0.2vh;
 
 a{
     width: 40vh;
@@ -36,8 +37,9 @@ a{
         img{
             filter: none;
         }
-        a{
+        h2{
             color: $black;
+            font-weight: 700;
         }
     }
 }

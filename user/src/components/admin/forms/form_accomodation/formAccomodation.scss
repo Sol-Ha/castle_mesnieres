@@ -4,7 +4,7 @@
 @import "~bootstrap/scss/bootstrap";
 
 .formAccomodation{
-    padding: 4%;
+    padding: 3% 4% 3% 4%;
 
     span{
         font-size: 2vw;
@@ -23,10 +23,15 @@
         }
     }
 
-    .inputhalf {
+    .halfsize {
         width: 48%;
       }
       
+      .form-check-input:checked{
+        background-color: $red;
+        
+      }
+
     ::placeholder, input[type=file]{
         color: $slate !important;
         font-size: 1vw !important;
