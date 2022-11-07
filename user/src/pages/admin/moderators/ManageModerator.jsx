@@ -11,7 +11,6 @@ const ManageModerator = () => {
       <BottomNav name="GESTION DES MODERATEURS" />
 
       <section className="manage_mod">
-        <div className="side_image"></div>
         <Container>
           <CardTime
             url="/admin/create_moderator"

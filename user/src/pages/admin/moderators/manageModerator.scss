@@ -1,0 +1,10 @@
+@import "../../../styles/_fonts.scss";
+@import "../../../styles/_variable.scss";
+@import "../../../styles/_mixin.scss";
+@import "~bootstrap/scss/bootstrap";
+
+.manage_mod {
+    display: flex;
+    flex-direction: row;
+    margin-block: 5%;
+}
