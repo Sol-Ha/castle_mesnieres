@@ -1,5 +1,5 @@
 import { Row, Form, Col, Button } from "react-bootstrap";
-import "./formPartner.scss";
+import "../form_moderator/formModerator.scss";
 
 
 const FormPartner = ({ subject, button }) => {

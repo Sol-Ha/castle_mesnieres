@@ -31,6 +31,11 @@ import ManagePartners from "./pages/admin/partners/ManagePartners";
 import EditPartner from "./pages/admin/partners/EditPartner";
 import CreatePartner from "./pages/admin/partners/CreatePartner";
 
+// partners
+import ManageHire from "./pages/admin/hire/ManageHire";
+import EditHire from "./pages/admin/hire/EditHire";
+import CreateHire from "./pages/admin/hire/CreateHire";
+
 // rent castle
 import Visit from "./pages/admin/visit/Visit";
 
@@ -80,6 +85,11 @@ function App() {
         <Route path="/admin/manage_partners" element={<ManagePartners />} />
         <Route path="/admin/create_partner" element={<CreatePartner />} />
         <Route path="/admin/edit_partner" element={<EditPartner />} />
+
+        {/* hire */}
+        <Route path="/admin/manage_hire" element={<ManageHire />} />
+        <Route path="/admin/create_hire" element={<CreateHire />} />
+        <Route path="/admin/edit_hire" element={<EditHire />} />
 
         {/* visit */}
         <Route path="/admin/visit_castle" element={<Visit />} />

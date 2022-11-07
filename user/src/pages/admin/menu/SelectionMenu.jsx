@@ -27,7 +27,7 @@ const SelectionMenu = () => {
           <Card name="NOUVEAU MODERATEUR" urlCard="/admin/manage_moderator" />
           <Card name="EVENEMENTS & PRESSE" urlCard="/admin/path_events&news" />
           <Card name="NOS PARTENAIRES" urlCard="/admin/manage_partners" />
-          <Card name="EMPLOIS & STAGES" />
+          <Card name="EMPLOIS & STAGES" urlCard="/admin/manage_hire"/>
           <Card name="VISITER" urlCard="/admin/visit_castle" />
           <Card name="HEBERGEMENT" urlCard="/admin/path_bedroom&dormitory" />
           <Card name="LOUER NOS SALLES" urlCard="/admin/rent_rooms" />
