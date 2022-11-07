@@ -1,51 +1,58 @@
+import Accordion from 'react-bootstrap/Accordion';
 import FormAccomodation from "../../../components/admin/forms/form_accomodation/FormAccomodation";
 import Btnreturn from "../../../components/admin/shared_components/Btnreturn";
 import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
-import Accordion from "../../../components/admin/shared_components/AccordionA";
 import "./manage.scss";
 
 const ManageDorms = () => {
-  // accordion auto
-  // index start at 0 so no content is shown
-  // "activeContent" is what's already in motion while "nextActivation" is the next one to turn on
-  // const [activeContent, nextActivation] = useState(0);
   return (
     <>
       <BottomNav name="EDITER LES DORTOIRS ET LE CAMPING" />
       <Btnreturn urlCard="/admin/path_bedroom&dormitory" />
 
-      {/* <Accordion
-        bedroomName="Dortoirs : Standards"
-        content={<FormAccomodation />}
-        // activeContent at the start will be 1, therefore our first accordion will be open at the starting point of our application.
-        index={1}
-        activeContent={activeContent}
-        nextActivation={nextActivation}
-      />
 
-      <Accordion
-        bedroomName="Gites de Groupe"
-        content={<FormAccomodation />}
-        index={2}
-        activeContent={activeContent}
-        nextActivation={nextActivation}
-      />
+      <Accordion defaultActiveKey="0" className='manageRoom' flush>
+      <Accordion.Item eventKey="0">
+        <Accordion.Header>Dortoirs : Standards</Accordion.Header>
+        <Accordion.Body>
 
-      <Accordion
-        content={<FormAccomodation />}
-        bedroomName="Chambres : Standard"
-        index={3}
-        activeContent={activeContent}
-        nextActivation={nextActivation}
-      />
+          {/* import form */}
+        <FormAccomodation        
+        />
+        </Accordion.Body>
+      </Accordion.Item>
 
-      <Accordion
-        content={<FormAccomodation />}
-        bedroomName="Camping"
-        index={4}
-        activeContent={activeContent}
-        nextActivation={nextActivation}
-      /> */}
+
+      <Accordion.Item eventKey="1">
+        <Accordion.Header>Gites de Groupe</Accordion.Header>
+        <Accordion.Body>
+
+          {/* import form */}
+          <FormAccomodation        
+        />      
+        </Accordion.Body>
+      </Accordion.Item>
+
+      <Accordion.Item eventKey="2">
+        <Accordion.Header>Chambres : Standard</Accordion.Header>
+        <Accordion.Body>
+
+          {/* import form */}
+          <FormAccomodation        
+        />      
+        </Accordion.Body>
+      </Accordion.Item>
+
+      <Accordion.Item eventKey="3">
+        <Accordion.Header>Camping</Accordion.Header>
+        <Accordion.Body>
+
+          {/* import form */}
+          <FormAccomodation        
+        />      
+        </Accordion.Body>
+      </Accordion.Item>
+    </Accordion>
     </>
   );
 };
