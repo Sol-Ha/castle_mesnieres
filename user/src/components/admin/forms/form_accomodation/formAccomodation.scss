@@ -11,17 +11,24 @@
         color: $red;
     }
 
-    input, textarea {
+    input, textarea, select {
         border-color: $txt;
         color: $dark_grey !important;
         font-size: 1.2vw !important;
         font-style: italic;
         resize: none;
+
         &:focus {
           box-shadow: 0 0 0 0.2rem rgba(214, 96, 96, 0.438);
           border-color: $red;
         }
     }
+
+    select option:checked {
+      background: linear-gradient(#d6d6d6, #d6d6d6);
+      background-color: $red !important; /* for IE */
+      color: $white !important;
+  }
 
     .halfsize {
         width: 48%;

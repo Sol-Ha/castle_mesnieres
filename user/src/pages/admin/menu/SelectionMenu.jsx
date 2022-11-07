@@ -28,7 +28,7 @@ const SelectionMenu = () => {
           <Card name="EVENEMENTS & PRESSE" urlCard="/admin/path_events&news" />
           <Card name="NOS PARTENAIRES" />
           <Card name="EMPLOIS & STAGES" />
-          <Card name="VISITER" />
+          <Card name="VISITER" urlCard="/admin/visit_castle"/>
           <Card name="HEBERGEMENT" urlCard="/admin/path_bedroom&dormitory" />
           <Card name="LOUER NOS SALLES" urlCard="/admin/rent_rooms" />
           <Card name="RESTAURATION" />

@@ -24,6 +24,10 @@ import EditEvent from "./pages/admin/articles/EditEvent";
 import ManageNews from "./pages/admin/articles/ManageNews";
 import CreateNews from "./pages/admin/articles/CreateNews";
 import EditNews from "./pages/admin/articles/EditNews";
+
+// rent castle
+import Visit from "./pages/admin/visit/Visit";
+
 // bedrooms dorms and camping
 import PathBedroomDormitory from "./pages/admin/accomodations/PathBedroomDormitory";
 import ManageBedrooms from "./pages/admin/accomodations/ManageBedrooms";
@@ -31,6 +35,7 @@ import ManageDorms from "./pages/admin/accomodations/ManageDorms";
 
 // rent rooms
 import ManageRooms from "./pages/admin/rentCastle/ManageRooms";
+
 
 function App() {
   // display differenet admin either header admin or header user
@@ -45,8 +50,10 @@ function App() {
         {/* admin */}
         <Route path="/admin/login" element={<Login />} />
 
+        {/* menu */}
         <Route path="/admin/selection_menu" element={<SelectionMenu />} />
 
+        {/* moderators */}
         <Route path="/admin/manage_moderator" element={<ManageModerator />} />
         <Route path="/admin/create_moderator" element={<CreateModerator />} />
         <Route path="/admin/edit_moderator" element={<EditModerator />} />
@@ -59,6 +66,10 @@ function App() {
         <Route path="/admin/manage_news" element={<ManageNews />} />
         <Route path="/admin/create_news" element={<CreateNews />} />
         <Route path="/admin/edit_news" element={<EditNews />} />
+
+        {/* visit */}
+        <Route path="/admin/visit_castle" element={<Visit />} />
+
         {/* bedrooms dorms and camping */}
         <Route
           path="/admin/path_bedroom&dormitory"
