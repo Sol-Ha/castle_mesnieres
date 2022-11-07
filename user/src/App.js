@@ -11,26 +11,26 @@ import ParcEtDomaine from "./pages/user/parc_et_domaine/ParcEtDomaine";
 
 // pages admin
 import Login from "./pages/admin/login/Login";
-import SelectionMenu from "./pages/admin/selection_menu/SelectionMenu";
+import SelectionMenu from "./pages/admin/menu/SelectionMenu";
 
-import ManageModerator from "./pages/admin/create_moderator/ManageModerator";
-import CreateModerator from "./pages/admin/create_moderator/CreateModerator";
-import EditModerator from "./pages/admin/create_moderator/EditModerator";
+import ManageModerator from "./pages/admin/moderators/ManageModerator";
+import CreateModerator from "./pages/admin/moderators/CreateModerator";
+import EditModerator from "./pages/admin/moderators/EditModerator";
 // articles & news
-import PathEventNews from "./pages/admin/events_News/PathEventNews";
-import ManageEvents from "./pages/admin/events_News/ManageEvents";
-import CreateEvent from "./pages/admin/events_News/CreateEvent";
-import EditEvent from "./pages/admin/events_News/EditEvent";
-import ManageNews from "./pages/admin/events_News/ManageNews";
-import CreateNews from "./pages/admin/events_News/CreateNews";
-import EditNews from "./pages/admin/events_News/EditNews";
+import PathEventNews from "./pages/admin/articles/PathEventNews";
+import ManageEvents from "./pages/admin/articles/ManageEvents";
+import CreateEvent from "./pages/admin/articles/CreateEvent";
+import EditEvent from "./pages/admin/articles/EditEvent";
+import ManageNews from "./pages/admin/articles/ManageNews";
+import CreateNews from "./pages/admin/articles/CreateNews";
+import EditNews from "./pages/admin/articles/EditNews";
 // bedrooms dorms and camping
-import PathBedroomDormitory from "./pages/admin/bedrooms_Dorms/PathBedroomDormitory";
-import ManageBedrooms from "./pages/admin/bedrooms_Dorms/ManageBedrooms";
-import ManageDorms from "./pages/admin/bedrooms_Dorms/ManageDorms";
+import PathBedroomDormitory from "./pages/admin/accomodations/PathBedroomDormitory";
+import ManageBedrooms from "./pages/admin/accomodations/ManageBedrooms";
+import ManageDorms from "./pages/admin/accomodations/ManageDorms";
 
 // rent rooms
-import ManageRooms from "./pages/admin/rentRoooms/ManageRooms";
+import ManageRooms from "./pages/admin/rentCastle/ManageRooms";
 
 function App() {
   // display differenet admin either header admin or header user
