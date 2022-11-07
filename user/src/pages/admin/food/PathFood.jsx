@@ -1,25 +1,25 @@
 import { Container } from "react-bootstrap";
 import Card from "../../../components/admin/card/Card";
 import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
-import "./pathEventNews.scss";
+import "./pathFood.scss";
 
-const PathEventNews = () => {
+const PathFood = () => {
   return (
     <>
-      <BottomNav name="EVENEMENTS & PRESSE" />
+      <BottomNav name="RESTAURATION TRAITEUR ET RESTAURANT" />
 
-      <Container className="pathEvent">
+      <Container className="pathFood">
       <h2>Ou souhaitez-vous aller?</h2>
         <div>
         <Card
-          name="EVENEMENT"
-          urlCard="/admin/manage_events"
+          name="TRAITEUR"
+          urlCard="/admin/manage_caterer"
         />
-        <Card name="MEDIA & PRESSE" urlCard="/admin/manage_news" />
+        <Card name="RESTAURANT-ECOLE" urlCard="#" />
         </div>
       </Container>
     </>
   );
 };
 
-export default PathEventNews;
+export default PathFood;

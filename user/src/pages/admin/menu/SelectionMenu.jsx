@@ -24,14 +24,14 @@ const SelectionMenu = () => {
         </Container>
 
         <Container fluid>
-          <Card name="CREER UN NOUVEL UTILISATEUR" urlCard="/admin/manage_moderator" />
+          <Card name="NOUVEAU MODERATEUR" urlCard="/admin/manage_moderator" />
           <Card name="EVENEMENTS & PRESSE" urlCard="/admin/path_events&news" />
-          <Card name="NOS PARTENAIRES" />
+          <Card name="NOS PARTENAIRES" urlCard="/admin/manage_partners" />
           <Card name="EMPLOIS & STAGES" />
-          <Card name="VISITER" urlCard="/admin/visit_castle"/>
+          <Card name="VISITER" urlCard="/admin/visit_castle" />
           <Card name="HEBERGEMENT" urlCard="/admin/path_bedroom&dormitory" />
           <Card name="LOUER NOS SALLES" urlCard="/admin/rent_rooms" />
-          <Card name="RESTAURATION" />
+          <Card name="RESTAURATION" urlCard="/admin/path_food" />
         </Container>
       </main>
     </>
