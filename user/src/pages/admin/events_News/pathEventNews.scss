@@ -3,22 +3,7 @@
 @import "../../../styles/mixin";
 @import "~bootstrap/scss/bootstrap";
 
-.pathEvent {
-  display: flex;
-  flex-direction: row;
-  margin-block: 5%;
-
-  .side_image {
-    width: 25%;
-    height: 95vh;
-    display: block;
-    background-image: url("../../../../public/assets/photos/workflow.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: -20.5vh;
-  }
-
-  div.container {
+  div.container.pathEvent {
     width: 75%;
     height: fit-content;
     display: flex;
@@ -50,4 +35,3 @@
       }
     }
   }
-}

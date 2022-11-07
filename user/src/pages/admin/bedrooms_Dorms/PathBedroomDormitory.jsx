@@ -10,9 +10,7 @@ const PathBedroomDormitory = () => {
     name="CHAMBRES & DORTOIRS"
     />
 
-<div className="pathBed">
-      <div className="side_image"></div>
-      <Container>
+      <Container className="pathBed">
       <h2>Ou souhaitez-vous aller?</h2>
         <div>
         <Card
@@ -22,7 +20,6 @@ const PathBedroomDormitory = () => {
         <Card name="DORTOIRS & CAMPING" urlCard="/admin/manage_dorms_and_camping" />
         </div>
       </Container>
-      </div>
     </>
   )
 }

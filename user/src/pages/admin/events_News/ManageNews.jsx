@@ -13,7 +13,6 @@ const ManageNews = () => {
     <Btnreturn urlCard="/admin/path_events&news"/>
 
     <section className="manage_news">
-      <div className="side_image"></div>
       <Container>
         <CardTime
           url="/admin/create_news"

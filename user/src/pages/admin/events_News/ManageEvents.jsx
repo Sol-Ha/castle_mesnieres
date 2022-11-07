@@ -3,7 +3,7 @@ import Btnreturn from "../../../components/admin/shared_components/Btnreturn";
 import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
 import CardTime from "../../../components/admin/shared_components/CardTime";
 import CardTimeEdit from "../../../components/admin/shared_components/CardTimeEdit";
-import "./manageEvents.scss";
+import "./manageNews.scss";
 
 const ManageEvents = () => {
   return (
@@ -12,8 +12,7 @@ const ManageEvents = () => {
 
       <Btnreturn urlCard="/admin/path_events&news"/>
 
-      <section className="manage_events">
-        <div className="side_image"></div>
+      <section className="manage_news">
         <Container>
           <CardTime
             url="/admin/create_event"

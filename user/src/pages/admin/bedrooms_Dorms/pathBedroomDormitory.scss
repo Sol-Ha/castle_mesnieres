@@ -4,22 +4,7 @@
 @import "~bootstrap/scss/bootstrap";
 
 
-.pathBed {
-    display: flex;
-    flex-direction: row;
-    margin-block: 5%;
-  
-    .side_image {
-      width: 25%;
-      height: 95vh;
-      display: block;
-      background-image: url("../../../../public/assets/photos/bedroom.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position-x: -54vh;
-    }
-  
-    div.container {
+    div.container.pathBed {
       width: 75%;
       height: fit-content;
       display: flex;
@@ -51,4 +36,4 @@
         }
       }
     }
-  }
+  

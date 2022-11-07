@@ -1,4 +1,3 @@
-import React from "react";
 import { Container } from "react-bootstrap";
 import Card from "../../../components/admin/card/Card";
 import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
@@ -9,19 +8,16 @@ const PathEventNews = () => {
     <>
       <BottomNav name="EVENEMENTS & PRESSE" />
 
-<div className="pathEvent">
-      <div className="side_image"></div>
-      <Container>
+      <Container className="pathEvent">
       <h2>Ou souhaitez-vous aller?</h2>
         <div>
         <Card
           name="CREER UN EVENEMENT"
           urlCard="/admin/manage_events"
         />
-        <Card name="EVENEMENTS & PRESSE" urlCard="/admin/manage_news" />
+        <Card name="MEDIA & PRESSE" urlCard="/admin/manage_news" />
         </div>
       </Container>
-      </div>
     </>
   );
 };
