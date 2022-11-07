@@ -38,13 +38,13 @@ const Login = () => {
                       {/* DISPLAY MESSAGE ERROR */}
           <h3>Votre identifiant n'est pas valide</h3>
 
-            <Form.Group className="mb-4" controlId="formGroupPseeudo">
+            <Form.Group className="mb-4">
               <Form.Label>Pseudo</Form.Label>
-              <Form.Control type="text" />
+              <Form.Control type="text" name='login_pseudo'/>
             </Form.Group>
-            <Form.Group className="mb-5" controlId="formBasicPassword">
+            <Form.Group className="mb-5">
               <Form.Label>Mot de passe</Form.Label>
-              <Form.Control type="password" />
+              <Form.Control type="password" name='login_password'/>
             </Form.Group>
             {/* Ce morceau de code crée une checkbox permettant
             quand elle est cochée de mémoriser le mot de passe :
@@ -52,7 +52,7 @@ const Login = () => {
               <Form.Check type="checkbox" label="Check me out" />
             </Form.Group> */}
             <Row>
-            <a href="#" className="mb-5">Vous n'arrivez pas à vous connecter?</a>
+            <a href="/admin/login_recover" className="mb-5">Vous n'arrivez pas à vous connecter?</a>
             </Row>
 
             {/* security */}

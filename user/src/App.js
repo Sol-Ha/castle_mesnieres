@@ -11,6 +11,9 @@ import ParcEtDomaine from "./pages/user/parc_et_domaine/ParcEtDomaine";
 
 // pages admin
 import Login from "./pages/admin/login/Login";
+import LoginRecover from "./pages/admin/login/LoginRecover";
+import LoginRecover2 from "./pages/admin/login/LoginRecover2";
+
 import SelectionMenu from "./pages/admin/menu/SelectionMenu";
 
 import ManageModerator from "./pages/admin/moderators/ManageModerator";
@@ -61,8 +64,11 @@ function App() {
         {/* user */}
         <Route path="/" element={<Index />} />
         <Route path="/ParcEtDomaine" element={<ParcEtDomaine />} />
+
         {/* admin */}
         <Route path="/admin/login" element={<Login />} />
+        <Route path="/admin/login_recover" element={<LoginRecover />} />
+        <Route path="/admin/login_recover_userDB" element={<LoginRecover2 />} />
 
         {/* menu */}
         <Route path="/admin/selection_menu" element={<SelectionMenu />} />
