@@ -1,58 +1,77 @@
-import React, { useState } from "react";
+import Accordion from 'react-bootstrap/Accordion';
 import FormRentRoom from "../../../components/admin/forms/form_rentRoom/FormRentRoom";
 import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
-import Accordion from "../../../components/admin/shared_components/AccordionA";
+import "./manageRoom.scss";
 
 const ManageRooms = () => {
-  // accordion auto
-  // index start at 0 so no content is shown
-  // "activeContent" is what's already in motion while "nextActivation" is the next one to turn on
-  const [activeContent, nextActivation] = useState(0);
+
   return (
     <>
       <BottomNav name="EDITER LES SALLES A LOUER" />
-      <Accordion
-        bedroomName="Le restaurant panoramique"
-        content={<FormRentRoom />}
-        index={1}
-        activeContent={activeContent}
-        nextActivation={nextActivation}
-      />
-      <Accordion
-        bedroomName="Salle Jean Eude"
-        content={<FormRentRoom />}
-        index={2}
-        activeContent={activeContent}
-        nextActivation={nextActivation}
-      />
-      <Accordion
-        bedroomName="Salle des Cartes"
-        content={<FormRentRoom />}
-        index={3}
-        activeContent={activeContent}
-        nextActivation={nextActivation}
-      />
-      <Accordion
-        bedroomName="Salle de la grande chapelle"
-        content={<FormRentRoom />}
-        index={4}
-        activeContent={activeContent}
-        nextActivation={nextActivation}
-      />
-      <Accordion
-        bedroomName="Salle polyvalente"
-        content={<FormRentRoom />}
-        index={5}
-        activeContent={activeContent}
-        nextActivation={nextActivation}
-      />
-      <Accordion
-        bedroomName="Galeriee des Cerfs"
-        content={<FormRentRoom />}
-        index={6}
-        activeContent={activeContent}
-        nextActivation={nextActivation}
-      />
+
+      <Accordion defaultActiveKey="0" className='manageRoom' flush>
+      <Accordion.Item eventKey="0">
+        <Accordion.Header>Le restaurant Panoramique</Accordion.Header>
+        <Accordion.Body>
+
+          {/* import form */}
+        <FormRentRoom        
+        />
+        </Accordion.Body>
+      </Accordion.Item>
+
+
+      <Accordion.Item eventKey="1">
+        <Accordion.Header>Salle Jean Eude</Accordion.Header>
+        <Accordion.Body>
+
+          {/* import form */}
+          <FormRentRoom        
+        />      
+        </Accordion.Body>
+      </Accordion.Item>
+
+      <Accordion.Item eventKey="2">
+        <Accordion.Header>Salle des Cartes</Accordion.Header>
+        <Accordion.Body>
+
+          {/* import form */}
+          <FormRentRoom        
+        />      
+        </Accordion.Body>
+      </Accordion.Item>
+
+      <Accordion.Item eventKey="3">
+        <Accordion.Header>Salle de la grande chapelle</Accordion.Header>
+        <Accordion.Body>
+
+          {/* import form */}
+          <FormRentRoom        
+        />      
+        </Accordion.Body>
+      </Accordion.Item>
+
+      <Accordion.Item eventKey="4">
+        <Accordion.Header>Salle polyvalente</Accordion.Header>
+        <Accordion.Body>
+
+          {/* import form */}
+          <FormRentRoom        
+        />      
+        </Accordion.Body>
+      </Accordion.Item>
+
+      <Accordion.Item eventKey="5">
+        <Accordion.Header>Galerie des Cerfs</Accordion.Header>
+        <Accordion.Body>
+
+          {/* import form */}
+          <FormRentRoom        
+        />      
+        </Accordion.Body>
+      </Accordion.Item>
+    </Accordion>
+
     </>
   );
 };
