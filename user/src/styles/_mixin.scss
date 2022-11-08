@@ -71,11 +71,6 @@
   line-height: 0.1em;
 }
 
-@mixin smallTitle {
-  font-weight: 500;
-  font-size: 0.9em;
-}
-
 @mixin center {
   display: flex;
   flex-direction: row;

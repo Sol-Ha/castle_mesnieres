@@ -13,80 +13,82 @@
 
   h2 {
     font-weight: 800;
-    font-size: 1.3vw;
-    margin-bottom: 3%;
+    font-size: 3vh;
+    margin-bottom: 3vh;
   }
 
   article {
     width: 60%;
     height: auto;
     padding: 2%;
-    border: 0.1vh solid;
-    box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 0.1vh solid $txt;
+    box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25);
     border-radius: 0px 70px 70px 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 
-    image {
-      width: 40%;
-      margin-right: 10%;
+    img {
+      width: 20%;
     }
+
+    h3 {
+      color: $red;
+      font-size: 1vw;
+    }
+
     form {
       width: 40%;
+      height: auto;
       display: flex;
-      justify-content: center;
       flex-direction: column;
       align-self: center;
       font-weight: 500;
       font-size: 1vw;
 
-      h3 {
-        color: $red;
-        font-size: 1vw;
-        margin-bottom: 3vh;
-      }
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-      .form-label {
-        top: 1250px;
-        line-height: 27px;
-      }
-      input, textarea, select  {
-        height: 6vh;
-        border: $txt solid 0.1vh;
-        border-color: $txt;
-        color: $dark_grey !important;
-        font-size: 1vw !important;
-        font-style: italic;
-        resize: none;
-        &:focus {
-          box-shadow: 0 0 0 0.2rem rgba(214, 96, 96, 0.438);
-          border-color: $red;
+        label {
+          margin-top: 2vh;
+          margin-bottom: 0;
+        }
+
+        input,
+        textarea,
+        select {
+          height: 6vh;
+          border: $txt solid 0.1vh;
+          color: $dark_grey !important;
+          font-size: 1vw !important;
+          font-style: italic;
+          resize: none;
+          &:focus {
+            box-shadow: 0 0 0 0.2rem rgba(214, 96, 96, 0.438);
+            border-color: $red;
+          }
+        }
+
+        select option:checked {
+          background: linear-gradient(#d6d6d6, #d6d6d6);
+          background-color: $red !important; /* for IE */
+          color: $white !important;
         }
       }
-
-      select option:checked {
-        background: linear-gradient(#d6d6d6, #d6d6d6);
-        background-color: $red !important; /* for IE */
-        color: $white !important;
-    }
-
       a {
-        color: $txt;
+        display: flex;
+        justify-content: center;
         text-decoration: none;
-        text-align: center;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-
-      a {
         button {
-          width: 100%;
+          width: 60%;
           height: 6vh;
           background-color: $white;
           border: $txt solid 0.1vh;
+          font-size: 2vh;
           font-weight: 600;
+          margin-block: 2vh 3vh;
 
           &:hover {
             background-color: $txt;
@@ -94,6 +96,92 @@
           }
         }
       }
+    }
+  }
+  #a_recover_up,
+  #a_recover_down {
+    color: $txt;
+    margin-top: 3vh;
+    font-size: 2vh;
+    text-decoration: none;
+    text-align: center;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  #a_recover_down {
+    display: none;
+  }
+
+  // media querry
+
+  @media only screen and (max-width: 480px) {
+    margin-block: 20% 20%;
+
+    h2 {
+      font-size: 2vh;
+    }
+
+    article {
+      width: 90%;
+      border: none;
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+      border-radius: 0px 30px 30px 0px;
+
+      h3 {
+        position: absolute;
+        left: 15vh;
+        top: 47vh;
+        font-size: 2vh;
+        text-align: center;
+      }
+
+      img {
+        width: 30%;
+        margin: 5% 10% 10% 0;
+      }
+
+      form {
+        width: 45%;
+        margin-inline: 5% 10%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-self: center;
+        font-weight: 500;
+        font-size: 1.8vh;
+
+        div {
+          input,
+          textarea,
+          select {
+            height: 4vh;
+            border: $dark_grey solid 0.1vh;
+            border-radius: none !important;
+            &:focus {
+              box-shadow: 0 0 0 0.2rem rgba(214, 96, 96, 0.438);
+              border-color: $red;
+            }
+          }
+        }
+        #a_recover_up {
+          display: none;
+        }
+
+        a {
+          width: 100%;
+          button {
+            width: 100%;
+            height: 4vh;
+            margin-block: 3vh 3vh;
+            font-size: 1.6vh;
+          }
+        }
+      }
+    }
+    #a_recover_down {
+      display: block;
     }
   }
 }
