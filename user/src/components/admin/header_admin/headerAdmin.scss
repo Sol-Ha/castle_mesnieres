@@ -36,13 +36,14 @@
 
 @media only screen and (max-width: 500px) {
   .header_back {
-      h2 {
-        font-size: 1.5vh;
-      }
-
+    div {
+    h2 {
+      font-size: 1.4vh;
+    }
+    
       img {
         width: 25px;
       }
+    }
+  }
 }
-}
-
