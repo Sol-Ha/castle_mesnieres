@@ -4,11 +4,6 @@
   color: $main_txt;
 }
 
-@mixin responsiveImg {
-  width: 100%;
-  height: auto;
-}
-
 // HOME NAV BAR
 @mixin homeNav {
   background-color: $black;

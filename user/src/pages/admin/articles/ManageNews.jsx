@@ -3,7 +3,7 @@ import Btnreturn from "../../../components/admin/shared_components/Btnreturn";
 import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
 import CardTime from "../../../components/admin/shared_components/CardTime";
 import CardTimeEdit from "../../../components/admin/shared_components/CardTimeEdit";
-import "./manageNews.scss";
+import "../../../styles/pages.scss";
 
 const ManageNews = () => {
   return (
