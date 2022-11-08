@@ -16,8 +16,6 @@ a{
     justify-content: space-evenly;
     align-items: center;
     background-color: $black;
-    font-size: 1.1vw;
-    font-weight: 500;
     text-decoration: none;
     
     h2{
@@ -56,29 +54,21 @@ a{
     width: 100%;
 
     // container display name
-    div.container-fluid:first-child{
+    div:first-child{
         width: 35%;
-        height: 38vh;
-        margin-block: 7vh;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-self: center;
-        background-image: url("../../../../public/assets/images/paint_brush1.png");
-        background-size:cover;
+        height: 21vh;
+        margin: 5% 33% 10% 33%;
+        @include center;
+        background-image: url("../../../../public/assets/images/splater.png");
+        background-size: 80%;
+        background-position: center;
         background-repeat: no-repeat;
 
-        img{
-            @include responsiveImg
-        }
-
         p{
-            margin-block: 13vh;
             text-align: center;
-            font-size: 1.2vw;
-            line-height: 2.5vw;
+            font-size: 2.5vh;
+            line-height: 6vh;
             font-weight: 600;
-            position: absolute;
         }
     }
 
@@ -95,59 +85,93 @@ a{
         margin: 3%;
     }
     .card_back:first-child{
-        background-image: url("../../../../public/assets/photos/key_ring.jpg");
+        background-image: url("../../../../public/assets/photos/key_ring.avif");
         background-size:cover;
         background-repeat: no-repeat;
         background-position-x: -5.5vh;
     }
 
     .card_back:nth-child(2){
-        background-image: url("../../../../public/assets/photos/workflow.jpg");
+        background-image: url("../../../../public/assets/photos/workflow.avif");
         background-size:cover;
         background-repeat: no-repeat;
         background-position-x: -5.5vh;
     }
 
     .card_back:nth-child(3){
-        background-image: url("../../../../public/assets/photos/solidarity.jpg");
+        background-image: url("../../../../public/assets/photos/solidarity.avif");
         background-size:cover;
         background-repeat: no-repeat;
         background-position-x: -5.5vh;
     }
 
     .card_back:nth-child(4){
-        background-image: url("../../../../public/assets/photos/hire.jpg");
+        background-image: url("../../../../public/assets/photos/hire.avif");
         background-size:cover;
         background-repeat: no-repeat;
         background-position-x: -5.5vh;
     }
 
     .card_back:nth-child(5){
-        background-image: url("../../../../public/assets/photos/roadtag.jpg");
+        background-image: url("../../../../public/assets/photos/roadtag.avif");
         background-size:cover;
         background-repeat: no-repeat;
         background-position-x: -5.5vh;
     }
 
     .card_back:nth-child(6){
-        background-image: url("../../../../public/assets/photos/bedroom.jpg");
+        background-image: url("../../../../public/assets/photos/bedroom.avif");
         background-size:cover;
         background-repeat: no-repeat;
         background-position-x: -25vh;
     }
 
     .card_back:nth-child(7){
-        background-image: url("../../../../public/assets/photos/rentroom.jpg");
+        background-image: url("../../../../public/assets/photos/rentroom.avif");
         background-size:cover;
         background-repeat: no-repeat;
         background-position-x: -10.5vh;
     }
 
     .card_back:last-child{
-        background-image: url("../../../../public/assets/photos/food.jpg");
+        background-image: url("../../../../public/assets/photos/food.avif");
         background-size:cover;
         background-repeat: no-repeat;
         background-position-x: -2.5vh;
     }
     }
+}
+
+@media only screen and (max-width: 800px) {
+//  nav and disconnecting button
+.nav_SelectionMenu{
+    height: 6vh;
+
+a{
+    width: 25vh;
+    
+    h2{
+        font-size: 1.6vh;
+        margin-block: 1vh;
+    }
+
+    img{
+        width: 3vh;
+    }
+    }
+}
+
+
+// main 
+    .main_SelectionMenu{
+        div:first-child{
+            width: 80%;
+            height: 18vh;
+            margin: 10%;
+            background-size: 80%;
+        p{
+            font-size: 1.8vh;
+            line-height: 4vh;
+        }
+    }}
 }
