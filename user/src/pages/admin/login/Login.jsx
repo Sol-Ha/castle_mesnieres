@@ -61,6 +61,8 @@ const Login = () => {
 
             {/* security */}
             <Button disabled={loading} variant="primary" onClick={() => navigate(handleClick)}>
+            {/* onClick={handleClick} */}
+            {/* onClick={() => navigate()} */}
               SE CONNECTER
             </Button>
           </Form>
@@ -72,20 +74,3 @@ const Login = () => {
 };
 
 export default Login;
-
-
-
-// onClick={handleClick}
-
-
-
-{/* <a href="/admin/selection_menu">
-<Button disabled={loading} onClick={handleClick} variant="primary" className="mb-5">
-  SE CONNECTER
-</Button>
-{error && <span>{error.message}</span>}
-</a>
-
-<Button disabled={loading} variant="primary" onClick={() => navigate(handleClick)}>
-  SE CONNECTER
-</Button> */}
