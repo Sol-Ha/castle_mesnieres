@@ -1,32 +1,32 @@
-// import { useContext, useState } from "react";
-// import { AuthContext } from '../../../context/authContext';
+import { useContext, useState } from "react";
+import { AuthContext } from '../../../context/authContext';
 import { Button, Form, Image, Row } from 'react-bootstrap';
 import "./login.scss";
-// import axios from 'axios';
+import axios from 'axios';
 
 const Login = () => {
 
-  // const [credentials, setCredentials] = useState({
-  //   username: undefined,
-  //   password: undefined,
-  // });
+  const [credentials, setCredentials] = useState({
+    username: undefined,
+    password: undefined,
+  });
 
-  // const { dispatch } = useContext(AuthContext);
+  const { loading, error, dispatch } = useContext(AuthContext);
 
-  // const handleChange = (e) => {
-  //   setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
-  // };
+  const handleChange = (e) => {
+    setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+  };
 
-  // const handleClick = async e => {
-  //   e.preventDefault();
-  //   dispatch({ type: "LOGIN_START" });
-  //   try {
-  //     const res = await axios.post("http://localhost:3000/auth/login", credentials);
-  //     dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
-  //   } catch (err) {
-  //     dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
-  //   }
-  // };
+  const handleClick = async e => {
+    e.preventDefault();
+    dispatch({ type: "LOGIN_START" });
+    try {
+      const res = await axios.post("http://localhost:3000/admin/login", credentials);
+      dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
+    } catch (err) {
+      dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
+    }
+  };
 
   return (
     <>
@@ -57,7 +57,7 @@ const Login = () => {
 
             {/* security */}
             <a href="/admin/selection_menu">
-            <Button variant="primary" className="mb-5">
+            <Button onClick={handleClick} variant="primary" className="mb-5">
               SE CONNECTER
             </Button>
             </a>
