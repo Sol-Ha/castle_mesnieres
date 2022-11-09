@@ -1,11 +1,11 @@
 import mongoose from "mongoose";
 
 const AdminSchema = new mongoose.Schema({
-    firstname: {
+    user_firstname: {
         type: String,
         required: true,
     },
-    lastname: {
+    user_lastname: {
         type: String,
         required: true,
     },
@@ -14,7 +14,7 @@ const AdminSchema = new mongoose.Schema({
         required: true,
         unique: true,
     },
-    email: {
+    user_email: {
         type: String,
         required: true,
         unique: true,
@@ -36,7 +36,7 @@ const AdminSchema = new mongoose.Schema({
         required: true,
     },
     user_endcontract: {
-        type: String,
+        type: Date,
         required: true,
     },
     isSuperadmin: {
