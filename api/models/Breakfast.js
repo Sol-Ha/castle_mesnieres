@@ -25,7 +25,7 @@ const BreakfastSchema = new mongoose.Schema({
         type: Array,
         required: true,
     },
-    food_price: {
+    breakfast_price: {
         type: Number,
         required: true,
     }
