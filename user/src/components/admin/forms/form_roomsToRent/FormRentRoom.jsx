@@ -1,5 +1,5 @@
 import { Row, Form, Col, Button } from "react-bootstrap";
-import "../form_accomodation/formAccomodation.scss";
+import "../form_accomodations/formAccomodation.scss";
 
 const FormRentRoom = ({
   room_title,

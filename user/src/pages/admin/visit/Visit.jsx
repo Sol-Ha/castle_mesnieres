@@ -71,7 +71,7 @@ const Rent = () => {
                       <Form.Label>
                         <span>* </span>HEURE OUVERTURE
                       </Form.Label>
-                      <Form.Control type="time" required />
+                      <Form.Control type="time_hourstart" required />
                     </Form.Group>
                   </Col>
                   <Col>
@@ -79,7 +79,7 @@ const Rent = () => {
                       <Form.Label>
                         <span>* </span>HEURE FERMETURE
                       </Form.Label>
-                      <Form.Control type="time" required />
+                      <Form.Control type="time_hourend" required />
                     </Form.Group>
                   </Col>
                 </Row>
@@ -122,7 +122,7 @@ const Rent = () => {
                       <span>* </span>PRIX VISITE GUIDEE PAR PERSONNE ( € )
                     </Form.Label>
                     <Form.Control
-                      name="price_visit"
+                      name="visit_priceadult"
                       type="number"
                       placeholder="exemple: 10,80"
                       required
@@ -134,7 +134,7 @@ const Rent = () => {
                       <span>* </span>PRIX VISITE DE GROUPE ( € )
                     </Form.Label>
                     <Form.Control
-                      name="price_visit_group"
+                      name="visit_pricegroup"
                       type="number"
                       placeholder="exemple: 10,80"
                       required
@@ -148,7 +148,7 @@ const Rent = () => {
                   </Form.Label>
                   <Form.Control
                     className="halfsize"
-                    name="price_visit_group"
+                    name="vist_pricegarden"
                     type="number"
                     placeholder="exemple: 10,80"
                     required
@@ -175,7 +175,7 @@ const Rent = () => {
                     <span>* </span>URL BUS EN DIRECTION DE ROUEN
                   </Form.Label>
                   <Form.Control
-                    name="url_rouen_bus"
+                    name="bus_urlRouen"
                     type="text"
                     placeholder="exemple: https://www.forgesleseaux.fr/upload/dieppegisors21.pdf"
                     required
@@ -189,7 +189,7 @@ const Rent = () => {
                     <span>* </span>URL BUS EN DIRECTION DE DIEPPE
                   </Form.Label>
                   <Form.Control
-                    name="url_dieppe_bus"
+                    name="bus_urlDieppe"
                     type="text"
                     placeholder="exemple: https://www.normandie.fr/sites/default/files/2020-06/ligne_71_neufchatel_en_bray_rouen.pdf"
                     required

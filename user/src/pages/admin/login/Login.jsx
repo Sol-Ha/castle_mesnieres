@@ -21,16 +21,16 @@ const Login = () => {
     setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
   };
 
-  // const handleClick = async e => {
-  //   e.preventDefault();
-  //   dispatch({ type: "LOGIN_START" });
-  //   try {
-  //     const res = await axios.post("http://localhost:3000/admin/login", credentials);
-  //     dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
-  //   } catch (err) {
-  //     dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
-  //   }
-  // };
+  const handleClick = async e => {
+    e.preventDefault();
+    dispatch({ type: "LOGIN_START" });
+    try {
+      const res = await axios.post("http://localhost:3000/admin/login", credentials);
+      dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
+    } catch (err) {
+      dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
+    }
+  };
 
   return (
     <>
@@ -55,11 +55,6 @@ const Login = () => {
               <Form.Label>Mot de passe</Form.Label>
               <Form.Control type="password" name="user_password" />
             </Form.Group>
-            {/* Ce morceau de code crée une checkbox permettant
-            quand elle est cochée de mémoriser le mot de passe :
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-              <Form.Check type="checkbox" label="Check me out" />
-            </Form.Group> */}
 
             <Link id="a_recover_up" to="/admin/login_recover">Vous n'arrivez pas à vous connecter?</Link>
 

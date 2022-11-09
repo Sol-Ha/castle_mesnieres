@@ -72,7 +72,7 @@ const FormPartner = ({ subject, button }) => {
               <span>* </span>TITRE
             </Form.Label>
             <Form.Control
-              name="hire_title"
+              name="offer_title"
               type="text"
               placeholder="exemple: guide touristique"
               required
@@ -88,7 +88,7 @@ const FormPartner = ({ subject, button }) => {
             <Form.Label>
               <span>* </span>DATE D'EMBAUCHE
             </Form.Label>
-            <Form.Control name="hire_contract_start" type="date" required />
+            <Form.Control name="offer_start" type="date" required />
           </Form.Group>
         </Col>
         {/* date end */}
@@ -100,7 +100,7 @@ const FormPartner = ({ subject, button }) => {
                   <span className="noAsterix">* </span>DATE DE FIN DE CONTRAT
                 </Col>
               </Form.Label>
-              <Form.Control name="hire_contract_end" type="date" required />
+              <Form.Control name="offer_end" type="date" required />
             </Form.Group>
           ) : null}
         </Col>
@@ -114,7 +114,7 @@ const FormPartner = ({ subject, button }) => {
               <span className="noAsterix">* </span>FORMATION
             </Form.Label>
             <Form.Control
-              name="hire_studies"
+              name="offer_studies"
               type="text"
               placeholder="exemple: CAP"
             />
@@ -125,7 +125,7 @@ const FormPartner = ({ subject, button }) => {
               <span className="noAsterix">* </span>EXPERIENCE
             </Form.Label>
             <Form.Control
-              name="hire_experience"
+              name="offer_experience"
               type="text"
               placeholder="exemple: 2 ans"
             />
@@ -141,7 +141,7 @@ const FormPartner = ({ subject, button }) => {
               <span className="noAsterix">* </span>LANGUE(S)
             </Form.Label>
             <Form.Control
-              name="hire_language"
+              name="offer_language"
               type="text"
               placeholder="exemple: anglais courant"
             />
@@ -152,7 +152,7 @@ const FormPartner = ({ subject, button }) => {
               <span className="noAsterix">* </span>NOMBRES D'HEURES PAR SEMAINE
             </Form.Label>
             <Form.Control
-              name="hire_experience"
+              name="offer_hours"
               type="text"
               placeholder="exemple: 35 heures"
             />
@@ -167,7 +167,7 @@ const FormPartner = ({ subject, button }) => {
         </Form.Label>
         <Form.Control
           className="halfsize mb-5"
-          name="hire_paycheck"
+          name="offer_paycheck"
           type="text"
           placeholder="exemple: SMIC"
         />
@@ -179,7 +179,7 @@ const FormPartner = ({ subject, button }) => {
           <span>* </span>DESCRIPTION DU POSTE
         </Form.Label>
         <Form.Control
-          name="hire_content"
+          name="offer_message"
           className="mb-4"
           as="textarea"
           rows={"10"}
