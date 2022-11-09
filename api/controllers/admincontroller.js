@@ -1,4 +1,5 @@
 import Admin from "../models/Admin.js";
+import { createError } from "../utils/error.js";
 
 //UPDATE
 export const updateAdmin = async (req, res, next) => {

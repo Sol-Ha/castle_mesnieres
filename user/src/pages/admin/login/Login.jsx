@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { AuthContext } from '../../../context/authContext';
-import { Button, Form, Image, Row } from 'react-bootstrap';
+import { Button, Form, Image } from 'react-bootstrap';
 import "../../../styles/pages.scss";
 import axios from 'axios';
 

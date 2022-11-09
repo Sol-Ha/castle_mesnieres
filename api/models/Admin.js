@@ -23,14 +23,26 @@ const AdminSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    birthdate: {
+    user_birthday: {
         type: Date,
+        required: true,
+    },
+    user_answer: {
+        type: String,
+        required: true,
+    },
+    user_question: {
+        type: String,
+        required: true,
+    },
+    user_endcontract: {
+        type: String,
         required: true,
     },
     isSuperadmin: {
         type: Boolean,
         default: false,
-    },
+    }
 },
     { timestamps: true },
 );

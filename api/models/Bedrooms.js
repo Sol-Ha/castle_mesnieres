@@ -1,29 +1,29 @@
 import mongoose from "mongoose";
 
-const CampingSchema = new mongoose.Schema({
-    title: {
+const BedroomsSchema = new mongoose.Schema({
+    bedroom_title: {
         type: String,
         required: true,
     },
-    description: {
+    bedroom_message: {
         type: String,
         required: true,
     },
-    check: {
+    bedroom_check: {
         type: String,
         required: true,
     },
-    priceLowSeason: {
+    bedroom_priceLowSeason: {
         type: Number,
         required: true,
     },
-    priceHighSeason: {
+    bedroom_priceHighSeason: {
         type: Number,
         required: true,
     },
-    photo: {
+    bedroom_photo: {
         type: [String],
     }
 });
 
-export default mongoose.model("Camping", CampingSchema);
+export default mongoose.model("Bedrooms", BedroomsSchema);

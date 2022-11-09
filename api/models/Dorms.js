@@ -1,29 +1,29 @@
 import mongoose from "mongoose";
 
-const DortoirSchema = new mongoose.Schema({
-    title: {
+const DormsSchema = new mongoose.Schema({
+    dorm_title: {
         type: String,
         required: true,
     },
-    description: {
+    dorm_message: {
         type: String,
         required: true,
     },
-    check: {
+    dorm_check: {
         type: String,
         required: true,
     },
-    priceLowSeason: {
+    dorm_priceLowSeason: {
         type: Number,
         required: true,
     },
-    priceHighSeason: {
+    dorm_priceHighSeason: {
         type: Number,
         required: true,
     },
-    photo: {
+    dorm_photo: {
         type: [String],
     }
 });
 
-export default mongoose.model("Dortoir", DortoirSchema);
+export default mongoose.model("Dorms", DormsSchema);

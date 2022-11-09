@@ -4,11 +4,17 @@ import mongoose from "mongoose"
 import cookieParser from "cookie-parser"
 import authRoute from "./routes/auth.js"
 import adminRoute from "./routes/admin.js"
-import articleRoute from "./routes/article.js"
-import articlepresseRoute from "./routes/articlepresse.js"
-import chambreRoute from "./routes/chambre.js"
-import dortoirRoute from "./routes/dortoir.js"
-import campingRoute from "./routes/camping.js"
+import eventsRoute from "./routes/events.js"
+import mediasRoute from "./routes/medias.js"
+import bedroomsRoute from "./routes/bedrooms.js"
+import dormsRoute from "./routes/dorms.js"
+import jobOffersRoute from "./routes/jobOffers.js"
+import roomsToRentRoute from "./routes/roomsToRent.js"
+import partnersRoute from "./routes/partners.js"
+import busRoute from "./routes/bus.js"
+import pricesVisitRoute from "./routes/pricesVisit.js"
+import timeTableRoute from "./routes/timeTable.js"
+import privateEventsRoute from "./routes/privateEvents.js"
 
 const app = express()
 dotenv.config()
@@ -32,11 +38,17 @@ app.use(express.json())
 
 app.use("/api/auth", authRoute)
 app.use("/api/admin", adminRoute)
-app.use("/api/article", articleRoute)
-app.use("/api/articlepresse", articlepresseRoute)
-app.use("/api/chambre", chambreRoute)
-app.use("/api/dortoir", dortoirRoute)
-app.use("/api/camping", campingRoute)
+app.use("/api/events", eventsRoute)
+app.use("/api/medias", mediasRoute)
+app.use("/api/bedrooms", bedroomsRoute)
+app.use("/api/dorms", dormsRoute)
+app.use("/api/jobOffers", jobOffersRoute)
+app.use("/api/roomsToRent", roomsToRentRoute)
+app.use("/api/partners", partnersRoute)
+app.use("/api/bus", busRoute)
+app.use("/api/pricesVisit", pricesVisitRoute)
+app.use("/api/timeTable", timeTableRoute)
+app.use("/api/privateEvents", privateEventsRoute)
 
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;

@@ -1,29 +1,28 @@
 import mongoose from "mongoose";
 
-const ArticlepresseSchema = new mongoose.Schema({
-    title: {
+const MediasSchema = new mongoose.Schema({
+    media_title: {
         type: String,
         required: true,
     },
-    description: {
+    media_message: {
         type: String,
         required: true,
     },
-    author: {
+    media_url: {
         type: String,
         required: true,
     },
-    date: {
-        type: Date,
-        required: true,
-    },
-    category: {
+    media_check: {
         type: String,
         required: true,
     },
-    photo: {
+    media_img1: {
+        type: [String],
+    },
+    media_img2: {
         type: [String],
     }
 });
 
-export default mongoose.model("Articlepresse", ArticlepresseSchema);
+export default mongoose.model("Medias", MediasSchema);
