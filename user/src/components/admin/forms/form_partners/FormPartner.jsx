@@ -60,7 +60,7 @@ const FormPartner = ({ subject, button }) => {
             <span>* </span>CONTENU
           </Form.Label>
           <Form.Control
-            name="partner_content"
+            name="partner_message"
             className="mb-4"
             as="textarea"
             rows={"5"}

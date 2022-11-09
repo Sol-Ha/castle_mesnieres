@@ -1,6 +1,6 @@
 import Btnreturn from "../../../components/admin/other_components/Btnreturn";
 import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
-import FormHire from "../../../components/admin/forms/form_hire/FormHire";
+import FormHire from "../../../components/admin/forms/form_jobOffers/FormHire";
 
 const EditHire = () => {
   return (
