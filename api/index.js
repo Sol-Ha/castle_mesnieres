@@ -15,6 +15,8 @@ import busRoute from "./routes/bus.js"
 import pricesVisitRoute from "./routes/pricesVisit.js"
 import timeTableRoute from "./routes/timeTable.js"
 import privateEventsRoute from "./routes/privateEvents.js"
+import breakfastRoute from "./routes/breakfast.js"
+import foodRoute from "./routes/food.js"
 
 const app = express()
 dotenv.config()
@@ -49,6 +51,8 @@ app.use("/api/bus", busRoute)
 app.use("/api/pricesVisit", pricesVisitRoute)
 app.use("/api/timeTable", timeTableRoute)
 app.use("/api/privateEvents", privateEventsRoute)
+app.use("/api/breakfast", breakfastRoute)
+app.use("/api/food", foodRoute)
 
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
