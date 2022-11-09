@@ -23,10 +23,10 @@ const AdminSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    // birthdate: {
-    //     type: Date,
-    //     required: true,
-    // },
+    birthdate: {
+        type: Date,
+        required: true,
+    },
     isSuperadmin: {
         type: Boolean,
         default: false,
