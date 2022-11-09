@@ -1,8 +1,8 @@
 import { Container } from "react-bootstrap";
-import Btnreturn from "../../../components/admin/shared_components/Btnreturn";
+import Btnreturn from "../../../components/admin/other_components/Btnreturn";
 import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
-import CardTime from "../../../components/admin/shared_components/CardTime";
-import CardTimeEdit from "../../../components/admin/shared_components/CardTimeEdit";
+import CardTime from "../../../components/admin/card/CardTime";
+import CardTimeEdit from "../../../components/admin/card/CardTimeEdit";
 import "../../../styles/pages.scss";
 
 const ManageNews = () => {

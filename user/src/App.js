@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // components
-import HeaderAdmin from "./components/admin/header_admin/HeaderAdmin";
-import FooterAdmin from "./components/admin/footer_admin/FooterAdmin";
+import HeaderAdmin from "./components/admin/_header_admin/HeaderAdmin";
+import FooterAdmin from "./components/admin/_footer_admin/FooterAdmin";
 
 // pages user
 

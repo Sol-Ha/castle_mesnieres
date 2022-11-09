@@ -1,5 +1,5 @@
 import { Button, Form, Image } from 'react-bootstrap';
-import Btnreturn from "../../../components/admin/shared_components/Btnreturn";
+import Btnreturn from "../../../components/admin/other_components/Btnreturn";
 import "../../../styles/pages.scss";
 
 const LoginRecover = () => {

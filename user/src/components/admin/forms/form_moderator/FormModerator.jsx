@@ -10,12 +10,12 @@ const FormModerator = ({ subject, button}) =>{
       </p>
       <Row>
               <Col>
-      <Form.Group className="mb-4" controlId="formGroupLastName">
+      <Form.Group className="mb-4">
         <Form.Label>
           <span>* </span>NOM
         </Form.Label>
         <Form.Control
-          name="user_lastName"
+          name="user_lastname"
           type="text"
           placeholder="exemple: Dupont"
           required
@@ -23,12 +23,12 @@ const FormModerator = ({ subject, button}) =>{
       </Form.Group>
       </Col>
               <Col>
-      <Form.Group className="mb-4" controlId="formGroupLastName">
+      <Form.Group className="mb-4">
         <Form.Label>
           <span>* </span>PRENOM
         </Form.Label>
         <Form.Control
-          name="user_firstName"
+          name="user_firstname"
           type="text"
           placeholder="exemple: Jean"
           required
@@ -39,7 +39,7 @@ const FormModerator = ({ subject, button}) =>{
 
             <Row>
               <Col>
-      <Form.Group className="mb-4" controlId="formGroupLastName">
+      <Form.Group className="mb-4">
         <Form.Label>
           <span>* </span>DATE DE NAISSANCE
         </Form.Label>
@@ -52,7 +52,7 @@ const FormModerator = ({ subject, button}) =>{
       </Form.Group>
       </Col>
               <Col>
-              <Form.Group className="mb-4" controlId="formGroupEmail">
+              <Form.Group className="mb-4">
                   <Form.Label>
                     <span>* </span>E-MAIL
                   </Form.Label>
@@ -71,7 +71,7 @@ const FormModerator = ({ subject, button}) =>{
           <span>* </span>DATE DE LA FIN DU CONTRAT
         </Form.Label>
         <Form.Control className="inputhalf"
-          name="user_contractEnd"
+          name="user_endcontract"
           type="date"
           placeholder="exemple: 01/01/1990"
           required

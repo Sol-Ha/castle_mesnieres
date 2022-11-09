@@ -1,4 +1,4 @@
-import Btnreturn from "../../../components/admin/shared_components/Btnreturn";
+import Btnreturn from "../../../components/admin/other_components/Btnreturn";
 import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
 import FormModerator from '../../../components/admin/forms/form_moderator/FormModerator';
 

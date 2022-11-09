@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import { AuthContext } from '../../../context/authContext';
 import { Button, Form, Image } from 'react-bootstrap';
 import "../../../styles/pages.scss";
@@ -32,13 +33,18 @@ console.log(user)
 
   return (
     <>
-      <section id='login_admin'>
+      <section id="login_admin">
         <h2>CONNEXION</h2>
         <article>
-          <Image src="../../assets/images/stag.png" alt="Image d'un cerf" width={250} height={430}></Image>
+          <Image
+            src="../../assets/images/stag.png"
+            alt="Image d'un cerf"
+            width={250}
+            height={430}
+          ></Image>
           <Form>
-                      {/* DISPLAY MESSAGE ERROR */}
-          <h3>Votre identifiant n'est pas valide</h3>
+            {/* DISPLAY MESSAGE ERROR */}
+            <h3>Votre identifiant n'est pas valide</h3>
 
             <Form.Group>
               <Form.Label>Pseudo</Form.Label>
@@ -53,7 +59,7 @@ console.log(user)
               <Form.Check type="checkbox" label="Check me out" />
             </Form.Group> */}
 
-            <a id='a_recover_up' href="/admin/login_recover">Vous n'arrivez pas à vous connecter?</a>
+            <Link id="a_recover_up" to="/admin/login_recover">Vous n'arrivez pas à vous connecter?</Link>
 
             {/* security */}
             <a href="/admin/selection_menu">
@@ -64,10 +70,10 @@ console.log(user)
             </a>
           </Form>
         </article>
-        <a id='a_recover_down' href="/admin/login_recover">Vous n'arrivez pas à vous connecter?</a>
+        <Link id="a_recover_down" to="/admin/login_recover">Vous n'arrivez pas à vous connecter?</Link>
       </section>
     </>
   );
 };
 
-export default Login
+export default Login;
