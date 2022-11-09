@@ -50,11 +50,6 @@
         }
       }
 
-      a {
-        display: flex;
-        justify-content: center;
-        text-decoration: none;
-
         button {
           width: 60%;
           height: 6vh;
@@ -68,7 +63,6 @@
             background-color: $txt;
             color: $white;
           }
-        }
       }
     }
   }
