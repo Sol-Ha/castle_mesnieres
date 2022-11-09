@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, Container } from "react-bootstrap";
 import Card from "../../../components/admin/card/Card";
-import "./selectionMenu.scss";
+import "../../../styles/pages.scss";
 
 const SelectionMenu = () => {
   return (

@@ -1,7 +1,60 @@
 @import "./_variable.scss";
+@import "~bootstrap/scss/bootstrap";
 
-@mixin reset {
-  color: $main_txt;
+@mixin displayFullScreen{
+  width: 100%;
+  height: auto;
+}
+
+// menu
+@mixin imgCardA {
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+// path
+@mixin imgCardB {
+  margin: 5% 5% 10% 5%;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+// flex basic column
+@mixin flexA{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// flex basic row
+@mixin flexB{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+// form
+@mixin form{
+  height: 6vh;
+  border: $txt solid 0.1vh;
+  color: $dark_grey !important;
+  font-size: 2vh !important;
+  resize: none;
+  &:focus {
+    box-shadow: 0 0 0 0.5vh $slate_transparent;
+    border-color: $slate;
+  }
+  select option:checked {
+    background-color: $slate !important; /* for IE */
+    color: $white !important;
+  }
+}
+
+// form button
+@mixin btnForm{
+  font-size: 2vh;
+  background-color: $white;
+  border: $txt solid 0.1vh;
 }
 
 // HOME NAV BAR

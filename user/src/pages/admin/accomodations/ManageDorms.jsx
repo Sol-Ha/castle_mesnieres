@@ -1,6 +1,6 @@
 import Accordion from 'react-bootstrap/Accordion';
 import FormAccomodation from "../../../components/admin/forms/form_accomodation/FormAccomodation";
-import Btnreturn from "../../../components/admin/shared_components/Btnreturn";
+import Btnreturn from "../../../components/admin/other_components/Btnreturn";
 import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
 import "../../../styles/pages.scss";
 
