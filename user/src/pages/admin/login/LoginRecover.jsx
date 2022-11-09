@@ -1,6 +1,6 @@
 import { Button, Form, Image } from 'react-bootstrap';
 import Btnreturn from "../../../components/admin/shared_components/Btnreturn";
-import "./login.scss";
+import "../../../styles/pages.scss";
 
 const LoginRecover = () => {
   return (
@@ -15,18 +15,18 @@ const LoginRecover = () => {
                   {/* DISPLAY MESSAGE ERROR */}
       <h3>Votre e-mail n’est pas reconnu par la base de donnée.</h3>
 
-        <Form.Group className="mb-4">
+        <Form.Group>
           <Form.Label>Email</Form.Label>
           <Form.Control type="email" name='login_email'/>
         </Form.Group>
-        <Form.Group className="mb-5">
+        <Form.Group>
           <Form.Label>Date de naissance</Form.Label>
           <Form.Control type="date" name='login_birthday'/>
         </Form.Group>
 
         {/* security */}
         <a href="/admin/login_recover_userDB">
-        <Button variant="primary" className="mb-5">
+        <Button variant="primary">
           ENVOYER
         </Button>
         </a>

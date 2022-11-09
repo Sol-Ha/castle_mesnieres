@@ -8,10 +8,10 @@ const SelectionMenu = () => {
     <>
       {/* DISCONNECTING USER */}
       <nav className="nav_SelectionMenu">
-        <button>
+      <a href="Login">
           <Image src="../../assets/icones/off.svg" alt="icone de deconnexion" />
-          <a href="Login">DECONNEXION</a>
-        </button>
+          <h2>DECONNEXION</h2>
+          </a>
       </nav>
 
       <main className="main_SelectionMenu">

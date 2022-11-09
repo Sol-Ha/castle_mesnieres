@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
 import CardTime from "../../../components/admin/shared_components/CardTime";
 import CardTimeEdit from "../../../components/admin/shared_components/CardTimeEdit";
-import "./manageModerator.scss";
+import "../../../styles/pages.scss";
 
 const ManageModerator = () => {
   return (

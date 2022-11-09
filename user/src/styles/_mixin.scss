@@ -4,11 +4,6 @@
   color: $main_txt;
 }
 
-@mixin responsiveImg {
-  width: 100%;
-  height: auto;
-}
-
 // HOME NAV BAR
 @mixin homeNav {
   background-color: $black;
@@ -69,11 +64,6 @@
   font-family: 'Handmagic Signature';
   margin: 0em 0.3em 0em -0.5em;
   line-height: 0.1em;
-}
-
-@mixin smallTitle {
-  font-weight: 500;
-  font-size: 0.9em;
 }
 
 @mixin center {

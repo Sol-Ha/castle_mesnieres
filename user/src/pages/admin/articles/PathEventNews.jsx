@@ -1,7 +1,7 @@
 import { Container } from "react-bootstrap";
 import Card from "../../../components/admin/card/Card";
 import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
-import "./pathEventNews.scss";
+import "../../../styles/pages.scss";
 
 const PathEventNews = () => {
   return (

@@ -8,12 +8,12 @@ const FooterAdmin = () => {
 
       <div>
         <address>
-          Château<br/>
+          Château<br id="br"/>
           de Mesnières-en-Bray<br/>
           <a href="tel:+330235931004">+33 (0)2 35 93 10 04</a>
         </address>
 
-        <Image 
+        <Image id="blason_normandy"
         src="../assets/images/Blason_Normandie.png"
         alt="blason de la Normandie"/>
 
@@ -21,7 +21,7 @@ const FooterAdmin = () => {
       </div>
 
       <div>
-      <Image 
+      <Image id="france_map"
         src="../assets/images/carte.png"
         alt="carte de France"/>
       </div>

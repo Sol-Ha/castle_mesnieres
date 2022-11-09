@@ -22,7 +22,7 @@
       padding: 9vh;
       color: $white;
       font-weight: 600;
-      font-size: 1.2vw;
+      font-size: 2.4vh;
       line-height: 6vh;
 
       a {
@@ -30,13 +30,13 @@
         color: inherit;
       }
     }
-    img{
+    #blason_normandy {
       width: 13vh;
       height: auto;
       margin-top: -30vh;
     }
 
-    span{
+    span {
       height: 29vh;
       width: 0.3vh;
       background-color: $white;
@@ -53,7 +53,7 @@
     align-items: center;
     padding-inline: 3vh;
 
-    img{
+    #france_map {
       height: 30vh;
       height: auto;
     }
@@ -67,13 +67,51 @@
     flex-direction: row;
     justify-content: space-between;
 
-    img{
+    img {
       width: 5.5vh;
       height: auto;
-      &:hover{
+      &:hover {
         transform: scale(1.5);
-filter: brightness(0) saturate(100%) invert(76%) sepia(33%) saturate(440%) hue-rotate(2deg) brightness(99%) contrast(102%);
+        filter: brightness(0) saturate(100%) invert(76%) sepia(33%)
+          saturate(440%) hue-rotate(2deg) brightness(99%) contrast(102%);
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .footer_back {
+    display: flex;
+    flex-direction: column!important;
+    div:first-child {
+      width: 100%;
+      order: 2;
+
+      address {
+        width: 100%;
+        padding: 0;
+        font-size: 2vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    display: flex;
+    flex-direction: row;
+    #france_map,
+    #blason_normandy,
+    span, #br {
+      display: none;
+    }
+
+    // social media
+    div:last-child {
+      width: 100%;
+      padding: 4vh 4vh 2vh 4vh;
+      margin: 0;
+      order: 1;
+
     }
   }
 }

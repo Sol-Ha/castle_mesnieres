@@ -1,6 +1,6 @@
 import { Button, Form, Image } from 'react-bootstrap';
 import Btnreturn from "../../../components/admin/shared_components/Btnreturn";
-import "./login.scss";
+import "../../../styles/pages.scss";
 
 const LoginRecover2 = () => {
   return (
@@ -19,7 +19,7 @@ const LoginRecover2 = () => {
                     <Form.Label>
                       Question secrète
                     </Form.Label>
-                    <Form.Select aria-label="Default select example" className="mb-4" required>
+                    <Form.Select aria-label="Default select example" required>
                       <option>-</option>
                       <option value="1">Nom de jeune fille de votre mère?</option>
                       <option value="2">Nom de votre premier animal?</option>
@@ -29,13 +29,13 @@ const LoginRecover2 = () => {
                     </Form.Select>
               </Form.Group>
 
-              <Form.Group className="mb-5">
+              <Form.Group>
               <Form.Label>Réponse</Form.Label>
               <Form.Control type="text" name='login_answer' required/>
             </Form.Group>
 
         <a href="/admin/selection_menu">
-        <Button variant="primary" className="mb-5">
+        <Button variant="primary">
           ENVOYER
         </Button>
         </a>
