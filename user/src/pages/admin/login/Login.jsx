@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { AuthContext } from '../../../context/authContext';
 import { Button, Form, Image } from 'react-bootstrap';
 import "../../../styles/pages.scss";
@@ -13,7 +14,7 @@ const Login = () => {
   });
 
   // change route
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const { user, loading, error, dispatch } = useContext(AuthContext);
 
@@ -53,14 +54,16 @@ const Login = () => {
               <Form.Label>Pseudo</Form.Label>
               <Form.Control onChange={handleChange} type="text" name="user_pseudo" />
             </Form.Group>
+
             <Form.Group>
               <Form.Label>Mot de passe</Form.Label>
               <Form.Control onChange={handleChange} type="password" name="user_password" />
             </Form.Group>
+
             <Link id="a_recover_up" to="/admin/login_recover">Vous n'arrivez pas à vous connecter?</Link>
 
             {/* security */}            
-            <Button disabled={loading} variant="primary" onClick={() => navigate(handleClick)}>
+            <Button disabled={loading} variant="primary" onClick={() => (handleClick)}>
             {/* onClick={handleClick} */}
             {/* onClick={() => navigate()} */}
               SE CONNECTER

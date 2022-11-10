@@ -35,12 +35,13 @@
     }
 
     form {
-      width: 40%;
+      width: 50%;
       height: auto;
+      padding-inline: 5%;
 
       div {
         label {
-          margin-top: 2vh;
+          margin-block: 2vh;
         }
 
         input,
@@ -50,34 +51,36 @@
         }
       }
 
-        button {
-          width: 60%;
-          height: 6vh;
-          font-size: 2vh;
-          font-weight: 500;
-          margin-block: 2vh 3vh;
-          background-color: $white;
-          border: $txt solid 0.1vh;
+      button {
+        width: 80%;
+        height: 6vh;
+        font-size: 2vh;
+        font-weight: 500;
+        margin: 5% 10% 4% 10%;
+        background-color: $white;
+        border: $txt solid 0.1vh;
 
-          &:hover {
-            background-color: $txt;
-            color: $white;
-          }
+        &:hover {
+          background-color: $txt;
+          color: $white;
+        }
       }
     }
   }
+
   #a_recover_up,
   #a_recover_down {
     color: $txt;
-    margin-top: 3vh;
     font-size: 2vh;
+    margin-block: 3vh 1vh;
     text-decoration: none;
-    text-align: center;
+    display: block;
 
     &:hover {
       text-decoration: underline;
     }
   }
+
   #a_recover_down {
     display: none;
   }
@@ -85,7 +88,8 @@
   // MEDIA QUERRIES
   // LOGIN
   @media only screen and (max-width: 800px) {
-    margin-block: 20% 20%;
+    
+    margin-block: 15% 15%;
 
     h2 {
       font-size: 2vh;
@@ -108,13 +112,8 @@
       }
 
       form {
-        width: 45%;
-        margin-inline: 5% 10%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-self: center;
-        font-weight: 500;
+        width: 50%;
+        margin-inline: 5% 5%;
         font-size: 1.8vh;
 
         div {
@@ -122,13 +121,8 @@
           textarea,
           select {
             height: 4vh;
-            border: $dark_grey solid 0.1vh;
-            border-radius: none !important;
-            &:focus {
-              box-shadow: 0 0 0 0.2rem rgba(214, 96, 96, 0.438);
-              border-color: $red;
-            }
           }
+
           option {
             width: min-content;
             font-size: 1.8vh;
@@ -138,14 +132,11 @@
           display: none;
         }
 
-        a {
-          @include displayFullScreen;
-          button {
-            width: 100%;
-            height: 4vh;
-            margin-block: 3vh 3vh;
-            font-size: 1.6vh;
-          }
+        button {
+          width: 100%;
+          height: 4vh;
+          font-size: 1.6vh;
+          margin: 20% 0 10% 0;
         }
       }
     }
