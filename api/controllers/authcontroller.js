@@ -30,7 +30,7 @@ export const register = async (req, res, next) => {
 export const login = async (req, res, next) => {
     try {
         const admin = await Admin.findOne({ username: req.body.username })
-        if (!admin) return next(createError(404, "L'admin n'a pas été trouvé"))
+        if (!admin) return next(createError(404, "L'administrateur n'a pas été trouvé"))
 
         const isPasswordCorrect = await bcrypt.compare(req.body.password, admin.password)
         if (!isPasswordCorrect) return next(createError(400, "Mot de passe ou nom d'utilisateur incorrect"))
