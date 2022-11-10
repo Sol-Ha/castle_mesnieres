@@ -37,7 +37,7 @@ const Login = () => {
 
   return (
     <>
-      <section id="login_admin">
+      <section className="login_admin">
         <h2>CONNEXION</h2>
         <article>
           <Image

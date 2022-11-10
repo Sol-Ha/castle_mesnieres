@@ -7,7 +7,7 @@ const LoginRecover2 = () => {
     <>
     <Btnreturn urlCard="/admin/Login" />
 
-    <section id='login_admin'>
+    <section className="login_admin">
     <h2>MOT DE PASSE OU IDENTIFIANT PERDU</h2>
     <article>
       <Image src="../../assets/images/stag.png" alt="Image d'un cerf"></Image>
@@ -34,11 +34,10 @@ const LoginRecover2 = () => {
               <Form.Control type="text" name='login_answer' required/>
             </Form.Group>
 
-        <a href="/admin/selection_menu">
-        <Button variant="primary">
+      <Button className="btn_login" variant="primary" onClick={() => ("admin/login/LoginRecover2")}>
           ENVOYER
         </Button>
-        </a>
+
       </Form>
     </article>
   </section>

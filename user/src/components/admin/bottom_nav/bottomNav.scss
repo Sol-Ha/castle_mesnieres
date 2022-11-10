@@ -5,41 +5,37 @@
 
 //  nav and disconnecting button
 .bottom_nav{
-    background-color: $black;
     height: 10vh;
     width: 100%;
+    background-color: $black;
     display: flex;
     font-weight: 600;
     border-block: $black solid 0.2vh;
 
-a{
-    width: 40vh;
-    height: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: $black;
-    color: $white;
-    font-size: 1.1vw;
-    font-weight: 500;
-    text-decoration: none;
-
-    img{
-        width: 8vh;
-        height: auto;
+    button {
+        height: 100%;
+        width: 20%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: $black;
+        border-radius: 0 !important;
+        border-block: 1px $black solid !important;
+        border-inline: 0px $black solid !important;
+        color: $white;
+    
+        img {
+          width: 6vh;
+          height: auto;
         filter: brightness(0) saturate(100%) invert(99%) sepia(3%) saturate(832%) hue-rotate(282deg) brightness(116%) contrast(100%);
     }
     &:hover{
         background-color: $white;
-        color: white;
+        color: $black;
         font-weight: 600;
 
         img{
             filter: none;
-        }
-        h2{
-            color: $black;
-            font-weight: 700;
         }
     }
 }
@@ -51,8 +47,17 @@ span{
   }
   h2 {
     color: $white;
-    font-size: 1.1vw;
-    margin-block: auto;
-    padding-inline: 5vh;
+    font-size: 2vh;
+    margin: auto;
   }
-}
+
+  @media only screen and (max-width: 800px) {
+    button {
+        font-size: 1.6vh;
+        width: 35%;
+  }
+
+  h2{
+    font-size: 1.6vh;
+  }
+}}

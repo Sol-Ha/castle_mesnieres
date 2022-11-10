@@ -1,17 +1,19 @@
-import React from 'react'
-import { Image } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import { Image, Button } from "react-bootstrap";
 import "./bottomNav.scss";
 
 // rfce for function
 const BottomNav = ({name}) => {
+
+  const navigate = useNavigate();
   return (
     <>
     {/* DISCONNECTING USER */}
     <nav className="bottom_nav">
-      <a href="/admin/selection_menu">
+    <Button onClick={() => navigate("/admin/selection_menu")}>
         <Image src="../assets/icones/stag.svg" alt="icone de retour vers le menu principal" />
-        <h2>PAGE D'ACCUEIL</h2>
-      </a>
+        PAGE D'ACCUEIL
+        </Button>
 
       <span></span>
       <h2>{name}</h2>

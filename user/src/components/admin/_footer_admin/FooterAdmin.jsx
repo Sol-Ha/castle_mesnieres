@@ -8,7 +8,7 @@ const FooterAdmin = () => {
 
       <div>
         <address>
-          Château<br id="br"/>
+          Château <br id="br"/>
           de Mesnières-en-Bray<br/>
           <a href="tel:+330235931004">+33 (0)2 35 93 10 04</a>
         </address>

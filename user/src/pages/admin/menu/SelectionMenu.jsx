@@ -1,17 +1,20 @@
-import React from "react";
-import { Image, Container } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import { Image, Container, Button } from "react-bootstrap";
 import Card from "../../../components/admin/card/Card";
 import "../../../styles/pages.scss";
 
 const SelectionMenu = () => {
+
+  const navigate = useNavigate();
   return (
     <>
       {/* DISCONNECTING USER */}
       <nav className="nav_SelectionMenu">
-      <a href="Login">
+
+      <Button onClick={() => navigate("/admin/login")}>
           <Image src="../../assets/icones/off.svg" alt="icone de deconnexion" />
-          <h2>DECONNEXION</h2>
-          </a>
+          DECONNEXION
+          </Button>
       </nav>
 
       <main className="main_SelectionMenu">
