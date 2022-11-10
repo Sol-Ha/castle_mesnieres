@@ -16,7 +16,7 @@ const Login = () => {
   // change route
   // const navigate = useNavigate();
 
-  const { user, loading, error, dispatch } = useContext(AuthContext);
+  const { admin, loading, error, dispatch } = useContext(AuthContext);
 
   const handleChange = (e) => {
     setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
@@ -27,14 +27,14 @@ const Login = () => {
     dispatch({ type: "LOGIN_START" });
     try {
 
-      const res = await axios.post("/admin/login", credentials);
+      const res = await axios.post("/auth/login", credentials);
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
     } catch (err) {
       dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
     }
   };
 
-  console.log(user)
+  console.log(admin)
 
   return (
     <>
@@ -53,19 +53,18 @@ const Login = () => {
 
             <Form.Group>
               <Form.Label>Pseudo</Form.Label>
-              <Form.Control onChange={handleChange} type="text" name="user_pseudo" />
+              <Form.Control onChange={handleChange} type="text" name="username" />
             </Form.Group>
 
             <Form.Group>
               <Form.Label>Mot de passe</Form.Label>
-              <Form.Control onChange={handleChange} type="password" name="user_password" />
+              <Form.Control onChange={handleChange} type="password" name="password" />
             </Form.Group>
 
             <Link id="a_recover_up" to="/admin/login_recover">Vous n'arrivez pas à vous connecter?</Link>
 
             {/* security */}            
-            <Button disabled={loading} variant="primary" onClick={() => (handleClick)}>
-            {/* onClick={handleClick} */}
+            <Button variant="primary" onClick={handleClick}>
             {/* onClick={() => navigate()} */}
               SE CONNECTER
             </Button>
