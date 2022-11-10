@@ -1,50 +1,42 @@
 import mongoose from "mongoose";
 
-const AdminSchema = new mongoose.Schema({
-    user_firstname: {
+const FoodSchema = new mongoose.Schema({
+    food_item1: {
         type: String,
         required: true,
     },
-    user_lastname: {
+    food_item2: {
         type: String,
         required: true,
     },
-    username: {
-        type: String,
-        required: true,
-        unique: true,
-    },
-    user_email: {
-        type: String,
-        required: true,
-        unique: true,
-    },
-    password: {
+    food_item3: {
         type: String,
         required: true,
     },
-    user_birthday: {
-        type: Date,
-        required: true,
-    },
-    user_answer: {
+    food_item4: {
         type: String,
         required: true,
     },
-    user_question: {
+    food_item5: {
         type: String,
         required: true,
     },
-    user_endcontract: {
-        type: Date,
+    food_item6: {
+        type: String,
         required: true,
     },
-    isSuperadmin: {
-        type: Boolean,
-        default: false,
+    food_item7: {
+        type: String,
+        required: true,
+    },
+    food_item8: {
+        type: String,
+        required: true,
+    },
+    food_price: {
+        type: Number,
+        required: true,
     }
-},
-    { timestamps: true },
-);
+});
 
-export default mongoose.model("Admin", AdminSchema);
+export default mongoose.model("Food", FoodSchema);

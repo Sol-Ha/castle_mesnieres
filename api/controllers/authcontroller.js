@@ -9,11 +9,16 @@ export const register = async (req, res, next) => {
         const hash = bcrypt.hashSync(req.body.password, salt);
 
         const newAdmin = new Admin({
-            firstname: req.body.firstname,
-            lastname: req.body.lastname,
+            user_firstname: req.body.user_firstname,
+            user_lastname: req.body.user_lastname,
             username: req.body.username,
-            email: req.body.email,
+            user_email: req.body.user_email,
             password: hash,
+            user_question: req.body.user_question,
+            user_answer: req.body.user_answer,
+            user_birthday: req.body.user_birthday,
+            user_endcontract: req.body.user_endcontract,
+            // isSuperadmin: req.body.isSuperadmin
         })
 
         await newAdmin.save()

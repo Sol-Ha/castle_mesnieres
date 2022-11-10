@@ -27,7 +27,7 @@ export const updatePrivateEvents = async (req, res, next) => {
 export const deletePrivateEvents = async (req, res, next) => {
     try {
         await PrivateEvents.findByIdAndDelete(req.params.id)
-        res.status(200).json("La salle à louer a été supprimée.")
+        res.status(200).json("L'évènement privé a été supprimée.")
     } catch (err) {
         next(err);
     }

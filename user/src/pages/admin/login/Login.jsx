@@ -59,8 +59,10 @@ const Login = () => {
             </Form.Group>
             <Link id="a_recover_up" to="/admin/login_recover">Vous n'arrivez pas à vous connecter?</Link>
 
-            {/* security */}
-            <Button disabled={loading} variant="primary" onClick= {handleClick}>
+            {/* security */}            
+            <Button disabled={loading} variant="primary" onClick={() => navigate(handleClick)}>
+            {/* onClick={handleClick} */}
+            {/* onClick={() => navigate()} */}
               SE CONNECTER
             </Button>
           </Form>
@@ -72,3 +74,4 @@ const Login = () => {
 };
 
 export default Login;
+
