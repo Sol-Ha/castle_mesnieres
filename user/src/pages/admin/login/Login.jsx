@@ -47,7 +47,7 @@ const Login = () => {
           ></Image>
           <Form>
             {/* DISPLAY MESSAGE ERROR */}
-            <h3>{error && <span>{error.message}</span>}</h3>
+            {error &&<h3>{error.message}</h3>}
 
             <Form.Group>
               <Form.Label>Pseudo</Form.Label>
@@ -60,7 +60,7 @@ const Login = () => {
             <Link id="a_recover_up" to="/admin/login_recover">Vous n'arrivez pas à vous connecter?</Link>
 
             {/* security */}
-            <Button disabled={loading} variant="primary" onClick={() => navigate(handleClick)}>
+            <Button disabled={loading} variant="primary" onClick= {handleClick}>
               SE CONNECTER
             </Button>
           </Form>
@@ -72,20 +72,3 @@ const Login = () => {
 };
 
 export default Login;
-
-
-
-// onClick={handleClick}
-
-
-
-{/* <a href="/admin/selection_menu">
-<Button disabled={loading} onClick={handleClick} variant="primary" className="mb-5">
-  SE CONNECTER
-</Button>
-{error && <span>{error.message}</span>}
-</a>
-
-<Button disabled={loading} variant="primary" onClick={() => navigate(handleClick)}>
-  SE CONNECTER
-</Button> */}
