@@ -1,5 +1,4 @@
 import Bedrooms from "../models/Bedrooms.js";
-import { createError } from "../utils/error.js";
 
 //CREATE
 export const createBedrooms = async (req, res, next) => {

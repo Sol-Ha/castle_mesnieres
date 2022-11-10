@@ -1,5 +1,4 @@
 import Food from "../models/Food.js";
-import { createError } from "../utils/error.js";
 
 //CREATE
 export const createFood = async (req, res, next) => {

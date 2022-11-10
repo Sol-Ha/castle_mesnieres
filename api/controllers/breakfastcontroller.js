@@ -1,5 +1,4 @@
 import Breakfast from "../models/Breakfast.js";
-import { createError } from "../utils/error.js";
 
 //CREATE
 export const createBreakfast = async (req, res, next) => {

@@ -1,5 +1,4 @@
 import Events from "../models/Events.js";
-import { createError } from "../utils/error.js";
 
 //CREATE
 export const createEvents = async (req, res, next) => {

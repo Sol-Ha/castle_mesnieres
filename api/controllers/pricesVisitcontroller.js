@@ -1,5 +1,4 @@
 import PricesVisit from "../models/PricesVisit.js";
-import { createError } from "../utils/error.js";
 
 //CREATE
 export const createPricesVisit = async (req, res, next) => {

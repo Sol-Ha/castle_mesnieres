@@ -9,16 +9,15 @@ export const register = async (req, res, next) => {
         const hash = bcrypt.hashSync(req.body.password, salt);
 
         const newAdmin = new Admin({
+            username: req.body.username,
+            password: hash,
             user_firstname: req.body.user_firstname,
             user_lastname: req.body.user_lastname,
-            username: req.body.username,
             user_email: req.body.user_email,
-            password: hash,
             user_question: req.body.user_question,
             user_answer: req.body.user_answer,
             user_birthday: req.body.user_birthday,
             user_endcontract: req.body.user_endcontract,
-            // isSuperadmin: req.body.isSuperadmin
         })
 
         await newAdmin.save()
@@ -35,6 +34,7 @@ export const login = async (req, res, next) => {
 
         const isPasswordCorrect = await bcrypt.compare(req.body.password, admin.password)
         if (!isPasswordCorrect) return next(createError(400, "Mot de passe ou nom d'utilisateur incorrect"))
+        
         // Vérification si superadmin ou pas grâce à jsonwebtoken
         const token = jwt.sign({ id: admin._id, isSuperadmin: admin.isSuperadmin }, process.env.JWT)
 

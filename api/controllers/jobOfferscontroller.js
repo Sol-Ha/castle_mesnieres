@@ -1,5 +1,4 @@
 import JobOffers from "../models/JobOffers.js";
-import { createError } from "../utils/error.js";
 
 //CREATE
 export const createJobOffers = async (req, res, next) => {

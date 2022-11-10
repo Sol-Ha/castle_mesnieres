@@ -1,5 +1,4 @@
 import PrivateEvents from "../models/PrivateEvents.js";
-import { createError } from "../utils/error.js";
 
 //CREATE
 export const createPrivateEvents = async (req, res, next) => {

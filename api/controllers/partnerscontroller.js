@@ -1,5 +1,4 @@
 import Partners from "../models/Partners.js";
-import { createError } from "../utils/error.js";
 
 //CREATE
 export const createPartners = async (req, res, next) => {

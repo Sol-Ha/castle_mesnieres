@@ -1,5 +1,4 @@
 import Bus from "../models/Bus.js";
-import { createError } from "../utils/error.js";
 
 //CREATE
 export const createBus = async (req, res, next) => {

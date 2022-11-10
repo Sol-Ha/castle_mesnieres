@@ -1,5 +1,4 @@
 import Dorms from "../models/Dorms.js";
-import { createError } from "../utils/error.js";
 
 //CREATE
 export const createDorms = async (req, res, next) => {

@@ -1,5 +1,4 @@
 import Medias from "../models/Medias.js"
-import { createError } from "../utils/error.js"
 
 //CREATE
 export const createMedias = async (req, res, next) => {

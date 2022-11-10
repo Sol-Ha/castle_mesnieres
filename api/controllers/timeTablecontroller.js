@@ -1,5 +1,4 @@
 import TimeTable from "../models/TimeTable.js";
-import { createError } from "../utils/error.js";
 
 //CREATE
 export const createTimeTable = async (req, res, next) => {
