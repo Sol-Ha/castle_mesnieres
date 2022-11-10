@@ -1,15 +1,20 @@
 import { Image } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./btn_return.scss";
 
-const Btnreturn = ({urlCard}) => {
-  return (
-    <a href={urlCard} className="btnReturn">
-    <div>
-        <Image src="../../assets/icones/left-arrow.svg" alt="image d'une flèche"/>
-    <h4>RETURN</h4>
-    </div>
-    </a>
-  )
-}
+const Btnreturn = ({ urlCard }) => {
 
-export default Btnreturn
+  return (
+    <Link to = {urlCard} className="btnReturn">
+      <div>
+        <Image
+          src="../../assets/icones/left-arrow.svg"
+          alt="image d'une flèche"
+        />
+        <h4>RETURN</h4>
+      </div>
+    </Link>
+  );
+};
+
+export default Btnreturn;

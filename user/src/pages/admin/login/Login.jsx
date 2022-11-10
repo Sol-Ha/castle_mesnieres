@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { AuthContext } from '../../../context/authContext';
 import { Button, Form, Image } from 'react-bootstrap';
 import "../../../styles/pages.scss";
@@ -13,7 +14,7 @@ const Login = () => {
   });
 
   // change route
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const { user, loading, error, dispatch } = useContext(AuthContext);
 
@@ -37,7 +38,7 @@ const Login = () => {
 
   return (
     <>
-      <section id="login_admin">
+      <section className="login_admin">
         <h2>CONNEXION</h2>
         <article>
           <Image
@@ -48,20 +49,22 @@ const Login = () => {
           ></Image>
           <Form>
             {/* DISPLAY MESSAGE ERROR */}
-            <h3>{error && <span>{error.message}</span>}</h3>
+            {error &&<h3>{error.message}</h3>}
 
             <Form.Group>
               <Form.Label>Pseudo</Form.Label>
               <Form.Control onChange={handleChange} type="text" name="user_pseudo" />
             </Form.Group>
+
             <Form.Group>
               <Form.Label>Mot de passe</Form.Label>
               <Form.Control onChange={handleChange} type="password" name="user_password" />
             </Form.Group>
+
             <Link id="a_recover_up" to="/admin/login_recover">Vous n'arrivez pas à vous connecter?</Link>
 
-            {/* security */}
-            <Button disabled={loading} variant="primary" onClick={() => navigate(handleClick)}>
+            {/* security */}            
+            <Button disabled={loading} variant="primary" onClick={() => (handleClick)}>
             {/* onClick={handleClick} */}
             {/* onClick={() => navigate()} */}
               SE CONNECTER
@@ -75,52 +78,3 @@ const Login = () => {
 };
 
 export default Login;
-
-
-
-
-
-
-// import axios from "axios"
-// import { useContext, useState } from "react"
-// import { AuthContext } from "../../../context/authContext"
-// import "../../../styles/pages.scss";
-
-// const Login = () => {
-//   const [credentials, setCredentials] = useState({
-//     username: undefined,
-//     password: undefined
-//   })
-
-//   const { user, loading, error, dispatch } = useContext(AuthContext)
-
-//   const handleChange = (e) => {
-//     setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }))
-//   }
-
-//   const handleClick = async e => {
-//     e.preventDefault()
-//     dispatch({ type: "LOGIN_START" })
-//     try {
-//       const res = await axios.post("/auth/login", credentials)
-//       dispatch({ type: "LOGIN_SUCCESS", payload: res.data })
-//     } catch (err) {
-//       dispatch({ type: "LOGIN_FAILURE", payload: err.response.data })
-//     }
-//   }
-
-//   console.log(user);
-
-//   return (
-//     <div className="login">
-//       <div className="lContainer">
-//         <input type="text" placeholder="username" id="username" />
-//         <input type="password" placeholder="password" id="password" onChange={handleChange} className="lInput" />
-//         <button onClick={handleClick} className="lButton">Login</button>
-//         {error && <span>{error.message}</span>}
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default Login

@@ -4,7 +4,7 @@
 @import "~bootstrap/scss/bootstrap";
 
 // LOGIN
-#login_admin {
+.login_admin {
   @include displayFullScreen;
   margin-block: 5% 8%;
   @include flexA;
@@ -35,12 +35,13 @@
     }
 
     form {
-      width: 40%;
+      width: 50%;
       height: auto;
+      padding-inline: 5%;
 
       div {
         label {
-          margin-top: 2vh;
+          margin-block: 2vh;
         }
 
         input,
@@ -50,34 +51,42 @@
         }
       }
 
-        button {
-          width: 60%;
-          height: 6vh;
-          font-size: 2vh;
-          font-weight: 500;
-          margin-block: 2vh 3vh;
-          background-color: $white;
-          border: $txt solid 0.1vh;
+      button,
+      .btn_login {
+        width: 80%;
+        height: 6vh;
+        font-size: 2vh;
+        font-weight: 500;
+        background-color: $white;
+        border: $txt solid 0.1vh;
 
-          &:hover {
-            background-color: $txt;
-            color: $white;
-          }
+        &:hover {
+          background-color: $txt;
+          color: $white;
+        }
+      }
+      button {
+        margin: 5% 10% 4% 10%;
+      }
+      .btn_login {
+        margin: 15% 10% 4% 10%;
       }
     }
   }
+
   #a_recover_up,
   #a_recover_down {
     color: $txt;
-    margin-top: 3vh;
     font-size: 2vh;
+    margin-block: 3vh 1vh;
     text-decoration: none;
-    text-align: center;
+    display: block;
 
     &:hover {
       text-decoration: underline;
     }
   }
+
   #a_recover_down {
     display: none;
   }
@@ -85,7 +94,7 @@
   // MEDIA QUERRIES
   // LOGIN
   @media only screen and (max-width: 800px) {
-    margin-block: 20% 20%;
+    margin-block: 15% 15%;
 
     h2 {
       font-size: 2vh;
@@ -108,13 +117,8 @@
       }
 
       form {
-        width: 45%;
-        margin-inline: 5% 10%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-self: center;
-        font-weight: 500;
+        width: 50%;
+        margin-inline: 5% 5%;
         font-size: 1.8vh;
 
         div {
@@ -122,15 +126,9 @@
           textarea,
           select {
             height: 4vh;
-            border: $dark_grey solid 0.1vh;
-            border-radius: none !important;
-            &:focus {
-              box-shadow: 0 0 0 0.2rem rgba(214, 96, 96, 0.438);
-              border-color: $red;
-            }
           }
+
           option {
-            width: min-content;
             font-size: 1.8vh;
           }
         }
@@ -138,14 +136,11 @@
           display: none;
         }
 
-        a {
-          @include displayFullScreen;
-          button {
-            width: 100%;
-            height: 4vh;
-            margin-block: 3vh 3vh;
-            font-size: 1.6vh;
-          }
+        button {
+          width: 100%;
+          height: 4vh;
+          font-size: 1.6vh;
+          margin: 20% 0 10% 0;
         }
       }
     }
@@ -163,20 +158,17 @@
   height: 10vh;
   width: 100%;
 
-  a {
+  // btn Disconnect
+  button {
     height: 100%;
-    width: 40vh;
+    width: 20%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     background-color: $black;
-    text-decoration: none;
-
-    h2 {
-      font-size: 2vh;
-      font-weight: 500;
-      color: $white;
-    }
+    border-radius: 0 !important;
+    border: 2px $black solid !important;
+    color: $white;
 
     img {
       width: 4vh;
@@ -187,22 +179,27 @@
 
     &:hover {
       background-color: $white;
-      color: white;
+      color: $black;
       font-weight: 600;
-      border-block: $black 0.3vh solid;
 
       img {
         filter: none;
       }
-      h2 {
-        color: $black;
-        font-weight: 600;
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    button {
+      font-size: 1.6vh;
+      width: 40%;
+
+      img {
+        width: 3vh;
       }
     }
   }
 }
 
-// main
+// Selection Menu
 
 .main_SelectionMenu {
   @include displayFullScreen;
@@ -210,11 +207,11 @@
   // container display name
   div:first-child {
     width: 35%;
-    height: 21vh;
+    height: 23vh;
     margin: 5% 33% 10% 33%;
     @include center;
     background-image: url("../../public/assets/images/splater.png");
-    background-size: 80%;
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
 
@@ -226,15 +223,15 @@
     }
   }
 
-  // NAVBAR
-  div.container-fluid:last-child {
+  // cards container
+  .container-fluid:last-child {
     width: 90%;
-    height: fit-content;
-    display: flex;
+    @include flexB;
     flex-wrap: wrap;
     justify-content: center;
     margin: -5% 5% 5% 5%;
 
+    // cards
     .card_back {
       margin: 3%;
     }
@@ -246,43 +243,36 @@
     .card_back:nth-child(2) {
       background-image: url("../../public/assets/photos/workflow.avif");
       @include imgCardA;
-      background-position-x: -5.5vh;
     }
 
     .card_back:nth-child(3) {
       background-image: url("../../public/assets/photos/solidarity.avif");
       @include imgCardA;
-      background-position-x: -5.5vh;
     }
 
     .card_back:nth-child(4) {
       background-image: url("../../public/assets/photos/hire.avif");
       @include imgCardA;
-      background-position-x: -5.5vh;
     }
 
     .card_back:nth-child(5) {
       background-image: url("../../public/assets/photos/roadtag.avif");
       @include imgCardA;
-      background-position-x: -5.5vh;
     }
 
     .card_back:nth-child(6) {
       background-image: url("../../public/assets/photos/bedroom.avif");
       @include imgCardA;
-      background-position-x: -25vh;
     }
 
     .card_back:nth-child(7) {
       background-image: url("../../public/assets/photos/rentroom.avif");
       @include imgCardA;
-      background-position-x: -10.5vh;
     }
 
     .card_back:last-child {
       background-image: url("../../public/assets/photos/food.avif");
       @include imgCardA;
-      background-position-x: -2.5vh;
     }
   }
 }
@@ -377,8 +367,8 @@
 
   h2 {
     text-align: center;
-    font-weight: 500;
-    font-size: 2.2vh;
+    font-weight: 600;
+    font-size: 3.5vh;
     margin-block: 10%;
   }
   div {
@@ -411,13 +401,11 @@
     .card_back:first-child {
       background-image: url("../../public/assets/photos/bedroom2.avif");
       @include imgCardB;
-      background-position-x: -10.5vh;
     }
   }
   .card_back:last-child {
     background-image: url("../../public/assets/photos/dorms.avif");
     @include imgCardB;
-    background-position-x: -25.5vh;
   }
 }
 

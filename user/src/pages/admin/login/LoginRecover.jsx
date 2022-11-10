@@ -1,13 +1,17 @@
 import { Button, Form, Image } from 'react-bootstrap';
+import { useNavigate } from "react-router-dom";
 import Btnreturn from "../../../components/admin/other_components/Btnreturn";
 import "../../../styles/pages.scss";
 
 const LoginRecover = () => {
+
+  // change route
+  const navigate = useNavigate();
   return (
     <>
     <Btnreturn urlCard="/admin/Login" />
 
-    <section id='login_admin'>
+    <section className="login_admin">
     <h2>MOT DE PASSE OU IDENTIFIANT PERDU</h2>
     <article>
       <Image src="../../assets/images/stag.png" alt="Image d'un cerf"></Image>
@@ -25,11 +29,9 @@ const LoginRecover = () => {
         </Form.Group>
 
         {/* security */}
-        <a href="/admin/login_recover_userDB">
-        <Button variant="primary">
-          ENVOYER
+        <Button className="btn_login" variant="primary" onClick={() => navigate("/admin/login_recover_userDB")}>
+        ENVOYER
         </Button>
-        </a>
       </Form>
     </article>
   </section>
