@@ -1,5 +1,3 @@
-import React from "react";
-import { Container } from "react-bootstrap";
 import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
 import CardTime from "../../../components/admin/card/CardTime";
 import CardTimeEdit from "../../../components/admin/card/CardTimeEdit";
@@ -10,15 +8,15 @@ const ManageModerator = () => {
     <>
       <BottomNav name="GESTION DES MODERATEURS" />
 
-      <section className="manage_mod">
-        <Container>
+      <section className="manage_CRUD">
+      <div className="new_card">
           <CardTime
             url="/admin/create_moderator"
             date="_ _ /_ _ / _ _"
             firstName="_ _ _ _ _ _"
             lastName="_ _ _ _ _ _"
           />
-
+        </div>
 
           <div className="manage_mode_feed">
           <CardTimeEdit 
@@ -28,7 +26,6 @@ const ManageModerator = () => {
                       lastName="_ _ _ _ _ _"
           />
           </div>
-        </Container>
       </section>
     </>
   );

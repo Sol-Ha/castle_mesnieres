@@ -15,7 +15,7 @@ const PathFood = () => {
           name="TRAITEUR"
           urlCard="/admin/manage_caterer"
         />
-        <Card name="RESTAURANT-ECOLE" urlCard="#" />
+        <Card name="RESTAURANT-ECOLE" urlCard="#" disabled />
         </div>
       </Container>
     </>

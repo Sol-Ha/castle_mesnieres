@@ -1,10 +1,10 @@
+import {  Link } from "react-router-dom";
 import { Image } from "react-bootstrap";
-import "./cardTime.scss";
+import "../../../styles/components.scss";
 
 const cardTime = ({url, date, firstName, lastName}) => {
   return (
-    <a href={url} className="cardTime">
-    <article>
+    <Link to={url} className="cardTime">
       <div>
         <p>{date}</p>
         </div>
@@ -15,8 +15,7 @@ const cardTime = ({url, date, firstName, lastName}) => {
       <div>
         <Image src="../../assets/icones/edit_create.svg" alt="image d'un stylo"/>
       </div>
-    </article>
-    </a>
+    </Link>
   )
 }
 

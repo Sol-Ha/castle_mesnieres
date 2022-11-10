@@ -1,6 +1,6 @@
-import React from "react";
+import {  Link } from "react-router-dom";
 import { Image } from "react-bootstrap";
-import "./cardTimeEdit.scss";
+import "../../../styles/components.scss";
 
 const CardTimeEdit = ({url, date, firstName, lastName}) => {
   return (
@@ -15,9 +15,9 @@ const CardTimeEdit = ({url, date, firstName, lastName}) => {
       <div>
         <Image src="../../assets/icones/delete.svg" alt="image d'une croix"/>
       </div>
-      <a href={url}>
+      <Link to={url}>
         <Image src="../../assets/icones/edit_create.svg" alt="image d'un stylo"/>
-      </a>
+      </Link>
     </article>
   )
 }
