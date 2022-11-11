@@ -30,7 +30,7 @@ const JobOffersSchema = new mongoose.Schema({
         required: true,
     },
     offer_hours: {
-        type: Number,
+        type: Date,
         required: true,
     },
     offer_paycheck: {

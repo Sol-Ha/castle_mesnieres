@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import {  Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import { useNavigate } from "react-router-dom";
 import { AuthContext } from '../../../context/authContext';
 import { Button, Form, Image } from 'react-bootstrap';
@@ -49,7 +49,7 @@ const Login = () => {
           ></Image>
           <Form>
             {/* DISPLAY MESSAGE ERROR */}
-            {error &&<h3>{error.message}</h3>}
+            {error && <h3>{error.message}</h3>}
 
             <Form.Group>
               <Form.Label>Pseudo</Form.Label>
@@ -63,9 +63,9 @@ const Login = () => {
 
             <Link id="a_recover_up" to="/admin/login_recover">Vous n'arrivez pas à vous connecter?</Link>
 
-            {/* security */}            
+            {/* security */}
             <Button variant="primary" onClick={handleClick}>
-            {/* onClick={() => navigate()} */}
+              {/* onClick={() => navigate()} */}
               SE CONNECTER
             </Button>
           </Form>
