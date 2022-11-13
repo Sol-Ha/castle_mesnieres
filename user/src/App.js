@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // components
-import HeaderAdmin from "./components/admin/_header_admin/HeaderAdmin";
-import FooterAdmin from "./components/admin/_footer_admin/FooterAdmin";
+import Header from "./components/admin/_admin_components/Header";
+import FooterAdmin from "./components/admin/_admin_components/FooterAdmin";
 
 // pages user
 
@@ -58,7 +58,7 @@ function App() {
   // display differenet admin either header admin or header user
   return (
     <BrowserRouter>
-      <HeaderAdmin />
+      <Header />
 
       <Routes>
         {/* user */}

@@ -1,6 +1,5 @@
-import React from "react";
 import { Image } from "react-bootstrap";
-import "./footerAdmin.scss";
+import "../../../styles/adminComponent.scss";
 
 const FooterAdmin = () => {
   return (

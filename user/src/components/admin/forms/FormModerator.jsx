@@ -1,9 +1,9 @@
 import { Row, Form, Col, Button } from "react-bootstrap";
-import "./formModerator.scss";
+import "../../../styles/components.scss";
 
 const FormModerator = ({ subject, button}) =>{
   return (
-    <Form className="formModerator" action="/admin/manage_moderator">
+    <Form className="formA" action="/admin/manage_moderator">
       <h2>{subject}</h2>
       <p>
         <span>* </span>Les champs marqués par une étoile sont obligatoires

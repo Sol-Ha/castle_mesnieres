@@ -1,6 +1,6 @@
 import Btnreturn from "../../../components/admin/other_components/Btnreturn";
-import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
-import FormPartner from "../../../components/admin/forms/form_partners/FormPartner";
+import BottomNav from "../../../components/admin/_admin_components/BottomNav";
+import FormPartner from "../../../components/admin/forms/FormPartner";
 
 const EditPartner = () => {
   return (

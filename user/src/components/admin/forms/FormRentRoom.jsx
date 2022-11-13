@@ -1,5 +1,5 @@
 import { Row, Form, Col, Button } from "react-bootstrap";
-import "../form_accomodations/formAccomodation.scss";
+import "../../../styles/components.scss";
 
 const FormRentRoom = ({
   room_title,
@@ -18,45 +18,40 @@ const FormRentRoom = ({
   room_seminary,
 }) => {
   return (
-    <Form className="formAccomodation">
+    <Form className="formA">
       <p>
         <span>* </span>Les champs marqués par une étoile sont obligatoires
       </p>
 
       {/* title */}
-      <Col>
-        <Form.Group className="mb-4">
-          <Form.Label>
-            <span>* </span>TITRE
-          </Form.Label>
-          <Form.Control
-            name={room_title}
-            type="text"
-            placeholder="exemple: Suite"
-            required
-          />
-        </Form.Group>
-      </Col>
+      <Form.Group>
+        <Form.Label>
+          <span>* </span>TITRE
+        </Form.Label>
+        <Form.Control
+          name={room_title}
+          type="text"
+          placeholder="exemple: Suite"
+          required
+        />
+      </Form.Group>
 
       {/* article's inner */}
-      <Col>
-        <Form.Group className="mb-4">
-          <Form.Label>
-            <span>* </span>CONTENU
-          </Form.Label>
-          <Form.Control
-            name={room_message}
-            className="mb-4"
-            as="textarea"
-            rows={"8"}
-            placeholder="Entrer votre texte..."
-            required
-          />
-        </Form.Group>
-      </Col>
+      <Form.Group>
+        <Form.Label>
+          <span>* </span>CONTENU
+        </Form.Label>
+        <Form.Control
+          name={room_message}
+          as="textarea"
+          rows={"8"}
+          placeholder="Entrer votre texte..."
+          required
+        />
+      </Form.Group>
 
       {/* min people */}
-      <Form.Group className="mb-5">
+      <Form.Group>
         <Row>
           <Col>
             <Form.Label>
@@ -85,7 +80,7 @@ const FormRentRoom = ({
       </Form.Group>
 
       {/* money low season */}
-      <Form.Group className="mb-5">
+      <Form.Group>
         <Row>
           <Col>
             <Form.Label>
@@ -114,66 +109,51 @@ const FormRentRoom = ({
       </Form.Group>
 
       {/* access */}
-      <Col>
-        <Form.Group className="mb-4">
+        <Form.Group>
           <Form.Label>
             <span>* </span>ACCES
           </Form.Label>
           <Form.Control
             name={room_access}
-            className="mb-4"
             as="textarea"
             rows={"3"}
             placeholder="Entrer votre texte..."
             required
           />
         </Form.Group>
-      </Col>
-
       {/* heating cooling radio */}
 
- {/* radios one answer submit */}
- <Form.Group className="mb-5">
- <Form.Label>
-            <span>* </span>BONUS DE LA SALLE
-          </Form.Label>
+      {/* radios one answer submit */}
+      <Form.Group>
+        <Form.Label>
+          <span>* </span>BONUS DE LA SALLE
+        </Form.Label>
 
-                <Row>
-                  <Col>
-              <Form.Check
-                label="CHAUFFER"
-                name ={room_heating}
-
-              />
-                  </Col>
-                  <Col>
-              <Form.Check
-                label="CLIMATISER"
-                name ={room_cooling}
-
-              />
-                  </Col>
-              </Row>
+        <Row>
+          <Col>
+            <Form.Check label="CHAUFFER" name={room_heating} />
+          </Col>
+          <Col>
+            <Form.Check label="CLIMATISER" name={room_cooling} />
+          </Col>
+        </Row>
       </Form.Group>
 
       {/* size */}
-
-      <Col>
-        <Form.Group className="mb-4 halfsize">
+        <Form.Group className="halfsize">
           <Form.Label>
             <span>* </span>TAILLE DE LA SALLE
           </Form.Label>
           <Form.Control
-              name={room_size}
-              type="number"
-              placeholder="exemple: 100"
-              required
+            name={room_size}
+            type="number"
+            placeholder="exemple: 100"
+            required
           />
         </Form.Group>
-      </Col>
 
       {/* cocktail + banquet*/}
-      <Form.Group className="mb-5">
+      <Form.Group>
         <Row>
           <Col>
             <Form.Label>
@@ -187,7 +167,6 @@ const FormRentRoom = ({
             />
           </Col>
           <Col>
-
             <Form.Label>
               <span>* </span>MAX PERSONNES: "BANQUET"
             </Form.Label>
@@ -202,7 +181,7 @@ const FormRentRoom = ({
       </Form.Group>
 
       {/* u shape seminary */}
-            <Form.Group className="mb-5">
+      <Form.Group>
         <Row>
           <Col>
             <Form.Label>
@@ -216,7 +195,6 @@ const FormRentRoom = ({
             />
           </Col>
           <Col>
-
             <Form.Label>
               <span>* </span>MAX PERSONNES: "SEMINAIRE"
             </Form.Label>
@@ -230,9 +208,9 @@ const FormRentRoom = ({
         </Row>
       </Form.Group>
 
-      <Button variant="primary" type="submit">
-          MODIFIER
-        </Button>
+      <Button variant="primary" className="btn2" type="submit">
+        MODIFIER
+      </Button>
     </Form>
   );
 };

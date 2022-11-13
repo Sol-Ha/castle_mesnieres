@@ -1,8 +1,115 @@
-@import "../../../styles/_fonts.scss";
-@import "../../../styles/_variable.scss";
-@import "../../../styles/_mixin.scss";
+@import "./_fonts.scss";
+@import "./_variable.scss";
+@import "./_mixin.scss";
 @import "~bootstrap/scss/bootstrap";
 
+// header
+.header_back {
+  width: 100%;
+  background-color: $black;
+  div {
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.2vh;
+    font-weight: 500;
+    padding-inline: 3vh;
+    background-color: $black;
+
+    h2 {
+      margin-top: 1vh;
+      font-size: 1.8vh;
+      color: $white;
+    }
+    img {
+      width: 35px;
+      height: auto;
+      margin-left: 2vh;
+    }
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .header_back {
+    div {
+      h2 {
+        font-size: 1.4vh;
+      }
+
+      img {
+        width: 25px;
+      }
+    }
+  }
+}
+
+//  nav and disconnecting button
+.bottom_nav {
+  height: 10vh;
+  width: 100%;
+  background-color: $black;
+  display: flex;
+  font-weight: 600;
+  border-block: $black solid 0.2vh;
+
+  button {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: $black;
+    border-radius: 0 !important;
+    border-block: 1px $black solid !important;
+    border-inline: 0px $black solid !important;
+    color: $white;
+
+    img {
+      width: 6vh;
+      height: auto;
+      filter: brightness(0) saturate(100%) invert(99%) sepia(3%) saturate(832%)
+        hue-rotate(282deg) brightness(116%) contrast(100%);
+    }
+    &:hover {
+      background-color: $white;
+      color: $black;
+      font-weight: 600;
+
+      img {
+        filter: none;
+      }
+    }
+  }
+  span {
+    height: auto;
+    width: 0.3vh;
+    background-color: $white;
+  }
+  h2 {
+    color: $white;
+    font-size: 2vh;
+    margin: auto;
+  }
+
+  @media only screen and (max-width: 800px) {
+    button {
+      font-size: 1.6vh;
+      width: 35%;
+    }
+
+    h2 {
+      font-size: 1.6vh;
+    }
+  }
+}
+
+// footer
 .footer_back {
   width: 100%;
   background-color: $black;
@@ -82,7 +189,7 @@
 @media only screen and (max-width: 800px) {
   .footer_back {
     display: flex;
-    flex-direction: column!important;
+    flex-direction: column !important;
     div:first-child {
       width: 100%;
       order: 2;
@@ -101,7 +208,8 @@
     flex-direction: row;
     #france_map,
     #blason_normandy,
-    span, #br {
+    span,
+    #br {
       display: none;
     }
 
@@ -111,7 +219,6 @@
       padding: 4vh 4vh 2vh 4vh;
       margin: 0;
       order: 1;
-
     }
   }
 }

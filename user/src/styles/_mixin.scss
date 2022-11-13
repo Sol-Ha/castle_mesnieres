@@ -87,20 +87,9 @@
       margin-right: 3vh;
     }
 
-    &:hover,
-    &:active,
-    &:focus,
-    &:checked {
-      background-color: $white !important;
-      color: $black !important;
-      font-weight: 600 !important;
-      border-left: none !important;
-      border-radius: 0 !important;
-
       img {
         filter: brightness(0%);
       }
-    }
   }
 }
 

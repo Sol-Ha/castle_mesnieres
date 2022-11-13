@@ -1,10 +1,11 @@
 import { Row, Form, Col, Button } from "react-bootstrap";
+import "../../../styles/components.scss";
 
 // rfce for function
 const FormNews = ({subject, button}) => {
   return (
     <>
-    <Form className="formEvent" action="/admin/manage_news">
+    <Form className="formA" action="/admin/manage_news">
       <h2>{subject}</h2>
       <p>
         <span>* </span>Les champs marqués par une étoile sont obligatoires

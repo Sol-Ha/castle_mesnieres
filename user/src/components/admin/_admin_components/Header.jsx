@@ -1,8 +1,7 @@
-import React from 'react';
 import { Image } from "react-bootstrap";
-import "./headerAdmin.scss";
+import "../../../styles/adminComponent.scss";
 
-const HeaderAdmin = () => {
+const Header = () => {
   return (
     <header className='header_back'>
       <div>
@@ -20,4 +19,4 @@ const HeaderAdmin = () => {
   )
 }
 
-export default HeaderAdmin
+export default Header

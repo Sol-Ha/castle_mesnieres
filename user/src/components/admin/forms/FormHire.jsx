@@ -1,12 +1,12 @@
 import { Row, Form, Col, Button } from "react-bootstrap";
 import { useState } from "react";
-import "../form_moderator/formModerator.scss";
+import "../../../styles/components.scss";
 
 const FormPartner = ({ subject, button }) => {
   // display or hide depending of the radio being pushed
   const [show, setShow] = useState(false);
   return (
-    <Form className="formEvent" action="/admin/manage_hire">
+    <Form className="formA" action="/admin/manage_hire">
       <h2>{subject}</h2>
       <p>
         <span>* </span>Les champs marqués par une étoile sont obligatoires

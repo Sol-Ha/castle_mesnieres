@@ -1,10 +1,10 @@
 import { Row, Form, Col, Button } from "react-bootstrap";
-import "./formAccomodation.scss";
+import "../../../styles/components.scss";
 
 const formAccomodation = ({ title, image, message, lowSeason, highSeason }) => {
   return (
     <>
-      <Form className="formAccomodation">
+      <Form className="formA">
         <h3>{title}</h3>
         <p>
           <span>* </span>Les champs marqués par une étoile sont obligatoires
@@ -12,7 +12,7 @@ const formAccomodation = ({ title, image, message, lowSeason, highSeason }) => {
 
         {/* title */}
         <Col>
-          <Form.Group className="mb-4">
+          <Form.Group>
             <Form.Label>
               <span>* </span>TITRE
             </Form.Label>
@@ -27,7 +27,7 @@ const formAccomodation = ({ title, image, message, lowSeason, highSeason }) => {
 
         {/* image */}
         <Col>
-          <Form.Group controlId="formFileLg" className="mb-4 inputhalf">
+          <Form.Group controlId="formFileLg" className="halfsize">
             <Form.Label>
               <span>* </span>INSERER UNE IMAGE
             </Form.Label>
@@ -37,13 +37,12 @@ const formAccomodation = ({ title, image, message, lowSeason, highSeason }) => {
 
         {/* article's inner */}
         <Col>
-          <Form.Group className="mb-4">
+          <Form.Group>
             <Form.Label>
               <span>* </span>CONTENU
             </Form.Label>
             <Form.Control
               name={message}
-              className="mb-4"
               as="textarea"
               rows={"10"}
               placeholder="Entrer votre texte..."
@@ -52,7 +51,7 @@ const formAccomodation = ({ title, image, message, lowSeason, highSeason }) => {
           </Form.Group>
         </Col>
         {/* money low season */}
-        <Form.Group className="mb-5">
+        <Form.Group>
           <Row>
             <Col>
               <Form.Label>
@@ -80,7 +79,7 @@ const formAccomodation = ({ title, image, message, lowSeason, highSeason }) => {
           </Row>
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" className="btn2">
           MODIFIER
         </Button>
       </Form>

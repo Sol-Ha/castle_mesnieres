@@ -1,7 +1,7 @@
 import Btnreturn from "../../../components/admin/other_components/Btnreturn";
 
-import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
-import FormNews from '../../../components/admin/forms/form_news/FormNews';
+import BottomNav from "../../../components/admin/_admin_components/BottomNav";
+import FormNews from '../../../components/admin/forms/FormNews';
 
 const CreateNews = () => {
   return (

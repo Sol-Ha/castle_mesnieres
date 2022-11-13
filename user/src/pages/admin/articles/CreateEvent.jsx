@@ -1,6 +1,6 @@
 import Btnreturn from "../../../components/admin/other_components/Btnreturn";
-import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
-import FormEvent from "../../../components/admin/forms/form_events/FormEvent";
+import BottomNav from "../../../components/admin/_admin_components/BottomNav";
+import FormEvent from "../../../components/admin/forms/FormEvent";
 
 const CreateEvent = () => {
   return (

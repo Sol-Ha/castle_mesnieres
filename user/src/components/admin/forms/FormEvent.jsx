@@ -1,11 +1,11 @@
 import { Row, Form, Col, Button } from "react-bootstrap";
-import "./formEvent.scss";
+import "../../../styles/components.scss";
 
 
 const FormEvent = ({ subject, button }) => {
 
   return (
-    <Form className="formEvent" action="/admin/manage_event">
+    <Form className="formA" action="/admin/manage_event">
       <h2>{subject}</h2>
       <p>
         <span>* </span>Les champs marqués par une étoile sont obligatoires
@@ -14,7 +14,7 @@ const FormEvent = ({ subject, button }) => {
       {/* title */}
       <Row>
         <Col>
-          <Form.Group className="mb-4">
+          <Form.Group>
             <Form.Label>
               <span>* </span>TITRE
             </Form.Label>
@@ -30,7 +30,7 @@ const FormEvent = ({ subject, button }) => {
       {/* url */}
       <Row>
         <Col>
-          <Form.Group className="mb-4">
+          <Form.Group>
             <Form.Label>
               <span className="noAsterix">* </span>URL
             </Form.Label>
@@ -45,7 +45,7 @@ const FormEvent = ({ subject, button }) => {
       {/* date start*/}
       <Row>
         <Col>
-          <Form.Group className="mb-4">
+          <Form.Group>
             <Form.Label>
               <span>* </span>DATE DE L'EVEMENENT
             </Form.Label>
@@ -54,7 +54,7 @@ const FormEvent = ({ subject, button }) => {
         </Col>
         {/* date end */}
         <Col>
-          <Form.Group className="mb-5">
+          <Form.Group>
             <Form.Label>
               <Col>
                 <span className="noAsterix">* </span>
