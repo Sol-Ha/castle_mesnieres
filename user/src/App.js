@@ -6,7 +6,7 @@ import FooterAdmin from "./components/admin/_admin_components/FooterAdmin";
 
 // pages user
 
-import Index from "./pages/user/index/Index";
+import Index from "./pages/user/pages/Index";
 import ParcEtDomaine from "./pages/user/parc_et_domaine/ParcEtDomaine";
 
 // pages admin
@@ -58,12 +58,12 @@ function App() {
   // display differenet admin either header admin or header user
   return (
     <BrowserRouter>
-      <Header />
+      <Header/>
 
       <Routes>
         {/* user */}
         <Route path="/" element={<Index />} />
-        <Route path="/ParcEtDomaine" element={<ParcEtDomaine />} />
+        <Route path="ParcEtDomaine" element={<ParcEtDomaine />} />
 
         {/* admin */}
         <Route path="/admin/login" element={<Login />} />
@@ -71,51 +71,51 @@ function App() {
         <Route path="/admin/login_recover_userDB" element={<LoginRecover2 />} />
 
         {/* menu */}
-        <Route path="/admin/selection_menu" element={<SelectionMenu />} />
+        <Route path="admin/selection_menu" element={<SelectionMenu />} />
 
         {/* moderators */}
-        <Route path="/admin/manage_moderator" element={<ManageModerator />} />
+        <Route path="admin/manage_moderator" element={<ManageModerator />} />
         <Route path="/admin/create_moderator" element={<CreateModerator />} />
         <Route path="/admin/edit_moderator" element={<EditModerator />} />
 
         {/* articles & news */}
-        <Route path="/admin/path_events&news" element={<PathEventNews />} />
-        <Route path="/admin/manage_events" element={<ManageEvents />} />
-        <Route path="/admin/edit_event" element={<EditEvent />} />
-        <Route path="/admin/create_event" element={<CreateEvent />} />
-        <Route path="/admin/manage_news" element={<ManageNews />} />
-        <Route path="/admin/create_news" element={<CreateNews />} />
-        <Route path="/admin/edit_news" element={<EditNews />} />
+        <Route path="admin/path_events&news" element={<PathEventNews />} />
+        <Route path="admin/manage_events" element={<ManageEvents />} />
+        <Route path="admin/edit_event" element={<EditEvent />} />
+        <Route path="admin/create_event" element={<CreateEvent />} />
+        <Route path="admin/manage_news" element={<ManageNews />} />
+        <Route path="admin/create_news" element={<CreateNews />} />
+        <Route path="admin/edit_news" element={<EditNews />} />
 
         {/* partners */}
-        <Route path="/admin/manage_partners" element={<ManagePartners />} />
-        <Route path="/admin/create_partner" element={<CreatePartner />} />
-        <Route path="/admin/edit_partner" element={<EditPartner />} />
+        <Route path="admin/manage_partners" element={<ManagePartners />} />
+        <Route path="admin/create_partner" element={<CreatePartner />} />
+        <Route path="admin/edit_partner" element={<EditPartner />} />
 
         {/* hire */}
-        <Route path="/admin/manage_hire" element={<ManageHire />} />
-        <Route path="/admin/create_hire" element={<CreateHire />} />
-        <Route path="/admin/edit_hire" element={<EditHire />} />
+        <Route path="admin/manage_hire" element={<ManageHire />} />
+        <Route path="admin/create_hire" element={<CreateHire />} />
+        <Route path="admin/edit_hire" element={<EditHire />} />
 
         {/* visit */}
-        <Route path="/admin/visit_castle" element={<Visit />} />
+        <Route path="admin/visit_castle" element={<Visit />} />
 
         {/* bedrooms dorms and camping */}
         <Route
-          path="/admin/path_bedroom&dormitory"
+          path="admin/path_bedroom&dormitory"
           element={<PathBedroomDormitory />}
         />
-        <Route path="/admin/manage_bedrooms" element={<ManageBedrooms />} />
+        <Route path="admin/manage_bedrooms" element={<ManageBedrooms />} />
         <Route
-          path="/admin/manage_dorms_and_camping"
+          path="admin/manage_dorms_and_camping"
           element={<ManageDorms />}
         />
         {/* rent rooms */}
-        <Route path="/admin/rent_rooms" element={<ManageRooms />} />
+        <Route path="admin/rent_rooms" element={<ManageRooms />} />
 
         {/* food */}
-        <Route path="/admin/path_food" element={<PathFood />} />
-        <Route path="/admin/manage_caterer" element={<ManageCaterer />} />
+        <Route path="admin/path_food" element={<PathFood />} />
+        <Route path="admin/manage_caterer" element={<ManageCaterer />} />
       </Routes>
 
       <FooterAdmin />

@@ -3,8 +3,9 @@
 @import "./_mixin.scss";
 @import "~bootstrap/scss/bootstrap";
 
-// header
-.header_back {
+// header back end
+.header_back,
+.header_front {
   width: 100%;
   background-color: $black;
   div {
@@ -36,7 +37,8 @@
 }
 
 @media only screen and (max-width: 800px) {
-  .header_back {
+  .header_back,
+  .header_front {
     div {
       h2 {
         font-size: 1.4vh;
@@ -48,6 +50,77 @@
     }
   }
 }
+
+// specificity header front
+
+// topbar
+
+.topBar {
+  height: 10vh;
+  width: 100%;
+  padding-inline: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $white;
+  img {
+    width: 6vh;
+    height: auto;
+  }
+
+  div,
+  button.btn.btn-primary {
+    background-color: $white;
+    height: 7vh !important;
+    width: 26vh !important;
+    border: none !important;
+    font-size: 2vh !important;
+    font-weight: 500 !important;
+
+    .dropdown-menu {
+      display: flex;
+      background-color: $strong_transparent;
+      flex-direction: column;
+      text-align: center;
+      margin-left: -5vh;
+      width: 30vh !important;
+      height: auto !important;
+
+      a.dropdown-item{
+        background: none!important;
+        color: $txt;  
+        &:hover{
+          text-decoration:underline;
+          text-underline-position: under;
+        }
+      }
+    }
+.btn{
+      &:hover {
+        background-image: url("../../public/assets/images/border.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-y: 5vh;
+        background-color: $white;
+      }
+    }
+
+      &:after {
+        display: none;
+      }
+    }
+    button.btn_nav.btn.btn-primary{
+      &:hover {
+        background-image: url("../../public/assets/images/border.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-y: 4.7vh;
+        background-color: $white;
+      }
+    }
+  }
+
+// }
 
 //  nav and disconnecting button
 .bottom_nav {

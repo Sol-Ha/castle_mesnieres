@@ -1,0 +1,128 @@
+@import "./_fonts.scss";
+@import "./_variable.scss";
+@import "./_mixin.scss";
+@import "~bootstrap/scss/bootstrap";
+
+main {
+  height: max-content;
+  width: 100%;
+  padding: 5% 1.5%;
+}
+
+//  presentation section
+#presentation_section {
+  @include flexB;
+  justify-content: space-around;
+  align-items: center;
+  width: 98%;
+
+  article {
+    width: 45%;
+    h3 {
+      height: 5vh;
+      margin-block: 1vh;
+      font-size: 2.4vh;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    #h2_presentation {
+      height: 6vh;
+    }
+    .div_presentation {
+      width: 100%;
+      height: 50vh;
+      @include flexB;
+      border: $txt solid 0.1vh;
+
+      .div_img_1 {
+        width: 25%;
+        height: 100%;
+        @include imgCardA;
+        background-image: url("../../public/assets/photos/garden.avif");
+      }
+
+      .div_img_2 {
+        width: 25%;
+        height: 100%;
+        @include imgCardA;
+        background-image: url("../../public/assets/photos/studies.jpg");
+      }
+
+      .div_content {
+        @include flexA;
+        width: 70%;
+        padding: 5% 5% 0% 5%;
+        p {
+          span {
+            font-family: 'Handmagic Signature';
+            line-height:0%;
+            font-size: 7vh;
+          }
+        }
+        a.btn.btn-primary {
+          width: 60%;
+          margin-block: 5%;
+          padding-block: 2%;
+          border-radius: 0 !important;
+          border: $txt 0.1vh solid;
+          background-color: $white;
+          color: $txt;
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          &:hover {
+            background-color: $txt;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+//  event section
+
+#articles_section{
+  @include flexB;
+  align-items: center;
+  justify-content: space-around;
+  margin-block: 8%;
+  width: 100%;
+  height: 70vh;
+  background-color: $light_grey;
+
+  header{
+    border-inline: solid 0.1vh $txt; 
+    height: inherit;
+    width: 6%;
+    @include flexA;
+    justify-content: center;
+    align-items: center;
+  h2{
+    font-size: 3vh;
+  }
+}
+
+  #article_feed_articles{
+    @include flexA;
+    justify-content: space-around;
+    width: 62%;
+    height: inherit;
+  }
+
+  aside{
+    width: 25%;
+    height: inherit;
+    background-color: blue;
+  }
+}
+
+//  caroussel
+#caroussel_section{
+  @include flexB;
+  align-items: center;
+  justify-content: space-around;
+  margin-block: 8%;
+  width: 100%;
+  height: 70vh;
+  background-color: $light_grey;
+}
