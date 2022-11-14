@@ -3,14 +3,14 @@ import { Image, Button } from "react-bootstrap";
 import "../../styles/adminComponent.scss";
 
 // rfce for function
-const BottomNav = ({name}) => {
+const BottomNav = ({name, urlNav}) => {
 
-  const navigate = useNavigate();
+  const navigate = useNavigate({urlNav});
   return (
     <>
     {/* DISCONNECTING USER */}
     <nav className="bottom_nav">
-    <Button onClick={() => navigate("/admin/selection_menu")}>
+    <Button onClick={() => navigate(urlNav)}>
         <Image src="../assets/icones/stag.svg" alt="icone de retour vers le menu principal" />
         PAGE D'ACCUEIL
         </Button>

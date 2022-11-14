@@ -6,7 +6,8 @@ import "../../../styles/pages.scss";
 const ManageModerator = () => {
   return (
     <>
-      <BottomNav name="GESTION DES MODERATEURS" />
+      <BottomNav name="GESTION DES MODERATEURS"
+      urlNav="/admin/selection_menu" />
 
       <section className="manage_CRUD">
       <div className="new_card">

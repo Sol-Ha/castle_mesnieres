@@ -7,7 +7,8 @@ const ManageRooms = () => {
 
   return (
     <>
-      <BottomNav name="EDITER LES SALLES A LOUER" />
+      <BottomNav name="EDITER LES SALLES A LOUER"
+      urlNav="/admin/selection_menu" />
 
       <Accordion defaultActiveKey="0" className='manageRoom' flush>
       <Accordion.Item eventKey="0">

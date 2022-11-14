@@ -8,6 +8,7 @@ const PathBedroomDormitory = () => {
     <>
     <BottomNav
     name="CHAMBRES & DORTOIRS"
+    urlNav="/admin/selection_menu"
     />
 
       <Container className="pathBed">

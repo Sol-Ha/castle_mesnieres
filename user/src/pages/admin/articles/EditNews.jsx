@@ -5,7 +5,8 @@ import FormNews from '../../../components/admin/forms/FormNews';
 const EditNews = () => {
   return (
     <>
-    <BottomNav name="EDITER UN ARTICLE DE PRESSE" />
+    <BottomNav name="EDITER UN ARTICLE DE PRESSE"
+    urlNav="/admin/selection_menu" />
     
     <Btnreturn urlCard="/admin/manage_news" />
 

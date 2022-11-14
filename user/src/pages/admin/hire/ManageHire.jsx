@@ -5,7 +5,8 @@ import CardTimeEdit from "../../../components/admin/card/CardTimeEdit";
 const ManageHire = () => {
   return (
     <>
-      <BottomNav name="GESTION DES EMPLOIS" />
+      <BottomNav name="GESTION DES EMPLOIS"
+      urlNav="/admin/selection_menu" />
 
       <section className="manage_CRUD">
         <div className="new_card">

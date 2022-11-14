@@ -5,7 +5,8 @@ import FormEvent from "../../../components/admin/forms/FormEvent";
 const EditEvent = () => {
   return (
     <>
-    <BottomNav name="EDITER UN EVENEMENT" />
+    <BottomNav name="EDITER UN EVENEMENT" 
+    urlNav="/admin/selection_menu"/>
 
     <Btnreturn urlCard="/admin/manage_events" />
 

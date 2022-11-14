@@ -6,7 +6,8 @@ import "../../../styles/pages.scss";
 const PathEventNews = () => {
   return (
     <>
-      <BottomNav name="EVENEMENTS & PRESSE" />
+      <BottomNav name="EVENEMENTS & PRESSE"
+      urlNav="/admin/selection_menu" />
 
       <Container className="pathEvent">
       <h2>Ou souhaitez-vous aller?</h2>

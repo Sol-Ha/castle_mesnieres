@@ -53,12 +53,12 @@ const Login = () => {
 
             <Form.Group>
               <Form.Label>Pseudo</Form.Label>
-              <Form.Control onChange={handleChange} type="text" name="user_pseudo" />
+              <Form.Control onChange={handleChange} type="text" name="admin_username" />
             </Form.Group>
 
             <Form.Group>
               <Form.Label>Mot de passe</Form.Label>
-              <Form.Control onChange={handleChange} type="password" name="user_password" />
+              <Form.Control onChange={handleChange} type="password" name="admin_password" />
             </Form.Group>
 
             <Link id="a_recover_up" to="/admin/login_recover">Vous n'arrivez pas à vous connecter?</Link>

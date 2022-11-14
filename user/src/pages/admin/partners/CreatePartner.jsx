@@ -5,7 +5,8 @@ import FormPartner from "../../../components/admin/forms/FormPartner";
 const CreatePartner = () => {
   return (
     <>
-    <BottomNav name="CREATION D'UN PARTENAIRE" />
+    <BottomNav name="CREATION D'UN PARTENAIRE"
+    urlNav="/admin/selection_menu" />
 
     <Btnreturn urlCard="/admin/manage_partners" />
     

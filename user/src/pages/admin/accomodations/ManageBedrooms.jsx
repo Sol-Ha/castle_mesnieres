@@ -9,7 +9,8 @@ const ManageBedrooms = () => {
 
   return (
     <>
-      <BottomNav name="EDITER LES CHAMBRES DU CHATEAU" />
+      <BottomNav name="EDITER LES CHAMBRES DU CHATEAU" 
+      urlNav="/admin/selection_menu"/>
 
 <Btnreturn urlCard="/admin/path_bedroom&dormitory"/>
 

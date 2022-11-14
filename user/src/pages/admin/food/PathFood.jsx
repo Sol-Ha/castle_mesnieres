@@ -6,7 +6,8 @@ import "../../../styles/pages.scss";
 const PathFood = () => {
   return (
     <>
-      <BottomNav name="RESTAURATION TRAITEUR ET RESTAURANT" />
+      <BottomNav name="RESTAURATION TRAITEUR ET RESTAURANT"
+      urlNav="/admin/selection_menu" />
 
       <Container className="pathFood">
       <h2>Ou souhaitez-vous aller?</h2>

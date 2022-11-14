@@ -6,7 +6,8 @@ import "../../../styles/pages.scss";
 const Rent = () => {
   return (
     <>
-      <BottomNav name="EDITER LES VISITES" />
+      <BottomNav name="EDITER LES VISITES"
+      urlNav="/admin/selection_menu" />
 
       <Accordion defaultActiveKey="0" className="manageRoom" flush>
         {/* visiting hours*/}

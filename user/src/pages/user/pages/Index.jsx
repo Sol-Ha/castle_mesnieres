@@ -19,7 +19,7 @@ const Index = () => {
         </Button>
       </nav>
 
-      <main>
+      <main id="main_index">
         {/* presentation castle */}
         <section id="presentation_section">
           <article>

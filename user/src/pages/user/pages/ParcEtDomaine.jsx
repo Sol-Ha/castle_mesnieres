@@ -1,21 +1,12 @@
-import React from "react";
-import "./parcEtDomaine.scss";
 import { Image, Button, Container } from "react-bootstrap";
+import BottomNav from '../../../components/common_components/BottomNav';
+import "../../../styles/pagesUser.scss";
 
 const ParcEtDomaine = () => {
   return (
     <>
-      <nav id="nav_home">
-        <Button href="/">
-          <Image
-            src="/assets/icones/cerf.svg"
-            alt="Icone page d'accueil"
-          ></Image>
-          PAGE D'ACCUEIL
-        </Button>
-        <span></span>
-        <h3>PARC ET DOMAINE</h3>
-      </nav>
+    <BottomNav name="PARC ET DOMAINE DU CHATEAU"
+    urlNav="/" />
 
       <main id="main_parkAndDomain">
         <Container fluid>
@@ -33,7 +24,7 @@ const ParcEtDomaine = () => {
             <article className="article1">
               <Image
                 className="img1"
-                src="/assets/photos/garden_park.svg"
+                src="/assets/photos/castle_garden_gooses.svg"
                 alt="Jardin château"
                 style={{ width: "36vw" }}
               ></Image>

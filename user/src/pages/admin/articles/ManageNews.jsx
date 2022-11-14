@@ -7,7 +7,8 @@ import "../../../styles/pages.scss";
 const ManageNews = () => {
   return (
     <>
-      <BottomNav name="GESTION DE LA PRESSE" />
+      <BottomNav name="GESTION DE LA PRESSE"
+      urlNav="/admin/selection_menu" />
 
       <Btnreturn urlCard="/admin/path_events&news" />
 

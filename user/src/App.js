@@ -7,7 +7,8 @@ import FooterAdmin from "./components/common_components/FooterAdmin";
 // pages user
 
 import Index from "./pages/user/pages/Index";
-import ParcEtDomaine from "./pages/user/parc_et_domaine/ParcEtDomaine";
+import ParcEtDomaine from "./pages/user/pages/ParcEtDomaine";
+import LouerNosSalles from "./pages/user/pages/LouerNosSalles";
 
 // pages admin
 import Login from "./pages/admin/login/Login";
@@ -64,6 +65,7 @@ function App() {
         {/* user */}
         <Route path="/" element={<Index />} />
         <Route path="ParcEtDomaine" element={<ParcEtDomaine />} />
+        <Route path="LouerNosSalles" element={<LouerNosSalles />} />
 
         {/* admin */}
         <Route path="/admin/login" element={<Login />} />

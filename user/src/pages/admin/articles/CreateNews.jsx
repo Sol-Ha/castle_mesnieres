@@ -5,7 +5,8 @@ import FormNews from '../../../components/admin/forms/FormNews';
 const CreateNews = () => {
   return (
     <>
-    <BottomNav name="CREER UN ARTICLE DE PRESSE" />
+    <BottomNav name="CREER UN ARTICLE DE PRESSE"
+    urlNav="/admin/selection_menu" />
     
     <Btnreturn urlCard="/admin/manage_news" />
     

@@ -5,7 +5,8 @@ import BottomNav from '../../../components/common_components/BottomNav';
 const CreateModerator = () => {
   return (
     <>
-      <BottomNav name="CREATION D'UN MODERATEUR" />
+      <BottomNav name="CREATION D'UN MODERATEUR"
+      urlNav="/admin/selection_menu" />
 
       <Btnreturn urlCard="/admin/manage_moderator" />
 

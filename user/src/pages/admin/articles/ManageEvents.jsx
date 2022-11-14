@@ -7,7 +7,8 @@ import "../../../styles/pages.scss";
 const ManageEvents = () => {
   return (
     <>
-      <BottomNav name="GESTION DES EVENEMENTS" />
+      <BottomNav name="GESTION DES EVENEMENTS"
+      urlNav="/admin/selection_menu" />
 
       <Btnreturn urlCard="/admin/path_events&news"/>
 

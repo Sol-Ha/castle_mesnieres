@@ -7,6 +7,7 @@ const EditModerator = () => {
     <>
     <BottomNav
     name="EDITER UN MODERATEUR"
+    urlNav="/admin/selection_menu"
     />
 
 <Btnreturn urlCard="/admin/manage_moderator" />

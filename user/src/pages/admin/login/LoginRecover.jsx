@@ -21,11 +21,11 @@ const LoginRecover = () => {
 
         <Form.Group>
           <Form.Label>Email</Form.Label>
-          <Form.Control type="email" name='login_email'/>
+          <Form.Control type="email" name='admin_email'/>
         </Form.Group>
         <Form.Group>
           <Form.Label>Date de naissance</Form.Label>
-          <Form.Control type="date" name='login_birthday'/>
+          <Form.Control type="date" name='admin_birthday'/>
         </Form.Group>
 
         {/* security */}

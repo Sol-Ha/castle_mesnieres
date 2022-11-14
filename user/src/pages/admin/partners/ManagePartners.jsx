@@ -5,7 +5,8 @@ import CardTimeEdit from "../../../components/admin/card/CardTimeEdit";
 const ManagePartners = () => {
   return (
     <>
-      <BottomNav name="GESTION DES PARTENAIRES" />
+      <BottomNav name="GESTION DES PARTENAIRES"
+      urlNav="/admin/selection_menu" />
 
       <section className="manage_CRUD">
         <div className="new_card">

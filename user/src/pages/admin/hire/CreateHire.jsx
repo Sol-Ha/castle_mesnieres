@@ -5,7 +5,8 @@ import FormHire from "../../../components/admin/forms/FormHire";
 const CreateHire = () => {
   return (
     <>
-    <BottomNav name="CREATION D'UN EMPLOI" />
+    <BottomNav name="CREATION D'UN EMPLOI" 
+    urlNav="/admin/selection_menu"/>
 
     <Btnreturn urlCard="/admin/manage_hire" />
     

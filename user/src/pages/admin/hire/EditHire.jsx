@@ -5,7 +5,8 @@ import FormHire from "../../../components/admin/forms/FormHire";
 const EditHire = () => {
   return (
     <>
-    <BottomNav name="EDITER UN EMPLOI" />
+    <BottomNav name="EDITER UN EMPLOI"
+    urlNav="/admin/selection_menu" />
 
     <Btnreturn urlCard="/admin/manage_hire" />
     
