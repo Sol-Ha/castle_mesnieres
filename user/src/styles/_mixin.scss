@@ -147,3 +147,17 @@
     font-size: 1.2vh;
   }
 }
+
+@mixin titleVertival{
+    border-inline: solid 0.1vh $txt;
+    height: 80%;
+    width: 6%;
+    @include flexA;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      font-size: 2.2vh;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+    }
+}

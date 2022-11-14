@@ -105,6 +105,103 @@
   }
 }
 
+// other social medias API
+.card_socialMedias {
+  width: 16%;
+  height: 100%;
+  background-color: $white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  header:first-child {
+    div {
+      display: flex;
+      justify-content: flex-end;
+      img {
+        width: 17%;
+        padding: 2% 2% 0% 2%;
+      }
+    }
+    img:nth-child(2) {
+      width: 100%;
+      height: 14.8vh;
+      object-fit: cover;
+    }
+  }
+  span {
+    font-size: 1.5vh;
+    display: block;
+    padding: 3%;
+  }
+  footer {
+    width: 100%;
+    @include flexA;
+    justify-content: center;
+    #line {
+      border-top: 1px solid $txt;
+      width: 80%;
+    }
+    .social_icones{
+      width: inherit;
+      display: flex;
+      align-content: center;
+      justify-content: space-between;
+      padding-inline: 5%;
+      div:first-child{
+        width: 40%;
+        display: flex;
+        align-content: center;
+        justify-content: space-around;
+      }
+      div:nth-child(2){
+        width: 30%;
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        p{
+          font-size: 1.5vh;
+        }
+      }
+    }
+  }
+}
+
+// google API
+.card_google {
+  width: 22%;
+  height: 80%;
+  padding: 1%;
+  background-color: $white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  header {
+    @include flexB;
+    div {
+      @include flexB;
+      img {
+        width: 12%;
+        border-radius: 100px;
+      }
+    }
+    img {
+      width: 10%;
+      border-radius: 100px;
+    }
+  }
+  span {
+    padding-block: 3% 1%;
+    font-size: 1.5vh;
+    font-style: italic;
+    display: block;
+  }
+  footer {
+    display: flex;
+    justify-content: flex-end;
+    p {
+      font-size: 2vh;
+    }
+  }
+}
+
 // card Room to Rent
 .cardRoomToRent {
   border: $txt solid 0.1vh;

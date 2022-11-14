@@ -3,7 +3,8 @@
 @import "./_mixin.scss";
 @import "~bootstrap/scss/bootstrap";
 
-main, #main_locationRoom {
+main,
+#main_locationRoom {
   height: max-content;
   width: 100%;
   padding: 5% 1.5%;
@@ -22,7 +23,8 @@ main, #main_locationRoom {
     width: 45%;
     h3 {
       height: 6vh;
-      width: 60%;
+      width: 70%;
+      text-align: center;
       margin-block: 1vh;
       font-size: 2.4vh;
       font-weight: 600;
@@ -121,23 +123,10 @@ main, #main_locationRoom {
   justify-content: space-around;
   margin-block: 8%;
   height: 70vh;
-  width: inherit;
   background-color: $light_grey;
-
-  header {
-    border-inline: solid 0.1vh $txt;
-    height: inherit;
-    width: 6%;
-    @include flexA;
-    justify-content: center;
-    align-items: center;
-    h2 {
-      font-size: 3vh;
-      writing-mode: vertical-rl;
-      text-orientation: upright;
-    }
-  }
-
+header{
+@include titleVertival
+}
   #article_feed_articles {
     @include flexA;
     justify-content: space-around;
@@ -150,6 +139,31 @@ main, #main_locationRoom {
     height: inherit;
   }
 }
+
+//  event googleReviews
+
+#article_socialMedia,
+#article_feed_googleReviews {
+  background-color: $light_grey;
+  height: 28vh;
+  @include flexB;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#article_socialMedia {
+  height: 60vh;
+  .header_vertical{
+    @include titleVertival
+    }
+    #article_feed_socialMedia{
+      width: 80% !important;
+      height: 75%;
+      @include flexB;
+      justify-content:space-around;
+    }
+}
+
 
 // PARC ET DOMAINE
 #main_parkAndDomain {
@@ -227,15 +241,15 @@ main, #main_locationRoom {
           @include btnType1;
           margin: 5% 0% -3% 35%;
 
-          #Icon_ceramist{
+          #Icon_ceramist {
             position: absolute;
             left: 55%;
             height: 90%;
             width: 90%;
             display: none;
           }
-          &:hover{
-            #Icon_ceramist{
+          &:hover {
+            #Icon_ceramist {
               display: block;
             }
           }

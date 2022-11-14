@@ -1,28 +1,34 @@
+require('dotenv').config()
 // import dependencies
-import express from "express"
-import dotenv from "dotenv"
-import mongoose from "mongoose"
-import cookieParser from "cookie-parser"
+// import express from "express"
+// import dotenv from "dotenv"
+// import mongoose from "mongoose"
+// import cookieParser from "cookie-parser"
+const express = require('express')
+const mongoose = require('mongoose')
+
+const authentification = require("./routes/auth.js")
+const admin = require("./routes/auth.js")
 
 // routes
-import authRoute from "./routes/auth.js"
-import adminRoute from "./routes/admin.js"
-import eventsRoute from "./routes/events.js"
-import mediasRoute from "./routes/medias.js"
-import bedroomsRoute from "./routes/bedrooms.js"
-import dormsRoute from "./routes/dorms.js"
-import jobOffersRoute from "./routes/jobOffers.js"
-import roomsToRentRoute from "./routes/roomsToRent.js"
-import partnersRoute from "./routes/partners.js"
-import busRoute from "./routes/bus.js"
-import pricesVisitRoute from "./routes/pricesVisit.js"
-import timeTableRoute from "./routes/timeTable.js"
-import privateEventsRoute from "./routes/privateEvents.js"
-import breakfastRoute from "./routes/breakfast.js"
-import foodRoute from "./routes/food.js"
+// import authRoute from "./routes/auth.js"
+// import adminRoute from "./routes/admin.js"
+// import eventsRoute from "./routes/events.js"
+// import mediasRoute from "./routes/medias.js"
+// import bedroomsRoute from "./routes/bedrooms.js"
+// import dormsRoute from "./routes/dorms.js"
+// import jobOffersRoute from "./routes/jobOffers.js"
+// import roomsToRentRoute from "./routes/roomsToRent.js"
+// import partnersRoute from "./routes/partners.js"
+// import busRoute from "./routes/bus.js"
+// import pricesVisitRoute from "./routes/pricesVisit.js"
+// import timeTableRoute from "./routes/timeTable.js"
+// import privateEventsRoute from "./routes/privateEvents.js"
+// import breakfastRoute from "./routes/breakfast.js"
+// import foodRoute from "./routes/food.js"
 
 const app = express()
-dotenv.config()
+// dotenv.config()
 
 // const connect = async () => {
 // try {
