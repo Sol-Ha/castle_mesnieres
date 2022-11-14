@@ -1,4 +1,5 @@
 import { Image, Container } from "react-bootstrap";
+import TextTruncate from "react-text-truncate";
 import "../../../styles/userComponents.scss";
 
 const CardEvent = ({
@@ -23,7 +24,12 @@ const CardEvent = ({
         />
       </div>
       <div className="event_body">
-        <p>{description}</p>
+      <TextTruncate
+          line={3}
+          text={description}
+          truncateText="…"
+          // textTruncateChild={<a href="#">Read on</a>}
+        />
       </div>
       </Container>
     </Container>

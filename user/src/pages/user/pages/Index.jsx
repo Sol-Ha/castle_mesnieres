@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { Image, Button, Carousel } from "react-bootstrap";
+import { Image, Button } from "react-bootstrap";
+import CardMedia from "../components/CardMedia";
 import CardEvent from "../components/CardEvent";
 import "../../../styles/pagesUser.scss";
 
@@ -22,8 +23,8 @@ const Index = () => {
         {/* presentation castle */}
         <section id="presentation_section">
           <article>
-            <h3 id="h2_presentation">
-              LE PLUS IMPORTANT EDIFICE DE LA <br /> RENAISSANCE EN HAUTE
+            <h3>
+              LE PLUS IMPORTANT EDIFICE DE LA RENAISSANCE EN HAUTE
               NORMANDIE.
             </h3>
             <div className="div_presentation">
@@ -74,7 +75,7 @@ const Index = () => {
         <section id="articles_section">
           <header>
             <h2>
-              A<br />G<br />E<br />N<br />D<br />A
+              AGENDA
             </h2>
           </header>
           <article id="article_feed_articles">
@@ -84,7 +85,7 @@ const Index = () => {
               title="PLANTER UN ARBRE"
               eventType="Evenement"
               image="../assets/photos/garden1.jpg"
-              description="lorem ipsum"
+              description="Ut magnam commodi tenetur expedita, id,laboriosa adipisicing elit."
               date="01-01-2022"
               author="Amélie"
             />
@@ -94,7 +95,14 @@ const Index = () => {
               title="JOURNEE PATRIMOINE"
               eventType="Culture"
               image="../assets/photos/patrimony.jpg"
-              description="lorem ipsum"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit reprehenderit quaerat a laudantium dolorem ipsam. Sit beatae tempora quasi inventore et error molestiae quam voluptatem? Odio eum quod accusamus libero!
+              adipisicing elit. Placeat, nemo delectus ducimus aliquid omnis
+              iusto consequuntur, excepturi laudantium tenetur nihil dicta
+              magnam voluptatibus eum libero autem molestias odio explicabo.
+              Amet. Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit. Asperiores, similique. Ratione animi consequatur vel
+              voluptatibus. Ut magnam commodi tenetur expedita, id,
+              laboriosa adipisicing elit."
               date="01-01-2022"
               author="Amélie"
             />
@@ -104,57 +112,35 @@ const Index = () => {
               title="FETE DE LA NATURE"
               eventType="Evenement"
               image="../assets/photos/feteNature.jpg"
-              description="lorem ipsum"
+              description="Asperiores, similique. Ratione animi consequatur velvoluptatibus. Ut magnam commodi tenetur expedita, id,laboriosa adipisicing elit."
               date="01-01-2022"
               author="Amélie"
             />
           </article>
-          <aside></aside>
+          <aside>
+<CardMedia
+name = "CARNET DE RANDO"
+content ="Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit reprehenderit quaerat a laudantium dolorem ipsam. Sit beatae tempora quasi inventore et error molestiae quam voluptatem? Odio eum quod accusamus libero!
+adipisicing elit. Placeat, nemo delectus ducimus aliquid omnis
+iusto consequuntur, excepturi laudantium tenetur nihil dicta
+magnam voluptatibus eum libero autem molestias odio explicabo.
+Amet. Lorem ipsum dolor sit amet, consectetur adipisicing
+elit. Asperiores, similique. Ratione animi consequatur vel
+voluptatibus. Ut magnam commodi tenetur expedita, id,
+laboriosa adipisicing elit. Placeat, nemo delectus ducimus aliquid omnis
+iusto consequuntur, excepturi laudantium tenetur nihil dicta
+magnam voluptatibus eum libero autem molestias odio explicabo.
+Amet. Lorem ipsum dolor sit amet, consectetur adipisicing
+elit. Asperiores, similique. Ratione animi consequatur vel
+voluptatibus. Ut magnam commodi tenetur expedita, id,
+laboriosa "
+videoYoutube="https://www.youtube.com/embed/_sFGKa43kB0"
+/>
+          </aside>
         </section>
 
 {/* section caroussel what to do */}
 
-<section id="caroussel_section">
-<Carousel slide={false}>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=First slide&bg=373940"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=Second slide&bg=282c34"
-          alt="Second slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=Third slide&bg=20232a"
-          alt="Third slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-</section>
       </main>
 
     </>

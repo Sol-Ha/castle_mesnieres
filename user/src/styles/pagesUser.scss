@@ -17,21 +17,20 @@ main {
   width: 98%;
 
   article {
+    @include flexA;
+    justify-content: center;
     width: 45%;
     h3 {
-      height: 5vh;
+      height: 6vh;
+      width: 60%;
       margin-block: 1vh;
       font-size: 2.4vh;
       font-weight: 600;
-      text-align: center;
     }
 
-    #h2_presentation {
-      height: 6vh;
-    }
     .div_presentation {
       width: 100%;
-      height: 50vh;
+      height: 55vh;
       @include flexB;
       border: $txt solid 0.1vh;
 
@@ -54,9 +53,10 @@ main {
         width: 70%;
         padding: 5% 5% 0% 5%;
         p {
+          font-size: 2vh;
           span {
-            font-family: 'Handmagic Signature';
-            line-height:0%;
+            font-family: "Handmagic Signature";
+            line-height: 0%;
             font-size: 7vh;
           }
         }
@@ -79,50 +79,75 @@ main {
   }
 }
 
+// media querries presentation section
+@media only screen and (max-width: 800px) {
+  #presentation_section {
+    @include flexA;
+    justify-content: center;
+    text-align: center;
+    article {
+      width: 90%;
+      margin-bottom: 5vh;
+      h3 {
+        height: 4vh;
+        font-size: 1.8vh;
+        width: 100%;
+      }
+      .div_presentation {
+        .div_content {
+          @include flexA;
+          width: 70%;
+          padding: 5% 5% 0% 5%;
+          p {
+            font-size: 1.7vh;
+            span {
+              font-size: 4vh;
+            }
+          }
+          a.btn.btn-primary {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+}
+
 //  event section
 
-#articles_section{
+#articles_section {
   @include flexB;
   align-items: center;
   justify-content: space-around;
   margin-block: 8%;
-  width: 100%;
   height: 70vh;
+  width: inherit;
   background-color: $light_grey;
 
-  header{
-    border-inline: solid 0.1vh $txt; 
+  header {
+    border-inline: solid 0.1vh $txt;
     height: inherit;
     width: 6%;
     @include flexA;
     justify-content: center;
     align-items: center;
-  h2{
-    font-size: 3vh;
+    h2 {
+      font-size: 3vh;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+    }
   }
-}
 
-  #article_feed_articles{
+  #article_feed_articles {
     @include flexA;
     justify-content: space-around;
     width: 62%;
     height: inherit;
   }
 
-  aside{
+  aside {
     width: 25%;
     height: inherit;
-    background-color: blue;
   }
 }
 
-//  caroussel
-#caroussel_section{
-  @include flexB;
-  align-items: center;
-  justify-content: space-around;
-  margin-block: 8%;
-  width: 100%;
-  height: 70vh;
-  background-color: $light_grey;
-}
