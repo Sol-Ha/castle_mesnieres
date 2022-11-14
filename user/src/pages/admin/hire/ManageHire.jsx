@@ -1,4 +1,4 @@
-import BottomNav from "../../../components/admin/_admin_components/BottomNav";
+import BottomNav from '../../../components/common_components/BottomNav';
 import CardTime from "../../../components/admin/card/CardTime";
 import CardTimeEdit from "../../../components/admin/card/CardTimeEdit";
 

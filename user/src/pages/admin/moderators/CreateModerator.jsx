@@ -1,6 +1,6 @@
 import Btnreturn from "../../../components/admin/other_components/Btnreturn";
 import FormModerator from "../../../components/admin/forms/FormModerator";
-import BottomNav from "../../../components/admin/_admin_components/BottomNav";
+import BottomNav from '../../../components/common_components/BottomNav';
 
 const CreateModerator = () => {
   return (

@@ -1,6 +1,6 @@
 import Accordion from 'react-bootstrap/Accordion';
 import FormRentRoom from "../../../components/admin/forms/FormRentRoom";
-import BottomNav from "../../../components/admin/_admin_components/BottomNav";
+import BottomNav from '../../../components/common_components/BottomNav';
 import "../../../styles/pages.scss";
 
 const ManageRooms = () => {

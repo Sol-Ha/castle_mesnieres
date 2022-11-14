@@ -1,7 +1,7 @@
 import Accordion from 'react-bootstrap/Accordion';
 import FormAccomodation from "../../../components/admin/forms/FormAccomodation";
 import Btnreturn from "../../../components/admin/other_components/Btnreturn";
-import BottomNav from "../../../components/admin/_admin_components/BottomNav";
+import BottomNav from '../../../components/common_components/BottomNav';
 import "../../../styles/pages.scss";
 
 const ManageDorms = () => {

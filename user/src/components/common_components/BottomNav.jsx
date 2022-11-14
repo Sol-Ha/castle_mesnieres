@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Image, Button } from "react-bootstrap";
-import "../../../styles/adminComponent.scss";
+import "../../styles/adminComponent.scss";
 
 // rfce for function
 const BottomNav = ({name}) => {
