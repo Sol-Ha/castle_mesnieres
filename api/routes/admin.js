@@ -2,7 +2,28 @@ import express from "express"
 import { deleteAdmin, updateAdmin } from "../controllers/admincontroller.js"
 import { verifyAdmin, verifySuperadmin } from "../utils/verifyToken.js"
 
+const {
+    createAdmin,
+    getAdmins,
+    getAdmin,
+    deleteAdmin,
+    updateAdmin
+  } = require('../controllers/workoutController')
 const router = express.Router()
+
+router.get('/', getAdmin)
+
+//GET a single workout
+router.get('/:id', getAdmin)
+
+// POST a new workout
+router.post('/', createAdmin)
+
+// DELETE a workout
+router.delete('/:id', deleteAdmin)
+
+// UPDATE a workout
+router.patch('/:id', updateAdmin)
 
 // router.get("/checkauthentification", verifyToken, (req, res, next) => {
 //     res.send("Vous êtes authentifié.")
@@ -17,9 +38,10 @@ const router = express.Router()
 // })
 
 //UPDATE
-router.put("/:id", verifyAdmin, updateAdmin)
+// router.put("/:id", verifyAdmin, updateAdmin)
 
 //DELETE
-router.delete("/:id", verifySuperadmin, deleteAdmin)
+// router.delete("/:id", verifySuperadmin, deleteAdmin)
 
-export default router
+module.exports = router
+// export default router

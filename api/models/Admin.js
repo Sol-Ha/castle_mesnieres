@@ -9,7 +9,7 @@ const AdminSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    username: {
+    user_username: {
         type: String,
         required: true,
         unique: true,
@@ -19,7 +19,7 @@ const AdminSchema = new mongoose.Schema({
         required: true,
         unique: true,
     },
-    password: {
+    user_password: {
         type: String,
         required: true,
     },

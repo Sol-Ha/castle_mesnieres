@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useAuthContext } from "./hooks/useAuthContext";
 
 // components
 import Header from "./components/common_components/Header";
@@ -56,10 +57,10 @@ import PathFood from "./pages/admin/food/PathFood";
 import ManageCaterer from "./pages/admin/food/ManageCaterer";
 
 function App() {
-  // display differenet admin either header admin or header user
+  const { user } = useAuthContext();
   return (
     <BrowserRouter>
-      <Header/>
+      <Header />
 
       <Routes>
         {/* user */}
@@ -68,56 +69,139 @@ function App() {
         <Route path="LouerNosSalles" element={<LouerNosSalles />} />
 
         {/* admin */}
-        <Route path="/admin/login" element={<Login />} />
+        <Route
+          path="/admin/login"
+          // if admin true you can login but if admin false return to index
+          element={!user ? <Login /> : <Navigate to="/" />}
+        />
+
         <Route path="/admin/login_recover" element={<LoginRecover />} />
+
         <Route path="/admin/login_recover_userDB" element={<LoginRecover2 />} />
 
         {/* menu */}
-        <Route path="admin/selection_menu" element={<SelectionMenu />} />
+        <Route
+          path="admin/selection_menu"
+          element={!user ? <SelectionMenu /> : <Navigate to="/" />}
+        />
 
         {/* moderators */}
-        <Route path="admin/manage_moderator" element={<ManageModerator />} />
-        <Route path="/admin/create_moderator" element={<CreateModerator />} />
-        <Route path="/admin/edit_moderator" element={<EditModerator />} />
+        <Route
+          path="admin/manage_moderator"
+          element={!user ? <ManageModerator /> : <Navigate to="/" />}
+        />
+
+        <Route
+          path="/admin/create_moderator"
+          element={!user ? <CreateModerator /> : <Navigate to="/" />}
+        />
+
+        <Route
+          path="/admin/edit_moderator"
+          element={!user ? <EditModerator /> : <Navigate to="/" />}
+        />
 
         {/* articles & news */}
-        <Route path="admin/path_events&news" element={<PathEventNews />} />
-        <Route path="admin/manage_events" element={<ManageEvents />} />
-        <Route path="admin/edit_event" element={<EditEvent />} />
-        <Route path="admin/create_event" element={<CreateEvent />} />
-        <Route path="admin/manage_news" element={<ManageNews />} />
-        <Route path="admin/create_news" element={<CreateNews />} />
-        <Route path="admin/edit_news" element={<EditNews />} />
+        <Route
+          path="admin/path_events&news"
+          element={!user ? <PathEventNews /> : <Navigate to="/" />}
+        />
+
+        <Route
+          path="admin/manage_events"
+          element={!user ? <ManageEvents /> : <Navigate to="/" />}
+        />
+
+        <Route
+          path="admin/edit_event"
+          element={!user ? <EditEvent /> : <Navigate to="/" />}
+        />
+
+        <Route
+          path="admin/create_event"
+          element={!user ? <CreateEvent /> : <Navigate to="/" />}
+        />
+
+        <Route
+          path="admin/manage_news"
+          element={!user ? <ManageNews /> : <Navigate to="/" />}
+        />
+
+        <Route
+          path="admin/create_news"
+          element={!user ? <CreateNews /> : <Navigate to="/" />}
+        />
+
+        <Route
+          path="admin/edit_news"
+          element={!user ? <EditNews /> : <Navigate to="/" />}
+        />
 
         {/* partners */}
-        <Route path="admin/manage_partners" element={<ManagePartners />} />
-        <Route path="admin/create_partner" element={<CreatePartner />} />
-        <Route path="admin/edit_partner" element={<EditPartner />} />
+        <Route
+          path="admin/manage_partners"
+          element={!user ? <ManagePartners /> : <Navigate to="/" />}
+        />
+
+        <Route
+          path="admin/create_partner"
+          element={!user ? <CreatePartner /> : <Navigate to="/" />}
+        />
+
+        <Route
+          path="admin/edit_partner"
+          element={!user ? <EditPartner /> : <Navigate to="/" />}
+        />
 
         {/* hire */}
-        <Route path="admin/manage_hire" element={<ManageHire />} />
-        <Route path="admin/create_hire" element={<CreateHire />} />
-        <Route path="admin/edit_hire" element={<EditHire />} />
+        <Route
+          path="admin/manage_hire"
+          element={!user ? <ManageHire /> : <Navigate to="/" />}
+        />
+
+        <Route
+          path="admin/create_hire"
+          element={!user ? <CreateHire /> : <Navigate to="/" />}
+        />
+
+        <Route
+          path="admin/edit_hire"
+          element={!user ? <EditHire /> : <Navigate to="/" />}
+        />
 
         {/* visit */}
-        <Route path="admin/visit_castle" element={<Visit />} />
+        <Route
+          path="admin/visit_castle"
+          element={!user ? <Visit /> : <Navigate to="/" />}
+        />
 
         {/* bedrooms dorms and camping */}
         <Route
           path="admin/path_bedroom&dormitory"
-          element={<PathBedroomDormitory />}
+          element={!user ? <PathBedroomDormitory /> : <Navigate to="/" />}
         />
+
         <Route path="admin/manage_bedrooms" element={<ManageBedrooms />} />
+
         <Route
           path="admin/manage_dorms_and_camping"
-          element={<ManageDorms />}
+          element={!user ? <ManageDorms /> : <Navigate to="/" />}
         />
         {/* rent rooms */}
-        <Route path="admin/rent_rooms" element={<ManageRooms />} />
+        <Route
+          path="admin/rent_rooms"
+          element={!user ? <ManageRooms /> : <Navigate to="/" />}
+        />
 
         {/* food */}
-        <Route path="admin/path_food" element={<PathFood />} />
-        <Route path="admin/manage_caterer" element={<ManageCaterer />} />
+        <Route
+          path="admin/path_food"
+          element={!user ? <PathFood /> : <Navigate to="/" />}
+        />
+        <Route
+          path="admin/manage_caterer"
+          element={!user ? <ManageCaterer /> : <Navigate to="/" />}
+        />
       </Routes>
 
       <FooterAdmin />

@@ -1,7 +1,10 @@
+// import dependencies
 import express from "express"
 import dotenv from "dotenv"
 import mongoose from "mongoose"
 import cookieParser from "cookie-parser"
+
+// routes
 import authRoute from "./routes/auth.js"
 import adminRoute from "./routes/admin.js"
 import eventsRoute from "./routes/events.js"
@@ -21,23 +24,24 @@ import foodRoute from "./routes/food.js"
 const app = express()
 dotenv.config()
 
-const connect = async () => {
-try {
-    await mongoose.connect(process.env.MONGO);
-    console.log("Connected to MongoDB")
-  } catch (error) {
-    throw error
-  }
-}
+// const connect = async () => {
+// try {
+//     await mongoose.connect(process.env.MONGO);
+//     console.log("Connected to MongoDB")
+//   } catch (error) {
+//     throw error
+//   }
+// }
 
 mongoose.connection.on("disconnected", () => {
     console.log("MongoDB disconnected!")
 })
 
 //middlewares
-app.use(cookieParser())
-app.use(express.json())
+// app.use(cookieParser())
+// app.use(express.json())
 
+// routes
 app.use("/api/auth", authRoute)
 app.use("/api/admin", adminRoute)
 app.use("/api/events", eventsRoute)
@@ -54,18 +58,31 @@ app.use("/api/privateEvents", privateEventsRoute)
 app.use("/api/breakfast", breakfastRoute)
 app.use("/api/food", foodRoute)
 
-app.use((err, req, res, next) => {
-  const errorStatus = err.status || 500;
-  const errorMessage = err.message || "Un problème est survenu.";
-  return res.status(errorStatus).json({
-    success: false,
-    status: errorStatus,
-    message: errorMessage,
-    stack: err.stack,
-  });
-});
+// app.use((err, req, res, next) => {
+//   const errorStatus = err.status || 500;
+//   const errorMessage = err.message || "Un problème est survenu.";
+//   return res.status(errorStatus).json({
+//     success: false,
+//     status: errorStatus,
+//     message: errorMessage,
+//     stack: err.stack,
+//   });
+// });
 
-app.listen(8800, () => {
-    connect()
-  console.log("Connected to backend.")
-})
+// app.listen(8800, () => {
+//     connect()
+//   console.log("Connected to backend.")
+// })
+
+mongoose.connect(process.env.MONGO)
+  .then(() => {
+    // listen for requests
+    app.listen(process.env.PORT, () => {
+      console.log('connected to db & listening on port', process.env.PORT)
+    })
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+
+  

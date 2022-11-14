@@ -4,6 +4,7 @@ import CardRoomToRent from "../components/CardRoomToRent";
 import "../../../styles/pagesUser.scss";
 
 const LouerNosSalles = () => {
+  
   return (
     <>
     <BottomNav name="LOCATION DE NOS SALLES"
@@ -12,10 +13,7 @@ const LouerNosSalles = () => {
     
 <Container id="main_locationRoom">
 <CardRoomToRent
-presentation="Placeat, nemo delectus ducimus aliquid omnis
-iusto consequuntur, excepturi laudantium tenetur nihil dicta
-magnam voluptatibus eum libero autem molestias odio explicabo.
-Amet."/>
+presentation="Placeat, nemo delectus ducimus aliquid omnis iusto consequuntur, excepturi laudantium tenetur nihil dicta magnam voluptatibus eum libero autem molestias odio explicabo. Amet."/>
 </Container>
     </>
   );
