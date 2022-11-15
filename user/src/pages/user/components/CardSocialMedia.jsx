@@ -5,7 +5,7 @@ import "../../../styles/userComponents.scss";
 
 const CardSocialMedia = ({ content, image, redirect, copy, like, logo }) => {
   return (
-    <article className="card_socialMedias">
+    <article fluid className="card_socialMedias">
       <header>
         <div>
           <Image src={logo} />
@@ -13,7 +13,7 @@ const CardSocialMedia = ({ content, image, redirect, copy, like, logo }) => {
         <Image src={image} />
       </header>
       <TextTruncate
-        line={9}
+        line={7}
         text={content}
         truncateText="…"
         // textTruncateChild={<a href="#">Read on</a>}

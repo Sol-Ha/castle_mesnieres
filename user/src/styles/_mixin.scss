@@ -152,6 +152,7 @@
     border-inline: solid 0.1vh $txt;
     height: 80%;
     width: 6%;
+    background-color: $white;
     @include flexA;
     justify-content: center;
     align-items: center;

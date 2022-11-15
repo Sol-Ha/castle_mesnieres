@@ -1,14 +1,13 @@
-import { Container } from "react-bootstrap";
 import TextTruncate from "react-text-truncate";
 import "../../../styles/userComponents.scss";
 
 const CardMedia = ({ name, content, videoYoutube }) => {
   return (
-    <Container className="card_media">
+    <article className="card_media">
       <h4>{name}</h4>
       <div className="card_media_main">
         <TextTruncate
-          line={9}
+          line={10}
           text={content}
           truncateText="…"
           // textTruncateChild={<a href="#">Read on</a>}
@@ -21,7 +20,7 @@ const CardMedia = ({ name, content, videoYoutube }) => {
           allowfullscreen
         ></iframe>
       </div>
-    </Container>
+    </article>
   );
 };
 
