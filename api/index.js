@@ -1,14 +1,44 @@
-require('dotenv').config()
+// dependencies
+const express = require ("express");
+const mongoose = require ("mongoose");
+require("dotenv").config()
+
+// import others
+const userRoutes = require("./routes/users")
+const app = express()
+
+// middleware : any code that execute between auth and request on server
+// will put it through a json
+app.use(express.json())
+// request / response / move on to the "next" middleware
+app.use((req,res, next) =>{
+  console.log(req.path, req.method)
+  next();
+})
+
+// routes + path where it will process requests
+// using this bit to define it in Postman
+app.use("/api/users", userRoutes)
+
+// connect to database
+mongoose.connect(process.env.MONGO_URL)
+  .then(() => {
+    // listen for requests
+    app.listen(process.env.PORT, () =>{
+      console.log("Fonctionne, Dieu merci on est sauvé!");
+    })
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+
+
+
 // import dependencies
 // import express from "express"
 // import dotenv from "dotenv"
 // import mongoose from "mongoose"
 // import cookieParser from "cookie-parser"
-const express = require('express')
-const mongoose = require('mongoose')
-
-const authentification = require("./routes/auth.js")
-const admin = require("./routes/auth.js")
 
 // routes
 // import authRoute from "./routes/auth.js"
@@ -27,7 +57,7 @@ const admin = require("./routes/auth.js")
 // import breakfastRoute from "./routes/breakfast.js"
 // import foodRoute from "./routes/food.js"
 
-const app = express()
+// const app = express()
 // dotenv.config()
 
 // const connect = async () => {
@@ -39,30 +69,30 @@ const app = express()
 //   }
 // }
 
-mongoose.connection.on("disconnected", () => {
-    console.log("MongoDB disconnected!")
-})
+// mongoose.connection.on("disconnected", () => {
+//     console.log("MongoDB disconnected!")
+// })
 
 //middlewares
 // app.use(cookieParser())
 // app.use(express.json())
 
 // routes
-app.use("/api/auth", authRoute)
-app.use("/api/admin", adminRoute)
-app.use("/api/events", eventsRoute)
-app.use("/api/medias", mediasRoute)
-app.use("/api/bedrooms", bedroomsRoute)
-app.use("/api/dorms", dormsRoute)
-app.use("/api/jobOffers", jobOffersRoute)
-app.use("/api/roomsToRent", roomsToRentRoute)
-app.use("/api/partners", partnersRoute)
-app.use("/api/bus", busRoute)
-app.use("/api/pricesVisit", pricesVisitRoute)
-app.use("/api/timeTable", timeTableRoute)
-app.use("/api/privateEvents", privateEventsRoute)
-app.use("/api/breakfast", breakfastRoute)
-app.use("/api/food", foodRoute)
+// app.use("/api/auth", authRoute)
+// app.use("/api/admin", adminRoute)
+// app.use("/api/events", eventsRoute)
+// app.use("/api/medias", mediasRoute)
+// app.use("/api/bedrooms", bedroomsRoute)
+// app.use("/api/dorms", dormsRoute)
+// app.use("/api/jobOffers", jobOffersRoute)
+// app.use("/api/roomsToRent", roomsToRentRoute)
+// app.use("/api/partners", partnersRoute)
+// app.use("/api/bus", busRoute)
+// app.use("/api/pricesVisit", pricesVisitRoute)
+// app.use("/api/timeTable", timeTableRoute)
+// app.use("/api/privateEvents", privateEventsRoute)
+// app.use("/api/breakfast", breakfastRoute)
+// app.use("/api/food", foodRoute)
 
 // app.use((err, req, res, next) => {
 //   const errorStatus = err.status || 500;
@@ -80,15 +110,5 @@ app.use("/api/food", foodRoute)
 //   console.log("Connected to backend.")
 // })
 
-mongoose.connect(process.env.MONGO)
-  .then(() => {
-    // listen for requests
-    app.listen(process.env.PORT, () => {
-      console.log('connected to db & listening on port', process.env.PORT)
-    })
-  })
-  .catch((error) => {
-    console.log(error)
-  })
 
   
