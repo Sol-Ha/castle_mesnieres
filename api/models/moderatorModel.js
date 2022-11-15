@@ -1,13 +1,13 @@
 // Define the structure we wish to see in database
 // mongoose define that structure 
 // it needs to be imported to the controller
-const mongoose = require ("mongoose");
-const Schema = mongoose.Schema;
+const mongoose = require('mongoose')
 
 // passing an object with properties
 // unique to avoid another doublon to be registered if currently in db
-const userSchema = new Schema({
+const Schema = mongoose.Schema
 
+const moderatorSchema = new Schema({
     user_firstName: {
         type: String,
         required: true,
@@ -15,9 +15,8 @@ const userSchema = new Schema({
     user_lastName: {
         type: String,
         required: true,
-    }
-    ,
-    user_userName: {
+    },
+    user_persona: {
         type: String,
         required: true,
         unique: true,
@@ -35,23 +34,11 @@ const userSchema = new Schema({
         type: Date,
         required: true,
     },
-    user_answer: {
-        type: String,
-    },
-    user_question: {
-        type: String,
-        required: true,
-    },
     user_endContract: {
         type: Date,
         required: true,
-    },
-    isSuperadmin: {
-        type: Boolean,
-        default: false,
     }
-},
-    { timestamps: true })
+}, { timestamps: true })
 
 // exporting through module and calling it a chosen name for the collection
-module.exports = mongoose.model("User", userSchema)
+module.exports = mongoose.model('moderator', moderatorSchema)
