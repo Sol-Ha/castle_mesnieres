@@ -8,33 +8,33 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const moderatorSchema = new Schema({
-    user_firstName: {
+    moderator_firstName: {
         type: String,
         required: true,
     },
-    user_lastName: {
+    moderator_lastName: {
         type: String,
         required: true,
     },
-    user_persona: {
-        type: String,
-        required: true,
-        unique: true,
-    },
-    user_email: {
+    moderator_persona: {
         type: String,
         required: true,
         unique: true,
     },
-    user_password: {
+    moderator_email: {
+        type: String,
+        required: true,
+        unique: true,
+    },
+    moderator_password: {
         type: String,
         required: true,
     },
-    user_birthday: {
+    moderator_birthday: {
         type: Date,
         required: true,
     },
-    user_endContract: {
+    moderator_endContract: {
         type: Date,
         required: true,
     }

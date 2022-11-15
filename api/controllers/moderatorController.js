@@ -27,29 +27,29 @@ const getModerator = async (req, res) => {
 
 // create a new moderator
 const createModerator = async (req, res) => {
-  const { user_firstName, user_lastName, user_persona, user_email, user_password, user_birthday, user_endContract } = req.body
+  const { moderator_firstName, moderator_lastName, moderator_persona, moderator_email, moderator_password, moderator_birthday, moderator_endContract } = req.body
 
   let emptyFields = []
 
-  if (!user_firstName) {
+  if (!moderator_firstName) {
     emptyFields.push('title')
   }
-  if (!user_lastName) {
+  if (!moderator_lastName) {
     emptyFields.push('load')
   }
-  if (!user_persona) {
+  if (!moderator_persona) {
     emptyFields.push('reps')
   }
-  if (!user_email) {
+  if (!moderator_email) {
     emptyFields.push('reps')
   }
-  if (!user_password) {
+  if (!moderator_password) {
     emptyFields.push('reps')
   }
-  if (!user_birthday) {
+  if (!moderator_birthday) {
     emptyFields.push('reps')
   }
-  if (!user_endContract) {
+  if (!moderator_endContract) {
     emptyFields.push('reps')
   }
   if (emptyFields.length > 0) {
@@ -57,7 +57,7 @@ const createModerator = async (req, res) => {
   }
 
   try {
-    const moderator = await Moderator.create({ user_firstName, user_lastName, user_persona, user_email, user_password, user_birthday, user_endContract })
+    const moderator = await Moderator.create({ moderator_firstName, moderator_lastName, moderator_persona, moderator_email, moderator_password, moderator_birthday, moderator_endContract })
     res.status(200).json(moderator)
   } catch (error) {
     res.status(400).json({ error: error.message })
@@ -100,10 +100,15 @@ const updateModerator = async (req, res) => {
   res.status(200).json(moderator)
 }
 
+const loginModerator = async (req, res) => {
+  res.json({mssg: 'login user'})
+}
+
 module.exports = {
   getModerators,
   getModerator,
   createModerator,
   deleteModerator,
-  updateModerator
+  updateModerator,
+  loginModerator
 }

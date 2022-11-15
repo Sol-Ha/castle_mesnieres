@@ -1,66 +1,37 @@
-import { createContext, useEffect, useReducer } from "react";
+import { createContext, useReducer, useEffect } from 'react'
 
-const INITIAL_STATE = {
-    user: JSON.parse(localStorage.getItem("user")) || null,
-    loading: false,
-    error: null
-};
-
-export const AuthContext = createContext(INITIAL_STATE);
-
-const AuthReducer = (state, action) => {
-    switch (action.type) {
-        case "LOGIN_START":
-            return {
-                user: null,
-                loading: true,
-                error: null
-            };
-
-        case "LOGIN_SUCCESS":
-            return {
-                user: action.payload,
-                loading: false,
-                error: null
-            };
-
-        case "LOGIN_FAILURE":
-            return {
-                user: null,
-                loading: false,
-                error: action.payload
-            };
-
-        case "LOGOUT":
-            return {
-                user: null,
-                loading: false,
-                error: null
-            };
-
-        default:
-            return state;
-    };
-};
+export const AuthContext = createContext()
+// abreviate the user =authReducer
+export const authReducer = (state, action) => {
+  switch (action.type) {
+    case 'LOGIN':
+      return { user: action.payload }
+    case 'LOGOUT':
+      return { user: null }
+    default:
+      return state
+  }
+}
 
 export const AuthContextProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(AuthReducer, INITIAL_STATE);
+  const [state, dispatch] = useReducer(authReducer, { 
+    user: null
+  })
 
-    useEffect(() => {
-        localStorage.setItem("user", JSON.stringify(state.user));
-    }, [state.user]);
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem('user'))
 
-        return (
-            <AuthContext.Provider 
-                value={{
-                     ...state, dispatch 
-                    // admin: state.admin,
-                    // loading: state.loading,
-                    // error: state.error,
-                    // dispatch
-                }}
-            >
-                {children}
-            </AuthContext.Provider>
-        );
+    if (user) {
+      dispatch({ type: 'LOGIN', payload: user }) 
     }
+  }, [])
+
+  console.log('AuthContext state:', state)
+  
+  return (
+    <AuthContext.Provider value={{ ...state, dispatch }}>
+      { children }
+    </AuthContext.Provider>
+  )
+
+}

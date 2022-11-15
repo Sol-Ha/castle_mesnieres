@@ -1,52 +1,20 @@
-import {  useState } from "react";
-import { useLogin } from "../../../hooks/useLogin"
-import {  Link } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
-// import { AuthContext } from '../../../context/authContext';
-import { Button, Form, Image } from 'react-bootstrap';
+import { useState } from "react";
+import { useLogin } from "../../../hooks/useLogin";
+import { Link } from "react-router-dom";
+import { Button, Form, Image } from "react-bootstrap";
 import "../../../styles/pages.scss";
-// import axios from 'axios';
 
 const Login = () => {
-
-  // const [credentials, setCredentials] = useState({
-  //   username: undefined,
-  //   password: undefined,
-  // });
-
-  const [user_username, setUser_username] = useState('')
-  const [user_password, setUser_password] = useState('')
-  const {login, error, isLoading} = useLogin()
+  const [moderator_persona, setModerator_persona] = useState("");
+  const [moderator_password, setModerator_password] = useState("");
+  const { login, error, isLoading } = useLogin();
 
   const handleSubmit = async (e) => {
     // don't refresh the page!
-    e.preventDefault()
+    e.preventDefault();
     // verify on DB
-    await login(user_username, user_password)
-  }
-  // change route
-  // const navigate = useNavigate();
-
-  // const { user, loading, error, dispatch } = useContext(AuthContext);
-
-  // const handleChange = (e) => {
-  //   setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
-  // };
-
-  // const handleClick = async e => {
-  //   e.preventDefault();
-  //   dispatch({ type: "LOGIN_START" });
-  //   try {
-
-  //     const res = await axios.post("/admin/login", credentials);
-  //     dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
-  //   } catch (err) {
-  //     dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
-  //   }
-  // };
-
-  // console.log(user)
-
+    await login(moderator_persona, moderator_password);
+  };
   return (
     <>
       <section className="login_admin">
@@ -60,45 +28,45 @@ const Login = () => {
           ></Image>
 
           <Form onSubmit={handleSubmit}>
-            {/* DISPLAY MESSAGE ERROR */}
+            {/* error message */}
             {error && <h3>{error}</h3>}
-            {/* {error &&<h3>{error.message}</h3>} */}
 
             <Form.Group>
               <Form.Label>Pseudo</Form.Label>
               <Form.Control
-              type="text"
-              value ={user_username}
-              onChange={(e) => setUser_username(e.target.value)}
-              // onChange={handleChange}
+                type="text"
+                value={moderator_persona}
+                onChange={(e) => setModerator_persona(e.target.value)}
+                // onChange={handleChange}
               />
             </Form.Group>
 
             <Form.Group>
               <Form.Label>Mot de passe</Form.Label>
               <Form.Control
-              type="password" 
-              value ={user_password} 
-              onChange={(e) => setUser_password(e.target.value)}
-              // onChange={handleChange}
+                type="password"
+                value={moderator_password}
+                onChange={(e) => setModerator_password(e.target.value)}
+                // onChange={handleChange}
               />
             </Form.Group>
 
-            <Link id="a_recover_up" to="/admin/login_recover">Vous n'arrivez pas à vous connecter?</Link>
+            <Link id="a_recover_up" to="/admin/login_recover">
+              Vous n'arrivez pas à vous connecter?
+            </Link>
 
-            {/* security */}            
-            <Button 
-            variant="primary"
-            disabled={isLoading}>
-            {/* onClick={() => (handleClick)} */}
-            {/* onClick={handleClick} */}
-            {/* onClick={() => navigate()} */}
+            <Button
+              variant="primary"
+              // prevent emptying the form
+              disabled={isLoading}
+            >
               SE CONNECTER
             </Button>
-
           </Form>
         </article>
-        <Link id="a_recover_down" to="/admin/login_recover">Vous n'arrivez pas à vous connecter?</Link>
+        <Link id="a_recover_down" to="/admin/login_recover">
+          Vous n'arrivez pas à vous connecter?
+        </Link>
       </section>
     </>
   );

@@ -1,10 +1,12 @@
 const express = require('express')
+
 const {
   getModerators,
   getModerator,
   createModerator,
   deleteModerator,
-  updateModerator
+  updateModerator,
+  loginModerator
 } = require('../controllers/moderatorController')
 
 const router = express.Router()
@@ -23,5 +25,7 @@ router.delete('/:id', deleteModerator)
 
 // UPDATE a workout
 router.patch('/:id', updateModerator)
+
+router.post('/admin/login', loginModerator)
 
 module.exports = router
