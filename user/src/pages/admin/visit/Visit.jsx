@@ -1,6 +1,6 @@
 import Accordion from "react-bootstrap/Accordion";
 import { Row, Form, Col, Button } from "react-bootstrap";
-import BottomNav from '../../../components/common_components/BottomNav';
+import BottomNav from '../../../components/componentShared/BottomNav';
 import "../../../styles/pages.scss";
 
 const Rent = () => {

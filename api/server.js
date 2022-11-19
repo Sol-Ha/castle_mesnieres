@@ -19,7 +19,8 @@ app.use((req, res, next) => {
 
 // routes + path where it will process requests
 // using this bit to define it in Postman
-app.use('/api/moderator', moderatorRoute)
+app.use('/api/user', moderatorRoute)
+
 
 // connect to database
 // mongoose

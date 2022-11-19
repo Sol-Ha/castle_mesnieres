@@ -1,31 +1,33 @@
-const express = require('express')
+const express = require("express")
 
 const {
   getModerators,
   getModerator,
-  createModerator,
   deleteModerator,
   updateModerator,
+  createModerator,
   loginModerator
-} = require('../controllers/moderatorController')
+} = require("../controllers/moderatorController")
 
 const router = express.Router()
 
-// GET all workouts
-router.get('/', getModerators)
+// CreateModerator Route
+router.post("/createModerator", createModerator)
 
-// GET a single workout
-router.get('/:id', getModerator)
+// Login Route
+router.post("/login", loginModerator)
 
-// POST a new workout
-router.post('/', createModerator)
 
-// DELETE a workout
-router.delete('/:id', deleteModerator)
+// GET all moderators
+router.get("/", getModerators)
 
-// UPDATE a workout
-router.patch('/:id', updateModerator)
+// GET a single moderator
+router.get("/:id", getModerator)
 
-router.post('/admin/login', loginModerator)
+// DELETE a moderator
+router.delete("/:id", deleteModerator)
+
+// UPDATE a moderator
+router.patch("/:id", updateModerator)
 
 module.exports = router

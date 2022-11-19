@@ -1,4 +1,4 @@
-import "../../../styles/userComponents.scss";
+import "./Card.scss";
 import { Container, Image } from "react-bootstrap";
 
 const CardRoomToRent = ({presentation}) => {

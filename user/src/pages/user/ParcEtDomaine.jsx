@@ -1,6 +1,6 @@
 import { Image, Button, Container } from "react-bootstrap";
-import BottomNav from '../../../components/common_components/BottomNav';
-import "../../../styles/pagesUser.scss";
+import BottomNav from '../../components/componentShared/BottomNav';
+import "../../styles/pagesUser.scss";
 
 const ParcEtDomaine = () => {
   return (

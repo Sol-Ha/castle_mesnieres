@@ -1,6 +1,6 @@
-@import "./_fonts.scss";
-@import "./_variable.scss";
-@import "./_mixin.scss";
+@import "../../styles/fonts";
+@import "../../styles/variable";
+@import "../../styles/_mixin.scss";
 @import "~bootstrap/scss/bootstrap";
 
 // header back end
@@ -86,18 +86,18 @@
       width: 30vh !important;
       height: auto !important;
 
-      a.dropdown-item{
-        background: none!important;
-        color: $txt;  
-        &:hover{
-          text-decoration:underline;
+      a.dropdown-item {
+        background: none !important;
+        color: $txt;
+        &:hover {
+          text-decoration: underline;
           text-underline-position: under;
         }
       }
     }
-.btn{
+    .btn {
       &:hover {
-        background-image: url("../../public/assets/images/border.png");
+        background-image: url("../../../public/assets/images/border.png");
         background-size: contain;
         background-repeat: no-repeat;
         background-position-y: 5vh;
@@ -105,22 +105,31 @@
       }
     }
 
-      &:after {
-        display: none;
-      }
-    }
-    button.btn_nav.btn.btn-primary{
-      &:hover {
-        background-image: url("../../public/assets/images/border.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position-y: 4.7vh;
-        background-color: $white;
-      }
+    &:after {
+      display: none;
     }
   }
+  button.btn_nav.btn.btn-primary {
+    &:hover {
+      background-image: url("../../../public/assets/images/border.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position-y: 4.7vh;
+      background-color: $white;
+    }
+  }
+}
 
-// }
+// media querries topbar
+@media only screen and (max-width: 1250px) {
+  .topBar {
+    div,
+    button.btn.btn-primary {
+      font-size: 1.6vh !important;
+      width: 20vh !important;
+    }
+  }
+}
 
 //  nav and disconnecting button
 .bottom_nav {
@@ -295,4 +304,3 @@
     }
   }
 }
-

@@ -1,7 +1,7 @@
 import { Image } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import TopBar from "./TopBar";
-import "../../styles/adminComponent.scss";
+import "./componentShared.scss";
 
 const Header = () => {
   const path = useLocation().pathname;

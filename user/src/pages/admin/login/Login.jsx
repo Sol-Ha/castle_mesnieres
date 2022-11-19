@@ -1,20 +1,12 @@
-import { useState } from "react";
-import { useLogin } from "../../../hooks/useLogin";
+// import { useState } from "react";
+// import { useLogin } from "../../../hooks/userLogin";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Button, Form, Image } from "react-bootstrap";
 import "../../../styles/pages.scss";
 
 const Login = () => {
-  const [moderator_persona, setModerator_persona] = useState("");
-  const [moderator_password, setModerator_password] = useState("");
-  const { login, error, isLoading } = useLogin();
-
-  const handleSubmit = async (e) => {
-    // don't refresh the page!
-    e.preventDefault();
-    // verify on DB
-    await login(moderator_persona, moderator_password);
-  };
+const navigate = useNavigate();
   return (
     <>
       <section className="login_admin">
@@ -27,16 +19,14 @@ const Login = () => {
             height={430}
           ></Image>
 
-          <Form onSubmit={handleSubmit}>
+          <Form>
             {/* error message */}
-            {error && <h3>{error}</h3>}
+            <h3>Salut</h3>
 
             <Form.Group>
               <Form.Label>Pseudo</Form.Label>
               <Form.Control
                 type="text"
-                value={moderator_persona}
-                onChange={(e) => setModerator_persona(e.target.value)}
                 // onChange={handleChange}
               />
             </Form.Group>
@@ -45,9 +35,6 @@ const Login = () => {
               <Form.Label>Mot de passe</Form.Label>
               <Form.Control
                 type="password"
-                value={moderator_password}
-                onChange={(e) => setModerator_password(e.target.value)}
-                // onChange={handleChange}
               />
             </Form.Group>
 
@@ -55,10 +42,9 @@ const Login = () => {
               Vous n'arrivez pas à vous connecter?
             </Link>
 
-            <Button
+            <Button onClick={() => navigate("/admin/selection_menu")}
               variant="primary"
               // prevent emptying the form
-              disabled={isLoading}
             >
               SE CONNECTER
             </Button>

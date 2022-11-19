@@ -1,5 +1,5 @@
 import TextTruncate from "react-text-truncate";
-import "../../../styles/userComponents.scss";
+import "./Card.scss";
 
 const CardMedia = ({ name, content, videoYoutube }) => {
   return (

@@ -1,6 +1,6 @@
 import Accordion from 'react-bootstrap/Accordion';
 import Btnreturn from "../../../components/admin/other_components/Btnreturn";
-import BottomNav from '../../../components/common_components/BottomNav';
+import BottomNav from '../../../components/componentShared/BottomNav';
 
 const ManageCaterer = () => {
   return (

@@ -1,7 +1,7 @@
 import { Container } from "react-bootstrap";
-import BottomNav from '../../../components/common_components/BottomNav';
-import CardRoomToRent from "../components/CardRoomToRent";
-import "../../../styles/pagesUser.scss";
+import BottomNav from '../../components/componentShared/BottomNav';
+import CardRoomToRent from "../../components/user/card/CardRoomToRent";
+import "../../styles/pagesUser.scss";
 
 const LouerNosSalles = () => {
   

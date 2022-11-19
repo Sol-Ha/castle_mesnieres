@@ -1,5 +1,5 @@
 import Btnreturn from "../../../components/admin/other_components/Btnreturn";
-import BottomNav from '../../../components/common_components/BottomNav';
+import BottomNav from '../../../components/componentShared/BottomNav';
 import CardTime from "../../../components/admin/card/CardTime";
 import CardTimeEdit from "../../../components/admin/card/CardTimeEdit";
 import "../../../styles/pages.scss";

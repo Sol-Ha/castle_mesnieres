@@ -1,6 +1,6 @@
 import { DropdownButton, Dropdown, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import "../../styles/adminComponent.scss";
+import "./componentShared.scss";
 
 const TopBar = () => {
   const navigate = useNavigate();

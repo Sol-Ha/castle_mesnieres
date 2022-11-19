@@ -1,15 +1,15 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { useAuthContext } from "./hooks/useAuthContext";
+import { useAuthContext } from "./hooks/userAuthContext";
 
 // components
-import Header from "./components/common_components/Header";
-import FooterAdmin from "./components/common_components/FooterAdmin";
+import Header from "./components/componentShared/Header";
+import FooterAdmin from "./components/componentShared/FooterAdmin";
 
 // pages user
 
-import Index from "./pages/user/pages/Index";
-import ParcEtDomaine from "./pages/user/pages/ParcEtDomaine";
-import LouerNosSalles from "./pages/user/pages/LouerNosSalles";
+import Index from "./pages/user/Index";
+import ParcEtDomaine from "./pages/user/ParcEtDomaine";
+import LouerNosSalles from "./pages/user/LouerNosSalles";
 
 // pages admin
 import Login from "./pages/admin/login/Login";
@@ -82,7 +82,7 @@ function App() {
         {/* menu */}
         <Route
           path="admin/selection_menu"
-          element={!user ? <SelectionMenu /> : <Navigate to="/" />}
+          element={!user ? <SelectionMenu /> : <Navigate to="/admin/login" />}
         />
 
         {/* moderators */}

@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import { Image, Button, Container } from "react-bootstrap";
-import CardSocialMedia from "../components/CardSocialMedia";
-import CardGoogle from "../components/CardGoogle";
-import CardMedia from "../components/CardMedia";
-import CardEvent from "../components/CardEvent";
-import "../../../styles/pagesUser.scss";
+import CardSocialMedia from "../../components/user/card/CardSocialMedia";
+import CardGoogle from "../../components/user/card/CardGoogle";
+import CardMedia from "../../components/user/card/CardSocialMedia";
+import CardEvent from "../../components/user/card/CardEvent";
+import "../../styles/pagesUser.scss";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -180,7 +180,7 @@ const Index = () => {
 
           <CardGoogle
             title="Super"
-            logo="../assets/icones/stag.svg"
+            logo="../assets/photos/garden1.jpg"
             content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit reprehenderit quaerat a laudantium dolorem ipsam. Sit beatae tempora quasi inventore et error molestiae quam voluptatem? Odio eum quod accusamus libero!
             adipisicing elit."
             name="John X"
@@ -188,7 +188,7 @@ const Index = () => {
 
           <CardGoogle
             title="Super"
-            logo="../assets/icones/stag.svg"
+            logo="../assets/photos/wedding.jpg"
             content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit reprehenderit quaerat a laudantium dolorem ipsam. Sit beatae tempora quasi inventore et error molestiae quam voluptatem? Odio eum quod accusamus libero!
             adipisicing elit."
             name="John X"
@@ -196,7 +196,7 @@ const Index = () => {
 
           <CardGoogle
             title="Super"
-            logo="../assets/icones/stag.svg"
+            logo="../assets/photos/patrimony.jpg"
             content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit reprehenderit quaerat a laudantium dolorem ipsam. Sit beatae tempora quasi inventore et error molestiae quam voluptatem? Odio eum quod accusamus libero!
             adipisicing elit."
             name="John X"
