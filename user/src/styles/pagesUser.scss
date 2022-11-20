@@ -11,103 +11,92 @@ main,
 }
 
 //  presentation section
-#presentation_section {
-  @include flexB;
+#index_presentation {
+  margin-top: 3%;
+  display: flex;
   justify-content: space-around;
-  align-items: center;
-  width: 98%;
+  width: 95%;
+  height: auto;
 
-  article {
+  .index_card_intro {
     @include flexA;
     justify-content: center;
     width: 45%;
+    padding: 0;
     h3 {
-      height: 6vh;
-      width: 70%;
+      width: 75%;
+      height: auto;
       text-align: center;
-      margin-block: 1vh;
-      font-size: 2.4vh;
+      margin-block: 1.2em;
+      font-size: 1.2em;
       font-weight: 600;
     }
-
-    .div_presentation {
+    .ant-card {
       width: 100%;
-      height: 55vh;
-      @include flexB;
-      border: $txt solid 0.1vh;
-
-      .div_img_1 {
-        width: 25%;
-        height: 100%;
-        @include imgCardA;
-        background-image: url("../../public/assets/photos/garden.avif");
-      }
-
-      .div_img_2 {
-        width: 25%;
-        height: 100%;
-        @include imgCardA;
-        background-image: url("../../public/assets/photos/studies.jpg");
-      }
-
-      .div_content {
-        @include flexA;
-        width: 70%;
-        padding: 5% 5% 0% 5%;
+      div.ant-card-body {
+        @include flexB;
+        justify-content: space-between;
         p {
-          font-size: 2vh;
+          width: 70%;
+          padding: 2%;
+          font-size: 1em;
           span {
             font-family: "Handmagic Signature";
             line-height: 0%;
-            font-size: 7vh;
-          }
-        }
-        a.btn.btn-primary {
-          width: 60%;
-          margin-block: 5%;
-          padding-block: 2%;
-          border-radius: 0 !important;
-          border: $txt 0.1vh solid;
-          background-color: $white;
-          color: $txt;
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-          &:hover {
-            background-color: $txt;
-            color: $white;
+            font-size: 3em;
           }
         }
       }
     }
   }
 }
+
+//     a.btn.btn-primary {
+//       width: 60%;
+//       margin-block: 5%;
+//       padding-block: 2%;
+//       border-radius: 0 !important;
+//       border: $txt 0.1vh solid;
+//       background-color: $white;
+//       color: $txt;
+//       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+//       &:hover {
+//         background-color: $txt;
+//         color: $white;
+//       }
+//     }
+//   }
+// }
+// }
 
 // media querries presentation section
-@media only screen and (max-width: 800px) {
-  #presentation_section {
-    @include flexA;
-    justify-content: center;
-    text-align: center;
-    article {
+@media only screen and (max-width: 1200px) {
+  #index_presentation {
+    display: flex;
+    flex-wrap: wrap;
+    .index_card_intro {
       width: 90%;
-      margin-bottom: 5vh;
-      h3 {
-        height: 4vh;
-        font-size: 1.8vh;
+      margin-bottom: 2em;
+      .ant-card-body {
         width: 100%;
       }
-      .div_presentation {
-        .div_content {
-          @include flexA;
-          width: 70%;
-          padding: 5% 5% 0% 5%;
+    }
+  }
+}
+@media only screen and (max-width: 800px) {
+  #index_presentation {
+    .index_card_intro {
+      h3 {
+        font-size: 0.8em;
+      }
+      .ant-card {
+        width: 100%;
+        div.ant-card-body {
           p {
-            font-size: 1.7vh;
+            font-size: 0.8em;
             span {
-              font-size: 4vh;
+              font-size: 2em;
             }
-          }
-          a.btn.btn-primary {
-            width: 90%;
           }
         }
       }
@@ -115,6 +104,15 @@ main,
   }
 }
 
+@media only screen and (max-width: 400px) {
+  #index_presentation {
+      .ant-card {
+        img{
+          display: none;
+        }
+    }
+  }
+}
 //  event section
 
 #articles_section {
@@ -124,9 +122,9 @@ main,
   margin-block: 8%;
   height: 70vh;
   background-color: $light_grey;
-header{
-@include titleVertival
-}
+  header {
+    @include titleVertival;
+  }
   #article_feed_articles {
     @include flexA;
     justify-content: space-around;
@@ -143,9 +141,9 @@ header{
 //  event googleReviews
 
 #article_socialMedia,
-#article_feed_googleReviews {
+.article_feed_googleReviews {
   background-color: $light_grey;
-  height: 28vh;
+  height: 32vh;
   @include flexB;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -153,17 +151,16 @@ header{
 
 #article_socialMedia {
   height: 60vh;
-  .header_vertical{
-    @include titleVertival
-    }
-    #article_feed_socialMedia{
-      width: 80% !important;
-      height: 75%;
-      @include flexB;
-      justify-content:space-around;
-    }
+  .header_vertical {
+    @include titleVertival;
+  }
+  #article_feed_socialMedia {
+    width: 80% !important;
+    height: 75%;
+    @include flexB;
+    justify-content: space-around;
+  }
 }
-
 
 // PARC ET DOMAINE
 #main_parkAndDomain {
@@ -264,9 +261,3 @@ header{
     }
   }
 }
-
-// location Room
-
-// #main_locationRoom{
-
-// }
