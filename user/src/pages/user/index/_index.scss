@@ -3,6 +3,18 @@
 @import "../../../styles/_mixin.scss";
 @import "~bootstrap/scss/bootstrap";
 
+#main_title{
+  background-color: $black;
+  padding-block: 0.5em;
+  h1{
+    font-size: 4.5em;
+    margin-left: 0.5em;
+    font-family: "Handmagic Signature";
+    color: $white;
+    
+  }
+}
+
 main,
 #main_locationRoom {
   height: max-content;
@@ -155,7 +167,7 @@ main,
 
 header {
   @include titleHorizontal;
-  padding-block:2%;
+  padding-block: 2% 1.5%;
 }
 }
 

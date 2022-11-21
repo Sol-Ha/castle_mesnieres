@@ -14,7 +14,9 @@ console.log(datas);
 const Index = () => {
   return (
     <>
-
+    <div id="main_title">
+      <h1>Bienvenue au château de Mesnières-en-Bray</h1>
+    </div>
       <Container fluid id="main_index">
         {/* presentation castle */}
         <Container fluid id="index_presentation">

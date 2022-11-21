@@ -73,7 +73,7 @@ function Carousel_index() {
     autoPlay
     autoPlayStrategy="none"
     autoPlayInterval={3500}
-    animationDuration={2000}
+    animationDuration={1000}
     animationType="fadeout"
     infinite
       mouseTracking

@@ -15,14 +15,14 @@
 
 .alice-carousel__dots-item:not(.__custom){
     background-color: $white;
-    border: 1px solid $txt;
+    border: 1px solid $black;
     height: 1em;
     width: 1em; 
     &:hover{
         background-color: $medium_grey;       
     } 
     &:not(.__custom).__active{
-        background-color: $dark_grey;       
+        background-color: $black;       
     }
 }
 
