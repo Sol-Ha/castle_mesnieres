@@ -1,10 +1,12 @@
 import { DropdownButton, Dropdown, Button } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import "./componentShared.scss";
 
 const TopBar = () => {
   const navigate = useNavigate();
+
   return (
+    <>
     <nav className="topBar">
 
       <DropdownButton className="dropdown-basic-button" title="LE CHATEAU">
@@ -20,7 +22,7 @@ const TopBar = () => {
 
       <DropdownButton title="DORMIR">
         <Dropdown.Item href="GitesCollectif">GITES COLLECTIF</Dropdown.Item>
-        <Dropdown.Item href="ChambresDuChateau">CHAMBRE DU CHATEAU</Dropdown.Item>
+        <Dropdown.Item href="ChambresDuChateau">CHAMBRES DU CHATEAU</Dropdown.Item>
       </DropdownButton>
 
       <DropdownButton title="NOS ARTICLES">
@@ -30,6 +32,8 @@ const TopBar = () => {
 
       <Button className="btn_nav" onClick={() => navigate("NousContacter")}>CONTACT</Button>
     </nav>
+
+</>
   );
 };
 

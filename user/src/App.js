@@ -7,7 +7,7 @@ import FooterAdmin from "./components/componentShared/FooterAdmin";
 
 // pages user
 
-import Index from "./pages/user/Index";
+import Index from "./pages/user/index/Index";
 import ParcEtDomaine from "./pages/user/ParcEtDomaine";
 import LouerNosSalles from "./pages/user/LouerNosSalles";
 

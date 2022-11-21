@@ -1,0 +1,28 @@
+@import "../../../styles/_fonts.scss";
+@import "../../../styles/_variable.scss";
+@import "../../../styles/_mixin.scss";
+@import "~bootstrap/scss/bootstrap";
+
+.alice-carousel__prev-btn-item,
+.alice-carousel__next-btn-wrapper{
+    display: none;
+}
+
+.alice-carousel__dots-item:nth-child(6),
+.alice-carousel__dots-item:last-child{
+    display: none;
+}
+
+.alice-carousel__dots-item:not(.__custom){
+    background-color: $white;
+    border: 1px solid $txt;
+    height: 1em;
+    width: 1em; 
+    &:hover{
+        background-color: $medium_grey;       
+    } 
+    &:not(.__custom).__active{
+        background-color: $dark_grey;       
+    }
+}
+

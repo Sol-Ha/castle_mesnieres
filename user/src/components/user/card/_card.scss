@@ -4,36 +4,35 @@
 @import "~bootstrap/scss/bootstrap";
 
 // cardEvent
-
-.card_event {
-  height: 18vh;
+.card_new_event {
+  height: 10em;
   width: 100%;
   @include flexA;
 
-  .card_eventHeader {
+  .new_event {
     display: flex;
+    align-items: center;
     width: 100%;
-    padding-inline: 2%;
+    height: 2em;
+    h3,
     h4 {
-      height: 3vh;
-      width: 85%;
-      font-size: 2.2vh;
       font-weight: 600;
-      padding-left: 15%;
       text-align: center;
     }
-    h5 {
-      height: 3vh;
-      width: 15%;
-      font-size: 2.2vh;
-      font-weight: 500;
-      text-align: center;
-      background-color: $cream;
-      border: 0.1vh $txt solid;
+    h3 {
+      width: 85%;
+      font-size: 1.1em;
+      padding-left: 15%;
+    }
+    h4 {
+      width: 13.5%;
+      padding: 0.3em;
+      font-size: 0.9em;
+      border: 1px $txt solid;
     }
   }
   .card_eventMain {
-    height: 15vh;
+    height: 7.5em;
     @include flexB;
 
     .event_img {
@@ -41,29 +40,43 @@
       padding: 0;
       height: inherit;
       margin-right: 2%;
-      border: $txt solid 0.1vh;
+      border: $txt solid 1px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
       img {
         width: 100%;
-        height: 14.8vh;
+        height: 7.4em;
         object-fit: cover;
-        border: $txt solid 0.1vh;
+        border: $txt solid 1px;
       }
     }
     .event_body {
-      @include flexB;
-      text-decoration: none;
-      align-items: center;
       width: 70%;
-      padding: 1%;
       height: inherit;
-      border: $txt solid 0.1vh;
+      padding: 2%;
+      @include flexA;
+      background-color: $white;
+      border: $txt solid 1px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       span {
+        height: 6em;
         width: 100%;
-        font-size: 1.6vh;
+        font-size: 0.9em;
         display: block;
+      }
+      footer {
+        height: 1.4em;
+        width: 98%;
+        display: flex;
+        justify-content: flex-end;
+        a {
+          font-size: 0.9em;
+          color: $txt;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
       }
     }
   }
@@ -82,31 +95,38 @@
 
 // card media
 
-.card_media {
-  height: 100%;
+#card_new_journalist {
+  height: 98%;
   @include flexA;
-  justify-content: space-around;
-  h4 {
-    height: 8%;
-    padding-block: 3%;
-    font-size: 2.2vh;
-    font-weight: 600;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 1%;
+  .journalist_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 12%;
+    h3 {
+      font-size: 1em;
+      font-weight: 600;
+    }
   }
-  .card_media_main {
-    height: 90%;
-    padding: 3%;
+  .journalist_body {
+    height: 88%;
     border: $txt solid 0.1vh;
-      @include flexA;
-  justify-content: space-around;
+    display: flex;
+    align-content: space-between;
+    justify-content: space-around;
 
-    span {
+    .card_media_txt {
+      height: 20em;
       padding: 2%;
       font-size: 1.8vh;
       display: block;
     }
-    iframe {
+    .card_media_video {
       width: 100%;
-      height: 30vh;
+      height: 10em;
     }
   }
 }
@@ -118,7 +138,7 @@
   background-color: $white;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
   border-radius: 15px;
-  header:first-child {
+  .socialMedia_header {
     div {
       display: flex;
       justify-content: flex-end;
@@ -133,12 +153,12 @@
       object-fit: cover;
     }
   }
-  span {
-    font-size: 1.5vh;
+  .socialMedia_body {
+    font-size: 0.9em;
     display: block;
     padding: 4%;
   }
-  footer {
+  .socialMedia_footer {
     width: 100%;
     @include flexA;
     justify-content: center;
@@ -146,25 +166,25 @@
       border-top: 1px solid $txt;
       width: 80%;
     }
-    .social_icones{
+    .social_icones {
       width: inherit;
       display: flex;
       align-content: center;
       justify-content: space-between;
       padding-inline: 5%;
-      div:first-child{
+      div:first-child {
         width: 40%;
         display: flex;
         align-content: center;
         justify-content: space-around;
       }
-      div:nth-child(2){
+      div:nth-child(2) {
         width: 30%;
         display: flex;
         justify-content: space-around;
         align-content: center;
-        p{
-          font-size: 1.5vh;
+        p {
+          font-size: 0.9em;
         }
       }
     }
@@ -180,20 +200,23 @@
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
   border-radius: 15px;
 
-  a{
+  a {
     text-decoration: none;
-    color: #1E1E1E;
+    color: #1e1e1e;
     display: block;
-  span {
-    margin: 1%;
-    font-size: 1.5vh;
-    font-style: italic;
-    display: block;
-  }
+    .card_google_body {
+      margin: 1%;
+      font-size: 0.8em;
+      font-style: italic;
+      text-transform: none;
+      display: block;
+    }
   }
 }
 
-
+.card_caroussel_index{
+  margin: 2%;
+}
 
 // card Room to Rent
 .cardRoomToRent {

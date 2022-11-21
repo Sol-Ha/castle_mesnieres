@@ -1,6 +1,6 @@
 import TextTruncate from "react-text-truncate";
 import { Card, Col, Row, Rate, Avatar } from "antd";
-import "./Card.scss";
+import "./_card.scss";
 
 // link to redirect
 // use of library antd with parameters to display for the api
@@ -18,7 +18,10 @@ const CardGoogle = ({link, content, rate, name, logo }) => {
         </Row>
 
         <Row>
-          <TextTruncate line={5} text={content} truncateText="…" />
+          <TextTruncate className="card_google_body"
+          line={7} 
+          text={content} 
+          truncateText="…" />
         </Row>
 
         <Row justify="end">

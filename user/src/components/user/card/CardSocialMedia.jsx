@@ -1,24 +1,24 @@
-import { Image } from "react-bootstrap";
+import { Container, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import TextTruncate from "react-text-truncate";
-import "./Card.scss";
+import "./_card.scss";
 
 const CardSocialMedia = ({ content, image, redirect, copy, like, logo }) => {
   return (
-    <article fluid className="card_socialMedias">
-      <header>
+    <Container fluid className="card_socialMedias">
+      <header className="socialMedia_header">
         <div>
           <Image src={logo} />
         </div>
         <Image src={image} />
       </header>
-      <TextTruncate
+      <TextTruncate className="socialMedia_body"
         line={7}
         text={content}
         truncateText="…"
         // textTruncateChild={<a href="#">Read on</a>}
       />
-      <footer>
+      <footer className="socialMedia_footer">
         <span id="line"></span>
         <div className="social_icones">
           <div>
@@ -35,7 +35,7 @@ const CardSocialMedia = ({ content, image, redirect, copy, like, logo }) => {
           </div>
         </div>
       </footer>
-    </article>
+    </Container>
   );
 };
 

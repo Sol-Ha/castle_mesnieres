@@ -149,7 +149,7 @@
 }
 
 @mixin titleVertival{
-    border-inline: solid 0.1vh $txt;
+    border-inline: solid 1px $txt;
     height: 80%;
     width: 6%;
     background-color: $white;
@@ -157,7 +157,7 @@
     justify-content: center;
     align-items: center;
     h2 {
-      font-size: 2.2vh;
+      font-size: 1.2em;
       writing-mode: vertical-rl;
       text-orientation: upright;
     }

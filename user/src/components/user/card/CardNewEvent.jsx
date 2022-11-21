@@ -1,35 +1,38 @@
 import { Image, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import TextTruncate from "react-text-truncate";
-import "./Card.scss";
+import "./_card.scss";
 
 const CardEvent = ({
   title,
   eventType,
   image,
   description,
-  urlEvent,
   date,
   author,
 }) => {
+
   return (
-    <Container fluid className="card_event">
-      <div className="card_eventHeader">
-        <h4>{title}</h4>
-        <h5>{eventType}</h5>
+
+    <Container fluid className="card_new_event">
+      <div className="new_event">
+        <h3>{title}</h3>
+        <h4>{eventType}</h4>
       </div>
       <Container className="card_eventMain">
         <div className="event_img">
-          <Image src={image} />
+          <Image src={image} alt="Evenement en cours"/>
         </div>
-        <Link to="/Evemenent" className="event_body">
+        <div className="event_body">
           <TextTruncate
             line={3}
             text={description}
             truncateText="…"
-            // textTruncateChild={<a href="#">Read on</a>}
           />
-        </Link>
+          <footer>
+          <Link to="/Evemenent">En savoir plus</Link>
+          </footer>
+        </div>
       </Container>
     </Container>
   );

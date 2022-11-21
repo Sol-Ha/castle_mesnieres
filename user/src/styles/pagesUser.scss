@@ -11,45 +11,6 @@ main,
 }
 
 //  presentation section
-#index_presentation {
-  margin-top: 3%;
-  display: flex;
-  justify-content: space-around;
-  width: 95%;
-  height: auto;
-
-  .index_card_intro {
-    @include flexA;
-    justify-content: center;
-    width: 45%;
-    padding: 0;
-    h3 {
-      width: 75%;
-      height: auto;
-      text-align: center;
-      margin-block: 1.2em;
-      font-size: 1.2em;
-      font-weight: 600;
-    }
-    .ant-card {
-      width: 100%;
-      div.ant-card-body {
-        @include flexB;
-        justify-content: space-between;
-        p {
-          width: 70%;
-          padding: 2%;
-          font-size: 1em;
-          span {
-            font-family: "Handmagic Signature";
-            line-height: 0%;
-            font-size: 3em;
-          }
-        }
-      }
-    }
-  }
-}
 
 //     a.btn.btn-primary {
 //       width: 60%;
@@ -69,75 +30,6 @@ main,
 // }
 // }
 
-// media querries presentation section
-@media only screen and (max-width: 1200px) {
-  #index_presentation {
-    display: flex;
-    flex-wrap: wrap;
-    .index_card_intro {
-      width: 90%;
-      margin-bottom: 2em;
-      .ant-card-body {
-        width: 100%;
-      }
-    }
-  }
-}
-@media only screen and (max-width: 800px) {
-  #index_presentation {
-    .index_card_intro {
-      h3 {
-        font-size: 0.8em;
-      }
-      .ant-card {
-        width: 100%;
-        div.ant-card-body {
-          p {
-            font-size: 0.8em;
-            span {
-              font-size: 2em;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  #index_presentation {
-      .ant-card {
-        img{
-          display: none;
-        }
-    }
-  }
-}
-//  event section
-
-#articles_section {
-  @include flexB;
-  align-items: center;
-  justify-content: space-around;
-  margin-block: 8%;
-  height: 70vh;
-  background-color: $light_grey;
-  header {
-    @include titleVertival;
-  }
-  #article_feed_articles {
-    @include flexA;
-    justify-content: space-around;
-    width: 62%;
-    height: inherit;
-  }
-
-  aside {
-    width: 25%;
-    height: inherit;
-  }
-}
-
 //  event googleReviews
 
 #article_socialMedia,
@@ -150,7 +42,7 @@ main,
 }
 
 #article_socialMedia {
-  height: 60vh;
+  height: 35em;
   .header_vertical {
     @include titleVertival;
   }
