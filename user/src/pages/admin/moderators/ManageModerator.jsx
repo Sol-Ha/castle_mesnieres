@@ -1,4 +1,4 @@
-import BottomNav from '../../../components/componentShared/BottomNav';
+import BottomNavHeader from '../../../components/componentShared/BottomNavHeader';
 import CardTime from "../../../components/admin/card/CardTime";
 import CardTimeEdit from "../../../components/admin/card/CardTimeEdit";
 import "../../../styles/pages.scss";
@@ -6,7 +6,7 @@ import "../../../styles/pages.scss";
 const ManageModerator = () => {
   return (
     <>
-      <BottomNav name="GESTION DES MODERATEURS"
+      <BottomNavHeader name="GESTION DES MODERATEURS"
       urlNav="/admin/selection_menu" />
 
       <section className="manage_CRUD">

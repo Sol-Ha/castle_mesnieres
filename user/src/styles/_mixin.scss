@@ -148,7 +148,7 @@
   }
 }
 
-@mixin titleVertival{
+@mixin titleVertical{
     border-inline: solid 1px $txt;
     height: 80%;
     width: 6%;
@@ -161,4 +161,22 @@
       writing-mode: vertical-rl;
       text-orientation: upright;
     }
+}
+
+@mixin titleHorizontal{
+  height: 9%;
+  width: 40%;
+  padding-block: 4%;
+  margin-block: 2%;
+  background-color: $white;
+  border-block: solid 1px $txt;
+  border-inline: none;
+  @include flexB;
+  justify-content: center;
+  h2 {
+    font-size: 1.2em;
+    text-align: center;
+    writing-mode: horizontal-tb;
+    text-orientation: initial;
+  }
 }

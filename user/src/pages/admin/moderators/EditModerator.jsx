@@ -1,11 +1,11 @@
 import Btnreturn from "../../../components/admin/other_components/Btnreturn";
-import BottomNav from '../../../components/componentShared/BottomNav';
+import BottomNavHeader from '../../../components/componentShared/BottomNavHeader';
 import FormModerator from '../../../components/admin/forms/FormModerator';
 
 const EditModerator = () => {
   return (
     <>
-    <BottomNav
+    <BottomNavHeader
     name="EDITER UN MODERATEUR"
     urlNav="/admin/selection_menu"
     />

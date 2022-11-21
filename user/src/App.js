@@ -3,7 +3,7 @@ import { useAuthContext } from "./hooks/userAuthContext";
 
 // components
 import Header from "./components/componentShared/Header";
-import FooterAdmin from "./components/componentShared/FooterAdmin";
+import Footer from "./components/componentShared/Footer";
 
 // pages user
 
@@ -204,7 +204,7 @@ function App() {
         />
       </Routes>
 
-      <FooterAdmin />
+      <Footer />
     </BrowserRouter>
   );
 }

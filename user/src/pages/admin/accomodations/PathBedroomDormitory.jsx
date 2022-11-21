@@ -1,12 +1,12 @@
 import { Container } from "react-bootstrap";
 import Card from "../../../components/admin/card/Card";
-import BottomNav from '../../../components/componentShared/BottomNav';
+import BottomNavHeader from '../../../components/componentShared/BottomNavHeader';
 import "../../../styles/pages.scss";
 
 const PathBedroomDormitory = () => {
   return (
     <>
-    <BottomNav
+    <BottomNavHeader
     name="CHAMBRES & DORTOIRS"
     urlNav="/admin/selection_menu"
     />

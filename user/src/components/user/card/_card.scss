@@ -28,6 +28,8 @@
       width: 13.5%;
       padding: 0.3em;
       font-size: 0.9em;
+      color: $white;
+      background-color: $slate;
       border: 1px $txt solid;
     }
   }
@@ -83,12 +85,12 @@
   &:hover {
     .event_img,
     .event_body {
-      box-shadow: 10px 10px 0px $cream;
+      box-shadow: 10px 10px 0px $slate;
     }
     .event_img {
-      filter: brightness(123%) saturate(212%);
-      -webkit-filter: brightness(123%) saturate(212%);
-      -moz-filter: brightness(123%) saturate(212%);
+      img{
+          filter: brightness(123%) saturate(212%);
+      }
     }
   }
 }

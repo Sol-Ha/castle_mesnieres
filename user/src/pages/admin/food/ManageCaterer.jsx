@@ -1,11 +1,11 @@
 import Accordion from 'react-bootstrap/Accordion';
 import Btnreturn from "../../../components/admin/other_components/Btnreturn";
-import BottomNav from '../../../components/componentShared/BottomNav';
+import BottomNavHeader from '../../../components/componentShared/BottomNavHeader';
 
 const ManageCaterer = () => {
   return (
     <>
-    <BottomNav name="EDITER LE TRAITEUR"
+    <BottomNavHeader name="EDITER LE TRAITEUR"
     urlNav="/admin/selection_menu" />
     <Btnreturn urlCard="/admin/path_food" />
 

@@ -1,11 +1,11 @@
 import Btnreturn from "../../../components/admin/other_components/Btnreturn";
 import FormModerator from "../../../components/admin/forms/FormModerator";
-import BottomNav from '../../../components/componentShared/BottomNav';
+import BottomNavHeader from '../../../components/componentShared/BottomNavHeader';
 
 const CreateModerator = () => {
   return (
     <>
-      <BottomNav name="CREATION D'UN MODERATEUR"
+      <BottomNavHeader name="CREATION D'UN MODERATEUR"
       urlNav="/admin/selection_menu" />
 
       <Btnreturn urlCard="/admin/manage_moderator" />

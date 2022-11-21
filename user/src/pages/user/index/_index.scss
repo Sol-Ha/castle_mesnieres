@@ -105,7 +105,7 @@ main,
   height: 38em;
   background-color: $light_grey;
   header {
-    @include titleVertival;
+    @include titleVertical;
   }
   #feed_news {
     @include flexA;
@@ -126,19 +126,7 @@ main,
     padding: 2% 5%;
     height: 40em;
     header {
-      height: 9%;
-      width: 40%;
-      padding-block: 4%;
-      margin-block: 2%;
-      border-block: solid 1px $txt;
-      border-inline: none;
-      @include flexB;
-      justify-content: center;
-      h2 {
-        text-align: center;
-        writing-mode: horizontal-tb;
-        text-orientation: initial;
-      }
+@include titleHorizontal
     }
     #feed_news {
       width: 100%;
@@ -162,8 +150,13 @@ main,
 // ACTIVITIES INDEX
 
 #index_activities {
-  display: flex;
+  @include flexA;
   justify-content: center;
+
+header {
+  @include titleHorizontal;
+  padding-block:2%;
+}
 }
 
 #index_socialMedia{

@@ -3,7 +3,7 @@ import { Image, Button } from "react-bootstrap";
 import "./componentShared.scss";
 
 // rfce for function
-const BottomNav = ({name, urlNav}) => {
+const BottomNavHeader = ({name, urlNav}) => {
 
   const navigate = useNavigate({urlNav});
   return (
@@ -22,4 +22,4 @@ const BottomNav = ({name, urlNav}) => {
   )
 }
 
-export default BottomNav
+export default BottomNavHeader

@@ -112,6 +112,9 @@ const Index = () => {
 
         {/* section caroussel what to do */}
         <Container id="index_activities">
+        <header className="header_vertical">
+            <h2>ACTIVITES AU CHATEAU</h2>
+          </header>
         <CarouselIndex/>
         </Container>
 

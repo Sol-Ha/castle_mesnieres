@@ -176,76 +176,78 @@
 
 // footer
 .footer_back {
-  width: 100%;
-  background-color: $black;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: center;
-  margin: 0;
-
-  div:first-child {
-    width: 33%;
+  article {
+    width: 100%;
+    background-color: $black;
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     align-items: center;
+    margin: 0;
 
-    address {
-      padding: 9vh;
-      color: $white;
-      font-weight: 600;
-      font-size: 2.4vh;
-      line-height: 6vh;
+    div:first-child {
+      width: 33%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
 
-      a {
-        text-decoration: none;
-        color: inherit;
+      address {
+        padding: 9vh;
+        color: $white;
+        font-weight: 600;
+        font-size: 2.4vh;
+        line-height: 6vh;
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+      #blason_normandy {
+        width: 13vh;
+        height: auto;
+        margin-top: -30vh;
+      }
+
+      span {
+        height: 29vh;
+        width: 0.3vh;
+        background-color: $white;
+        margin-top: -10vh;
+        margin-left: 3vh;
       }
     }
-    #blason_normandy {
-      width: 13vh;
-      height: auto;
-      margin-top: -30vh;
+
+    div:nth-child(2) {
+      width: 33%;
+      margin-left: 15vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-inline: 3vh;
+
+      #france_map {
+        height: 30vh;
+        height: auto;
+      }
     }
 
-    span {
-      height: 29vh;
-      width: 0.3vh;
-      background-color: $white;
-      margin-top: -10vh;
-      margin-left: 3vh;
-    }
-  }
+    div:last-child {
+      width: 33%;
+      padding-inline: 13vh;
+      margin-top: -20vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
 
-  div:nth-child(2) {
-    width: 33%;
-    margin-left: 15vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-inline: 3vh;
-
-    #france_map {
-      height: 30vh;
-      height: auto;
-    }
-  }
-
-  div:last-child {
-    width: 33%;
-    padding-inline: 13vh;
-    margin-top: -20vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    img {
-      width: 5.5vh;
-      height: auto;
-      &:hover {
-        transform: scale(1.5);
-        filter: brightness(0) saturate(100%) invert(76%) sepia(33%)
-          saturate(440%) hue-rotate(2deg) brightness(99%) contrast(102%);
+      img {
+        width: 5.5vh;
+        height: auto;
+        &:hover {
+          transform: scale(1.5);
+          filter: brightness(0) saturate(100%) invert(76%) sepia(33%)
+            saturate(440%) hue-rotate(2deg) brightness(99%) contrast(102%);
+        }
       }
     }
   }
@@ -262,7 +264,7 @@
       address {
         width: 100%;
         padding: 0;
-        font-size: 2vh;
+        font-size: 0.9em;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -281,9 +283,25 @@
     // social media
     div:last-child {
       width: 100%;
-      padding: 4vh 4vh 2vh 4vh;
+      padding: 2em 2em 1em 2em;
       margin: 0;
       order: 1;
+    }
+  }
+}
+
+#nav_bottomFooter {
+  @include flexB;
+  justify-content: space-evenly;
+  background-color: $black;
+  padding-block: 1em;
+  border-top: 2px $white solid;
+  .linkFooter {
+    color: $white;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 0.5em;
     }
   }
 }

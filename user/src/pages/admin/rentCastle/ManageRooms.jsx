@@ -1,13 +1,13 @@
 import Accordion from 'react-bootstrap/Accordion';
 import FormRentRoom from "../../../components/admin/forms/FormRentRoom";
-import BottomNav from '../../../components/componentShared/BottomNav';
+import BottomNavHeader from '../../../components/componentShared/BottomNavHeader';
 import "../../../styles/pages.scss";
 
 const ManageRooms = () => {
 
   return (
     <>
-      <BottomNav name="EDITER LES SALLES A LOUER"
+      <BottomNavHeader name="EDITER LES SALLES A LOUER"
       urlNav="/admin/selection_menu" />
 
       <Accordion defaultActiveKey="0" className='manageRoom' flush>

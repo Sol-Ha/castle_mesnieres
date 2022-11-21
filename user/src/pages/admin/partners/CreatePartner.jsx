@@ -1,11 +1,11 @@
 import Btnreturn from "../../../components/admin/other_components/Btnreturn";
-import BottomNav from '../../../components/componentShared/BottomNav';
+import BottomNavHeader from '../../../components/componentShared/BottomNavHeader';
 import FormPartner from "../../../components/admin/forms/FormPartner";
 
 const CreatePartner = () => {
   return (
     <>
-    <BottomNav name="CREATION D'UN PARTENAIRE"
+    <BottomNavHeader name="CREATION D'UN PARTENAIRE"
     urlNav="/admin/selection_menu" />
 
     <Btnreturn urlCard="/admin/manage_partners" />

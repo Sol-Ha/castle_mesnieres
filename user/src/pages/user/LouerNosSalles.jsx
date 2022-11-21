@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import BottomNav from '../../components/componentShared/BottomNav';
+import BottomNavHeader from '../../components/componentShared/BottomNavHeader';
 import CardRoomToRent from "../../components/user/card/CardRoomToRent";
 import "../../styles/pagesUser.scss";
 
@@ -7,7 +7,7 @@ const LouerNosSalles = () => {
   
   return (
     <>
-    <BottomNav name="LOCATION DE NOS SALLES"
+    <BottomNavHeader name="LOCATION DE NOS SALLES"
     urlNav="/" />
 
     

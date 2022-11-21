@@ -1,11 +1,11 @@
-import BottomNav from '../../../components/componentShared/BottomNav';
+import BottomNavHeader from '../../../components/componentShared/BottomNavHeader';
 import CardTime from "../../../components/admin/card/CardTime";
 import CardTimeEdit from "../../../components/admin/card/CardTimeEdit";
 
 const ManageHire = () => {
   return (
     <>
-      <BottomNav name="GESTION DES EMPLOIS"
+      <BottomNavHeader name="GESTION DES EMPLOIS"
       urlNav="/admin/selection_menu" />
 
       <section className="manage_CRUD">

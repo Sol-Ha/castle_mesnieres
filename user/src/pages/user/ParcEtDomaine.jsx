@@ -1,11 +1,11 @@
 import { Image, Button, Container } from "react-bootstrap";
-import BottomNav from '../../components/componentShared/BottomNav';
+import BottomNavHeader from '../../components/componentShared/BottomNavHeader';
 import "../../styles/pagesUser.scss";
 
 const ParcEtDomaine = () => {
   return (
     <>
-    <BottomNav name="PARC ET DOMAINE DU CHATEAU"
+    <BottomNavHeader name="PARC ET DOMAINE DU CHATEAU"
     urlNav="/" />
 
       <main id="main_parkAndDomain">
