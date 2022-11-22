@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { useAuthContext } from "./hooks/userAuthContext";
 
 // components
 import Header from "./components/componentShared/Header";
@@ -7,57 +6,57 @@ import Footer from "./components/componentShared/Footer";
 
 // pages user
 
-import Index from "./pages/user/index/Index";
-import ParcEtDomaine from "./pages/user/ParcEtDomaine";
-import LouerNosSalles from "./pages/user/LouerNosSalles";
+import Index from "./pages/frontPages/index/Index";
+import ParcEtDomaine from "./pages/frontPages/ParcEtDomaine";
+import LouerNosSalles from "./pages/frontPages/LouerNosSalles";
 
 // pages admin
-import Login from "./pages/admin/login/Login";
-import LoginRecover from "./pages/admin/login/LoginRecover";
-import LoginRecover2 from "./pages/admin/login/LoginRecover2";
+import Login from "./pages/backPages/login/Login";
+import LoginRecover from "./pages/backPages/login/LoginRecover";
+import LoginRecover2 from "./pages/backPages/login/LoginRecover2";
 
-import SelectionMenu from "./pages/admin/menu/SelectionMenu";
+import SelectionMenu from "./pages/backPages/menu/SelectionMenu";
 
-import ManageModerator from "./pages/admin/moderators/ManageModerator";
-import CreateModerator from "./pages/admin/moderators/CreateModerator";
-import EditModerator from "./pages/admin/moderators/EditModerator";
+import ManageModerator from "./pages/backPages/moderators/ManageModerator";
+import CreateModerator from "./pages/backPages/moderators/CreateModerator";
+import EditModerator from "./pages/backPages/moderators/EditModerator";
 
 // articles & news
-import PathEventNews from "./pages/admin/articles/PathEventNews";
-import ManageEvents from "./pages/admin/articles/ManageEvents";
-import CreateEvent from "./pages/admin/articles/CreateEvent";
-import EditEvent from "./pages/admin/articles/EditEvent";
-import ManageNews from "./pages/admin/articles/ManageNews";
-import CreateNews from "./pages/admin/articles/CreateNews";
-import EditNews from "./pages/admin/articles/EditNews";
+import PathEventNews from "./pages/backPages/articles/PathEventNews";
+import ManageEvents from "./pages/backPages/articles/ManageEvents";
+import CreateEvent from "./pages/backPages/articles/CreateEvent";
+import EditEvent from "./pages/backPages/articles/EditEvent";
+import ManageNews from "./pages/backPages/articles/ManageNews";
+import CreateNews from "./pages/backPages/articles/CreateNews";
+import EditNews from "./pages/backPages/articles/EditNews";
 
 // partners
-import ManagePartners from "./pages/admin/partners/ManagePartners";
-import EditPartner from "./pages/admin/partners/EditPartner";
-import CreatePartner from "./pages/admin/partners/CreatePartner";
+import ManagePartners from "./pages/backPages/partners/ManagePartners";
+import EditPartner from "./pages/backPages/partners/EditPartner";
+import CreatePartner from "./pages/backPages/partners/CreatePartner";
 
 // partners
-import ManageHire from "./pages/admin/hire/ManageHire";
-import EditHire from "./pages/admin/hire/EditHire";
-import CreateHire from "./pages/admin/hire/CreateHire";
+import ManageHire from "./pages/backPages/hire/ManageHire";
+import EditHire from "./pages/backPages/hire/EditHire";
+import CreateHire from "./pages/backPages/hire/CreateHire";
 
 // rent castle
-import Visit from "./pages/admin/visit/Visit";
+import Visit from "./pages/backPages/visit/Visit";
 
 // bedrooms dorms and camping
-import PathBedroomDormitory from "./pages/admin/accomodations/PathBedroomDormitory";
-import ManageBedrooms from "./pages/admin/accomodations/ManageBedrooms";
-import ManageDorms from "./pages/admin/accomodations/ManageDorms";
+import PathBedroomDormitory from "./pages/backPages/accomodations/PathBedroomDormitory";
+import ManageBedrooms from "./pages/backPages/accomodations/ManageBedrooms";
+import ManageDorms from "./pages/backPages/accomodations/ManageDorms";
 
 // rent rooms
-import ManageRooms from "./pages/admin/rentCastle/ManageRooms";
+import ManageRooms from "./pages/backPages/rentCastle/ManageRooms";
 
 // food
-import PathFood from "./pages/admin/food/PathFood";
-import ManageCaterer from "./pages/admin/food/ManageCaterer";
+import PathFood from "./pages/backPages/food/PathFood";
+import ManageCaterer from "./pages/backPages/food/ManageCaterer";
 
 function App() {
-  const { user } = useAuthContext();
+
   return (
     <BrowserRouter>
       <Header />
@@ -69,139 +68,68 @@ function App() {
         <Route path="LouerNosSalles" element={<LouerNosSalles />} />
 
         {/* admin */}
-        <Route
-          path="/admin/login"
-          // if admin true you can login but if admin false return to index
-          element={!user ? <Login /> : <Navigate to="/" />}
-        />
+        <Route path="/admin/login" element={<Login/>}/>
 
         <Route path="/admin/login_recover" element={<LoginRecover />} />
 
         <Route path="/admin/login_recover_userDB" element={<LoginRecover2 />} />
 
         {/* menu */}
-        <Route
-          path="admin/selection_menu"
-          element={!user ? <SelectionMenu /> : <Navigate to="/admin/login" />}
-        />
+        <Route path="admin/selection_menu" element={ <SelectionMenu />}/>
 
         {/* moderators */}
-        <Route
-          path="admin/manage_moderator"
-          element={!user ? <ManageModerator /> : <Navigate to="/" />}
-        />
+        <Route path="admin/manage_moderator" element={ <ManageModerator/>}/>
 
-        <Route
-          path="/admin/create_moderator"
-          element={!user ? <CreateModerator /> : <Navigate to="/" />}
-        />
+        <Route path="/admin/create_moderator" element={ <CreateModerator />}/>
 
-        <Route
-          path="/admin/edit_moderator"
-          element={!user ? <EditModerator /> : <Navigate to="/" />}
-        />
+        <Route path="/admin/edit_moderator" element={<EditModerator /> }/>
 
         {/* articles & news */}
-        <Route
-          path="admin/path_events&news"
-          element={!user ? <PathEventNews /> : <Navigate to="/" />}
-        />
+        <Route path="admin/path_events&news" element={<PathEventNews />}/>
 
-        <Route
-          path="admin/manage_events"
-          element={!user ? <ManageEvents /> : <Navigate to="/" />}
-        />
+        <Route path="admin/manage_events" element={<ManageEvents />}/>
 
-        <Route
-          path="admin/edit_event"
-          element={!user ? <EditEvent /> : <Navigate to="/" />}
-        />
+        <Route path="admin/edit_event" element={<EditEvent />}/>
 
-        <Route
-          path="admin/create_event"
-          element={!user ? <CreateEvent /> : <Navigate to="/" />}
-        />
+        <Route path="admin/create_event" element={<CreateEvent />}/>
 
-        <Route
-          path="admin/manage_news"
-          element={!user ? <ManageNews /> : <Navigate to="/" />}
-        />
+        <Route path="admin/manage_news" element={<ManageNews />}/>
 
-        <Route
-          path="admin/create_news"
-          element={!user ? <CreateNews /> : <Navigate to="/" />}
-        />
+        <Route path="admin/create_news" element={<CreateNews />} />
 
-        <Route
-          path="admin/edit_news"
-          element={!user ? <EditNews /> : <Navigate to="/" />}
-        />
+        <Route path="admin/edit_news" element={<EditNews />}/>
 
         {/* partners */}
-        <Route
-          path="admin/manage_partners"
-          element={!user ? <ManagePartners /> : <Navigate to="/" />}
-        />
+        <Route path="admin/manage_partners" element={<ManagePartners />}/>
 
-        <Route
-          path="admin/create_partner"
-          element={!user ? <CreatePartner /> : <Navigate to="/" />}
-        />
+        <Route path="admin/create_partner" element={<CreatePartner />}/>
 
-        <Route
-          path="admin/edit_partner"
-          element={!user ? <EditPartner /> : <Navigate to="/" />}
-        />
+        <Route path="admin/edit_partner" element={ <EditPartner />}/>
 
         {/* hire */}
-        <Route
-          path="admin/manage_hire"
-          element={!user ? <ManageHire /> : <Navigate to="/" />}
-        />
+        <Route path="admin/manage_hire" element={<ManageHire />}/>
 
-        <Route
-          path="admin/create_hire"
-          element={!user ? <CreateHire /> : <Navigate to="/" />}
-        />
+        <Route path="admin/create_hire" element={<CreateHire />}/>
 
-        <Route
-          path="admin/edit_hire"
-          element={!user ? <EditHire /> : <Navigate to="/" />}
-        />
+        <Route path="admin/edit_hire" element={<EditHire />}/>
 
         {/* visit */}
-        <Route
-          path="admin/visit_castle"
-          element={!user ? <Visit /> : <Navigate to="/" />}
-        />
+        <Route path="admin/visit_castle" element={<Visit />}/>
 
         {/* bedrooms dorms and camping */}
-        <Route
-          path="admin/path_bedroom&dormitory"
-          element={!user ? <PathBedroomDormitory /> : <Navigate to="/" />}
-        />
+        <Route path="admin/path_bedroom&dormitory" element={<PathBedroomDormitory />}/>
 
         <Route path="admin/manage_bedrooms" element={<ManageBedrooms />} />
 
-        <Route
-          path="admin/manage_dorms_and_camping"
-          element={!user ? <ManageDorms /> : <Navigate to="/" />}
-        />
+        <Route path="admin/manage_dorms_and_camping" element={<ManageDorms />}/>
+        
         {/* rent rooms */}
-        <Route
-          path="admin/rent_rooms"
-          element={!user ? <ManageRooms /> : <Navigate to="/" />}
-        />
+        <Route path="admin/rent_rooms" element={<ManageRooms />}/>
 
         {/* food */}
-        <Route
-          path="admin/path_food"
-          element={!user ? <PathFood /> : <Navigate to="/" />}
-        />
-        <Route
-          path="admin/manage_caterer"
-          element={!user ? <ManageCaterer /> : <Navigate to="/" />}
-        />
+        <Route path="admin/path_food" element={<PathFood />}/>
+
+        <Route path="admin/manage_caterer" element={<ManageCaterer />}/>
       </Routes>
 
       <Footer />

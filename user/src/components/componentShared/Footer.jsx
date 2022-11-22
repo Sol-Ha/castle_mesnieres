@@ -1,7 +1,6 @@
 import { Image } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
-import BottomNavFooter from "./BottomNavFooter";
-import "./componentShared.scss";
+import BottomNavFooter from "./navs/BottomNavFooter";
 
 const Footer = () => {
   const path = useLocation().pathname;
