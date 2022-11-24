@@ -18,7 +18,7 @@ export const verifyAdmin = (req, res, next) => {
         if (req.admin.id === req.params.id || req.admin.isSuperadmin) {
             next();
         } else {
-            if (err) return next(createError(403, "Vous n'êtes pas autorisé à accéder à cette page."));
+            return next(createError(403, "Vous n'êtes pas autorisé à accéder à cette page."));
         }
     })
 }

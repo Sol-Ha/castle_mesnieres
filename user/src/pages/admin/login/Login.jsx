@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // import { useNavigate } from "react-router-dom";
 import { AuthContext } from '../../../context/authContext';
 import { Button, Form, Image } from 'react-bootstrap';
@@ -13,10 +13,10 @@ const Login = () => {
     password: undefined,
   });
 
-  // change route
-  // const navigate = useNavigate();
-
   const { admin, loading, error, dispatch } = useContext(AuthContext);
+
+  // change route
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
@@ -26,9 +26,9 @@ const Login = () => {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
-
       const res = await axios.post("/auth/login", credentials);
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
+      navigate("/admin/selection_menu")
     } catch (err) {
       dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
     }
@@ -53,18 +53,18 @@ const Login = () => {
 
             <Form.Group>
               <Form.Label>Pseudo</Form.Label>
-              <Form.Control onChange={handleChange} type="text" name="username" />
+              <Form.Control onChange={handleChange} type="text" id="username" name="username" />
             </Form.Group>
 
             <Form.Group>
               <Form.Label>Mot de passe</Form.Label>
-              <Form.Control onChange={handleChange} type="password" name="password" />
+              <Form.Control onChange={handleChange} type="password" id="password" name="password" />
             </Form.Group>
 
             <Link id="a_recover_up" to="/admin/login_recover">Vous n'arrivez pas à vous connecter?</Link>
 
             {/* security */}
-            <Button variant="primary" onClick={handleClick}>
+            <Button variant="primary" disabled={loading} onClick={handleClick}>
               {/* onClick={() => navigate()} */}
               SE CONNECTER
             </Button>
