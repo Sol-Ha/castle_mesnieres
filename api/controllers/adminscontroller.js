@@ -1,5 +1,14 @@
 import Admin from "../models/Admin.js";
-import { createError } from "../utils/error.js";
+
+//GET
+export const getAdmin = async (req,res,next) =>{
+    try{
+        const admin = await Admin.findById(req.params.id)
+        res.status(200).json(admin)
+    } catch (err){
+        next(err)
+    }
+}
 
 //UPDATE
 export const updateAdmin = async (req, res, next) => {
