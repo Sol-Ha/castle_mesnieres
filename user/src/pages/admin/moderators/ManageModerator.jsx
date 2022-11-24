@@ -1,6 +1,4 @@
-import React from "react";
-import { Container } from "react-bootstrap";
-import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
+import BottomNav from '../../../components/common_components/BottomNav';
 import CardTime from "../../../components/admin/card/CardTime";
 import CardTimeEdit from "../../../components/admin/card/CardTimeEdit";
 import "../../../styles/pages.scss";
@@ -8,17 +6,18 @@ import "../../../styles/pages.scss";
 const ManageModerator = () => {
   return (
     <>
-      <BottomNav name="GESTION DES MODERATEURS" />
+      <BottomNav name="GESTION DES MODERATEURS"
+      urlNav="/admin/selection_menu" />
 
-      <section className="manage_mod">
-        <Container>
+      <section className="manage_CRUD">
+      <div className="new_card">
           <CardTime
             url="/admin/create_moderator"
             date="_ _ /_ _ / _ _"
             firstName="_ _ _ _ _ _"
             lastName="_ _ _ _ _ _"
           />
-
+        </div>
 
           <div className="manage_mode_feed">
           <CardTimeEdit 
@@ -28,7 +27,6 @@ const ManageModerator = () => {
                       lastName="_ _ _ _ _ _"
           />
           </div>
-        </Container>
       </section>
     </>
   );

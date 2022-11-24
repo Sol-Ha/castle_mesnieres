@@ -141,6 +141,13 @@
           height: 4vh;
           font-size: 1.6vh;
           margin: 20% 0 10% 0;
+          background-color: $black !important;
+          color: $white !important;
+
+          &:active, &:checked, &:focus, &:hover{
+            background-color: $white !important;
+            color: $black !important;
+          }
         }
       }
     }
@@ -354,6 +361,15 @@
   }
 }
 
+// MEDIA QERRIES
+// MANAGE ROOM
+@media only screen and (max-width: 800px) {
+  .manageRoom {
+    width: 95%;
+    margin: 2.5%;
+  }
+}
+
 // MANAGE PATH
 // GENERAL
 .pathBed,
@@ -378,24 +394,22 @@
   }
 }
 
-// ARTICLES
+// PATH ARTICLES
 .pathEvent {
   div {
     .card_back:first-child {
       background-image: url("../../public/assets/photos/event.avif");
       @include imgCardB;
-      background-position-x: -25.5vh;
     }
 
     .card_back:last-child {
       background-image: url("../../public/assets/photos/newspaper.avif");
       @include imgCardB;
-      background-position-x: -25.5vh;
     }
   }
 }
 
-// ACCOMODATIONS
+// PATH ACCOMODATIONS
 .pathBed {
   div {
     .card_back:first-child {
@@ -413,14 +427,15 @@
 .pathFood {
   div {
     .card_back:first-child {
-      background-image: url("../../public/assets/photos/caterer.jpg");
+      background-image: url("../../public/assets/photos/caterer.avif");
       @include imgCardB;
     }
 
     .card_back:last-child {
-      background-image: url("../../public/assets/photos/restaurant.jpg");
+      background-image: url("../../public/assets/photos/restaurant.avif");
+      filter: grayscale(1);
+      cursor: not-allowed;
       @include imgCardB;
-      background-position-x: -39vh;
     }
   }
 }
@@ -434,6 +449,28 @@
       display: flex;
       flex-wrap: wrap;
       margin-bottom: 10%;
+    }
+  }
+}
+
+// MEDIA QUERRIES FULL CRUD
+.manage_CRUD{
+  @include displayFullScreen;
+  margin: 5% 10%;
+.manage_mode_feed, .new_card{
+  width: 80%;
+  margin-bottom: 5%;
+  @include flexA;
+  justify-content: center;
+  align-items: center;
+}}
+
+// MEDIA QUERRIES FULL CRUD
+@media only screen and (max-width: 800px) {
+  .manage_CRUD{
+    margin: 10% 5%;
+    .manage_mode_feed, .new_card{
+      width: 90%;
     }
   }
 }

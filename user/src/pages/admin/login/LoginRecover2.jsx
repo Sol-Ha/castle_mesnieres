@@ -31,7 +31,7 @@ const LoginRecover2 = () => {
 
               <Form.Group>
               <Form.Label>Réponse</Form.Label>
-              <Form.Control type="text" name='login_answer' required/>
+              <Form.Control type="text" name='admin_answer' required/>
             </Form.Group>
 
       <Button className="btn_login" variant="primary" onClick={() => ("admin/login/LoginRecover2")}>

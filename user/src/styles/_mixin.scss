@@ -33,6 +33,13 @@
   align-items: center;
 }
 
+@mixin center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 // form
 @mixin form{
   height: 6vh;
@@ -80,20 +87,9 @@
       margin-right: 3vh;
     }
 
-    &:hover,
-    &:active,
-    &:focus,
-    &:checked {
-      background-color: $white !important;
-      color: $black !important;
-      font-weight: 600 !important;
-      border-left: none !important;
-      border-radius: 0 !important;
-
       img {
         filter: brightness(0%);
       }
-    }
   }
 }
 
@@ -117,13 +113,6 @@
   font-family: 'Handmagic Signature';
   margin: 0em 0.3em 0em -0.5em;
   line-height: 0.1em;
-}
-
-@mixin center {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 
 @mixin btnType1{

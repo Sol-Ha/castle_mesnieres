@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap";
 import Card from "../../../components/admin/card/Card";
-import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
+import BottomNav from '../../../components/common_components/BottomNav';
 import "../../../styles/pages.scss";
 
 const PathBedroomDormitory = () => {
@@ -8,6 +8,7 @@ const PathBedroomDormitory = () => {
     <>
     <BottomNav
     name="CHAMBRES & DORTOIRS"
+    urlNav="/admin/selection_menu"
     />
 
       <Container className="pathBed">

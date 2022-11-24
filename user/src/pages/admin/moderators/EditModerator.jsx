@@ -1,12 +1,13 @@
 import Btnreturn from "../../../components/admin/other_components/Btnreturn";
-import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
-import FormModerator from '../../../components/admin/forms/form_moderator/FormModerator';
+import BottomNav from '../../../components/common_components/BottomNav';
+import FormModerator from '../../../components/admin/forms/FormModerator';
 
 const EditModerator = () => {
   return (
     <>
     <BottomNav
     name="EDITER UN MODERATEUR"
+    urlNav="/admin/selection_menu"
     />
 
 <Btnreturn urlCard="/admin/manage_moderator" />

@@ -1,11 +1,12 @@
 import Btnreturn from "../../../components/admin/other_components/Btnreturn";
-import BottomNav from "../../../components/admin/bottom_nav/BottomNav";
-import FormNews from '../../../components/admin/forms/form_news/FormNews';
+import BottomNav from '../../../components/common_components/BottomNav';
+import FormNews from '../../../components/admin/forms/FormNews';
 
 const EditNews = () => {
   return (
     <>
-    <BottomNav name="EDITER UN ARTICLE DE PRESSE" />
+    <BottomNav name="EDITER UN ARTICLE DE PRESSE"
+    urlNav="/admin/selection_menu" />
     
     <Btnreturn urlCard="/admin/manage_news" />
 

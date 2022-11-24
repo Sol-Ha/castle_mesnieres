@@ -101,3 +101,8 @@ internship project to remodel a website from the early 2000. Method : MERN
 ```yarn add @emailjs/browser```
 
 *( API to process forms to a chosen templace through mailJS and forwards it to the receiver )*
+
+
+```yarn add react-text-truncate```
+
+*( truncating excess text )*

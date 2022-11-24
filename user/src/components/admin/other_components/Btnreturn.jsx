@@ -1,6 +1,6 @@
 import { Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "./btn_return.scss";
+import "../../../styles/components.scss";
 
 const Btnreturn = ({ urlCard }) => {
 
