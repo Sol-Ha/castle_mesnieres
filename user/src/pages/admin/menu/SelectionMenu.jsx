@@ -21,7 +21,7 @@ const SelectionMenu = () => {
         <Container fluid>
           {/* USER: GRAB USER FIRSTNAME */}
           <p>
-            Bonjour, !<br />
+            Bonjour !<br />
             Par ou souhaitez-vous commencer?
           </p>
         </Container>
