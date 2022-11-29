@@ -21,6 +21,9 @@ import foodRoute from "./routes/food.js"
 const app = express()
 dotenv.config()
 
+// façon d'écrire de base, avant d'ajouter le "type": "module", dans le package.json
+// const express = require("express")
+
 const connect = async () => {
 try {
     await mongoose.connect(process.env.MONGO);
