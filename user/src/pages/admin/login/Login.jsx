@@ -33,8 +33,6 @@ const Login = () => {
     }
   };
 
-  console.log(admin)
-
   return (
     <>
       <section className="login_admin">
