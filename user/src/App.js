@@ -9,12 +9,6 @@ import Index from "./pages/user/pages/Index";
 import ParcEtDomaine from "./pages/user/pages/ParcEtDomaine";
 import LouerNosSalles from "./pages/user/pages/LouerNosSalles";
 
-// routing
-import PrivateRoute from "./components/routing/PrivateRoute";
-
-// pages admin
-import PrivatePage from "./pages/admin/PrivatePage";
-
 import Login from "./pages/admin/login/Login";
 import LoginRecover from "./pages/admin/login/LoginRecover";
 import LoginRecover2 from "./pages/admin/login/LoginRecover2";
@@ -69,9 +63,6 @@ function App() {
         <Route path="/" element={<Index />} />
         <Route path="ParcEtDomaine" element={<ParcEtDomaine />} />
         <Route path="LouerNosSalles" element={<LouerNosSalles />} />
-
-        {/* security private url */}
-        {/* <PrivateRoute exact path="/admin" component={PrivatePage} /> */}
 
         {/* admin */}
         <Route path="/admin/login" element={<Login />} />
