@@ -5,12 +5,16 @@ import Header from "./components/common_components/Header";
 import FooterAdmin from "./components/common_components/FooterAdmin";
 
 // pages user
-
 import Index from "./pages/user/pages/Index";
 import ParcEtDomaine from "./pages/user/pages/ParcEtDomaine";
 import LouerNosSalles from "./pages/user/pages/LouerNosSalles";
 
+// routing
+import PrivateRoute from "./components/routing/PrivateRoute";
+
 // pages admin
+import PrivatePage from "./pages/admin/PrivatePage";
+
 import Login from "./pages/admin/login/Login";
 import LoginRecover from "./pages/admin/login/LoginRecover";
 import LoginRecover2 from "./pages/admin/login/LoginRecover2";
@@ -59,13 +63,15 @@ function App() {
   // display differenet admin either header admin or header user
   return (
     <BrowserRouter>
-      <Header/>
-
+      <Header />
       <Routes>
         {/* user */}
         <Route path="/" element={<Index />} />
         <Route path="ParcEtDomaine" element={<ParcEtDomaine />} />
         <Route path="LouerNosSalles" element={<LouerNosSalles />} />
+
+        {/* security private url */}
+        {/* <PrivateRoute exact path="/admin" component={PrivatePage} /> */}
 
         {/* admin */}
         <Route path="/admin/login" element={<Login />} />
@@ -103,15 +109,10 @@ function App() {
         <Route path="admin/visit_castle" element={<Visit />} />
 
         {/* bedrooms dorms and camping */}
-        <Route
-          path="admin/path_bedroom&dormitory"
-          element={<PathBedroomDormitory />}
-        />
+        <Route path="admin/path_bedroom&dormitory" element={<PathBedroomDormitory />} />
         <Route path="admin/manage_bedrooms" element={<ManageBedrooms />} />
-        <Route
-          path="admin/manage_dorms_and_camping"
-          element={<ManageDorms />}
-        />
+        <Route path="admin/manage_dorms_and_camping" element={<ManageDorms />} />
+
         {/* rent rooms */}
         <Route path="admin/rent_rooms" element={<ManageRooms />} />
 
@@ -119,7 +120,6 @@ function App() {
         <Route path="admin/path_food" element={<PathFood />} />
         <Route path="admin/manage_caterer" element={<ManageCaterer />} />
       </Routes>
-
       <FooterAdmin />
     </BrowserRouter>
   );
